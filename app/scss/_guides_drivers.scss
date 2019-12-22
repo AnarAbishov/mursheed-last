@@ -1,0 +1,138 @@
+#guides_drivers{
+    padding: 30px 0;
+    .pagination{
+        margin-top: 20px;
+    }
+    .content{
+        padding: 20px;
+        border-radius: 4px;
+         background-color: #f7f7f7;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dee2e6;
+            h4{
+                font-family: Averta;
+                font-size: 20px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: black;
+                padding-bottom: 0;
+                margin: 0;
+            }
+            .custom-selectbox{
+                width: 25%;
+            }
+        }
+        .body{
+            .person_details{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #dee2e6;
+                &:nth-last-child(1){
+                    border: none;
+                }
+                .profile{
+                    padding: 20px 0 20px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    // width: 37%;
+                    align-items: center;
+                    .profile_img{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .profile_details{
+                        margin-left: 30px;
+                        h4{
+                            font-family: Averta;
+                            font-size: 20px;
+                            font-weight: 600;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            color: black;
+                            margin-bottom: 5px;
+                            padding-bottom: 0;
+                        }
+                        p{
+                            font-family: Averta;
+                            font-size: 16px;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 1.25;
+                            letter-spacing: normal;
+                            color: black;
+                            margin-bottom: 5px;
+                            padding-bottom: 0;
+                        }
+                        img{
+                            width: 19px;
+                            height: 19px;
+                        }
+                        .busy{
+                            border-radius: 2px;
+                            background-color: #b73838;
+                            font-family: Averta;
+                            font-size: 10px;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            text-align: center;
+                            color: #ffffff;
+                            border: none;
+                            padding: 5px 15px;
+                            margin-right: 10px;
+                        }
+                        .aviable{
+                            border-radius: 2px;
+                            background-color: #38b77b;
+                            font-family: Averta;
+                            font-size: 10px;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            text-align: center;
+                            color: #ffffff;
+                            border: none;
+                            padding: 5px 15px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .buttons{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 17px 0;
+                    .reyting{
+                        span{
+                            font-family: Averta;
+                            font-size: 12px;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            text-align: right;
+                            color: #666666;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

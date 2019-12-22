@@ -1,0 +1,147 @@
+#swiper_popular_attractions_locations {
+    text-align: center;
+    margin: 30px 0px;
+
+    .swiper_popular_attractions_locations_top {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 60px 10px;
+        align-items: center;
+        h6 {
+            font-family: Averta;
+            font-size: 24px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    .swiper_popular_attractions_locations_bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .swiper_popular_attractions_locations_bottom_center{
+            width: 90%;
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+                position: static;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        text-align: center;
+                        font-size: 18px;
+                        background: #fff;
+                        /* Center slide text vertically */
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        -webkit-justify-content: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        -webkit-align-items: center;
+                        align-items: center;
+    
+                        .popular_attractions_locations_bottom_item {
+                            // border: 1px solid #c9c9c9;
+                            margin: 1px;
+                            box-shadow: 0px 0px 0px 1px #c9c9c9;
+                            border-radius: 3px;
+                            text-align: left;
+                            img {
+                                margin-bottom: 25px;
+                                width: 100%;
+                            }
+                            .popular_attractions_locations_name{
+                                margin-left: 12px;
+                                font-family: Averta;
+                                font-size: 16px;
+                                font-weight: 600;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: normal;
+                                letter-spacing: normal;
+                            }
+                            .popular_attractions_locations_bottom_item_ratings{
+                                display: flex;
+                                justify-content: left;
+                                // align-items: baseline;
+                                img{
+                                    width: 20px;
+                                    margin-bottom: 4px;
+                                    margin-left: 10px;
+                                }
+                                p{
+                                    margin-left: 11px;
+                                    font-family: Averta;
+                                    font-size: 13px;
+                                    margin-bottom: 4px;
+                                }
+                                span{
+                                    font-family: Averta;
+                                    font-size: 13px;
+                                    color: #888888;
+                                    line-height: 26px;
+                                    margin-left: 10px;                                
+                                }
+                            }
+                            p{
+                                margin-left: 12px;
+                                font-family: Averta;
+                                font-size: 13px;
+                                margin-bottom: 4px;
+                            }
+                       
+                        }
+                    }
+                }
+                .swiper-button-next{
+                    top: 50%;
+                    &::after{
+                        content: "";
+                        background-image: url("../img/swiper_popular_attractions_locations/right.svg");
+                        width: 30px;
+                        height: 30px;
+                        background-repeat: no-repeat;
+                    }
+                }
+                .swiper-button-prev{
+                    top: 50%;
+                    &::after{
+                        content: "";
+                        background-image: url("../img/swiper_popular_attractions_locations/left.svg");
+                        width: 30px;
+                        height: 30px;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    #swiper_popular_attractions_locations{
+        h6{
+            font-size: 18px !important;
+        }
+        .swiper-button-next{
+            right: -15px !important;
+        }
+        .swiper-button-prev{
+            left: -15px !important;
+        }
+    }
+  }

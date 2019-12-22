@@ -1,0 +1,135 @@
+#swiper_crated_for{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+    background-color: #f3f3f3;
+    height: 400px;
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        .swiper-wrapper{
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                .crated_for_center{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    height: 100%;
+                    text-align: center;
+                    width: 67%;
+                    margin: 0 auto;
+                    img{
+                        width: 110px;
+                        height: 110px;
+                        margin-bottom: 10px;
+                        border-radius: 100%;
+                        margin-top: 15px;
+                    }
+                    .crated_for_name{
+                        font-family: Averta;
+                        font-size: 18px;
+                        font-weight: 600;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        margin-bottom: 8px;
+                    }
+                    span{
+                        font-family: Averta;
+                        font-size: 16px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        text-align: center;
+                        color: #0b8071;
+                        margin-bottom: 8px;
+                    }
+                    .crated_for_description{
+                        margin-top: 10px;
+                        font-size: 15px;
+                        font-family: "Averta";
+                    }
+                }
+              }
+        }
+        .swiper-button-next{
+            cursor: pointer;
+            // opacity: 0.6;
+            background: #eeeeee;
+            border-radius: 100%;
+            color: black;
+            width: 40px;
+            height: 40px;
+            right: 50px;
+            &::after{
+                font-weight: bold;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+        .swiper-button-prev{
+            cursor: pointer;
+            // opacity: 0.6;
+            background: #eeeeee;
+            border-radius: 100%;
+            color: black;
+            width: 40px;
+            height: 40px;
+            left: 50px;
+            &::after{
+                font-weight: bold;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+      }
+}
+
+@media only screen and (max-width: 768px) {
+    #swiper_crated_for{
+        height: 100%;
+        .swiper-container{
+            .swiper-button-next{
+                right: 20px;
+            }
+            .swiper-button-prev{
+                left: 20px;
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    #swiper_crated_for{
+        .swiper-container{
+            .swiper-button-next{
+                right: 7px;
+            }
+            .swiper-button-prev{
+                left: 7px;
+            }
+        }
+    }
+  }

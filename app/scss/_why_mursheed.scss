@@ -1,0 +1,36 @@
+#why_mursheed{
+    text-align: center;
+    margin: 30px 0px;
+    .why_mursheed_top{
+        margin-bottom: 45px;
+        h6{
+            font-family: Averta;
+            font-size: 26px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+        }   
+    }
+    .why_mursheed_bottom{
+        display: flex;
+        justify-content: space-evenly;
+        .why_mursheed_bottom_item{
+            width: 200px;
+            img{
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    #why_mursheed{
+        .why_mursheed_bottom_item{
+            width: 100% !important;
+        }
+    }
+  }

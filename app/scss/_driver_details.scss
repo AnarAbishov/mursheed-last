@@ -1,0 +1,726 @@
+#driver_details {
+    margin-bottom: 30px;
+
+    .driver_details_content {
+        background: #f7f7f7;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+
+        .driver_details_about_driver {
+            .about_driver_info {
+                h6 {}
+
+                .about_driver_info_inside {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    .about_driver_info_left {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .about_driver_info_img {
+                            img {}
+                        }
+
+                        .about_driver_info_content {
+                            .about_driver_info_name {
+                                margin-bottom: 0px;
+                                padding-left: 20px;
+                                font-family: Averta;
+                                font-size: 16px;
+                                font-weight: 600;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: normal;
+                                letter-spacing: normal;
+                            }
+
+                            .about_driver_info_ratings {
+                                padding-left: 17px;
+
+                                img {
+                                    width: 20px;
+                                }
+
+                                span {
+                                    font-family: Averta;
+                                    font-size: 13px;
+                                    color: #888;
+                                    line-height: 26px;
+                                    margin-left: 10px;
+                                }
+                            }
+
+                            ul {
+                                list-style: none;
+                                padding-left: 20px;
+
+                                li {
+                                    font-family: Averta;
+                                    font-size: 16px;
+                                    font-weight: normal;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.25;
+                                    letter-spacing: normal;
+                                    margin-bottom: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    .about_driver_info_right {
+                        display: flex;
+                        align-items: flex-end;
+
+                        button {
+                            width: 120px;
+                            height: 36px;
+                            font-family: Averta;
+                            font-size: 16px;
+                            font-weight: bold;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            text-align: center;
+                            color: #ffffff;
+                            background: #0b8071;
+                        }
+                    }
+
+                }
+            }
+
+            .swiper_driver_details_cars {
+                padding: 20px 0px 0px 0px;
+
+                
+                .driver_details_cars_inside {
+                    margin-bottom: 30px;
+                    width: 70%;
+                    height: 190px;
+                    .swiper-container{
+                        .driver_details_cars_header {
+                            position: relative;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+                            .driver_details_cars_inside_next_prev {
+                                width: 85px;
+                                position: relative;
+        
+                                .swiper-button-next {
+                                    width: 30px;
+                                    height: 30px;
+                                    background: white;
+                                    &::after {
+                                        content: url("../img/cars_modal/next.svg");
+                                        width: 30px;
+                                        height: 30px;
+                                        text-align: center;
+                                        line-height: 25px;
+                                    }
+                                }
+                                .swiper-button-prev {
+                                    width: 30px;
+                                    height: 30px;
+                                    background: white;
+                                    &::after {
+                                        content: url("../img/cars_modal/prev.svg");
+                                        width: 30px;
+                                        height: 30px;
+                                        text-align: center;
+                                        line-height: 25px;
+                                    }
+        
+                                }
+                            }
+        
+                        }
+        
+                        .swiper-slide{
+                            .modal_click{
+                                cursor: pointer;
+                                .driver_details_cars_item{
+                                    padding: 13px 17px;
+                                    background: white;
+                                    height: 100%;
+                                    img{
+                                        width: 100%;
+                                        height: 53px;
+                                        margin-bottom: 20px;
+                                    }
+                                    .driver_details_cars_marka{
+                                        margin-bottom: 0px;
+                                        font-family: Averta;
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: normal;
+                                        letter-spacing: normal;
+                                    }
+                                    .driver_details_cars_model{
+                                        margin-bottom: 0px;
+                                        font-family: Averta;
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: normal;
+                                        letter-spacing: normal;
+                                    }
+                                    .driver_details_cars_item_rides{
+                                        .busy{
+                                            width: 90px;
+                                            height: 20px;
+                                            border-radius: 2px;
+                                            background-color: #ac1b1b;  
+                                            font-family: Averta;
+                                            font-size: 10px;
+                                            font-weight: normal;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: normal;
+                                            letter-spacing: normal;
+                                            text-align: center;
+                                            color: #ffffff;
+                                            margin-right: 12px;
+                                            line-height: 8px;
+                                        }
+                                        .available{
+                                            width: 90px;
+                                            height: 20px;
+                                            border-radius: 2px;
+                                            background-color: #38b77b;  
+                                            font-family: Averta;
+                                            font-size: 10px;
+                                            font-weight: normal;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: normal;
+                                            letter-spacing: normal;
+                                            text-align: center;
+                                            color: #ffffff; 
+                                            margin-right: 12px;
+                                            line-height: 8px;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                    .modal {
+                        .modal-header{
+                            .modal-title{
+                                width: 60%;
+                                display: flex;
+                                justify-content: flex-end;
+                            }
+                        }
+                        .modal-body {
+                            #carouselExampleIndicators{
+                                width: 50%;
+                                margin: 0 auto;
+                                .carousel-inner{
+                                    .carousel-item{
+                                        height: 200px;
+                                        img{
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                                .carousel-control-prev{
+                                    left: -70px;
+                                    .carousel-control-prev-icon{
+                                        background-image: url("../img/cars_modal/prev.svg");
+                                    }
+                                }
+                                .carousel-control-next{
+                                    right: -70px;
+                                    .carousel-control-next-icon{
+                                        background-image: url("../img/cars_modal/next.svg");
+                                    }
+                                }
+                                .carousel-indicators-footer{
+                                    padding: 10px;
+                                    .carousel-indicators {
+                                        display: flex;
+                                        justify-content: center;
+                                        width: 100%;
+                                        margin: 0px;
+                                        position: static;
+                                        .active {
+                                            background: transparent;
+                                            img {
+                                                opacity: 0.7;
+                                            }
+                                        }
+                                        .item{
+                                            width: 60px;
+                                            height: 60px;
+                                            margin: 0px 5px;
+                                            img{
+                                                cursor: pointer;
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                
+                                
+                            }
+                            
+                        }
+                        .modal-footer{
+                            display: flex;
+                            justify-content: flex-start;
+                            .modal-footer_details{
+                                width: 100%;
+                                border: 1px solid #d9d9d9;
+                                padding: 15px;
+                                .modal-footer_details_top{
+                                    border-bottom: 1px solid #e0e0e0;
+                                    margin-bottom: 23px;
+                                    p{
+                                        font-family: Averta;
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.25;
+                                        letter-spacing: normal;
+                                        text-align: center;
+                                    }
+                                }
+                                ul{
+                                    list-style: none;
+                                    margin: 0px;
+                                    padding: 0px;
+                                    li{
+                                        font-family: Averta;
+                                        font-size: 14px;
+                                        font-weight: normal;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.25;
+                                        letter-spacing: normal;
+                                        margin-bottom: 15px;
+                                    }
+                                }
+                                .available{
+                                    width: 95px;
+                                    font-size: 14px;
+                                    height: 35px;
+                                    border-radius: 2px;
+                                    background-color: #38b77b;
+                                    color: white;
+                                    &:focus{
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .available_dates_and_swiper_packages {
+                display: flex;
+
+                .available_dates {
+                    width: 35%;
+                    padding-right: 15px;
+
+                    .available_dates_header {
+                        margin-bottom: 21px;
+                    }
+
+                    .available_dates_inside {
+                        #datetimepicker {
+                            display: none;
+                        }
+
+                        #datetime-demo-holder {
+                            .tail-datetime-calendar {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                }
+
+                .swiper_packages {
+                    width: 65%;
+                    padding-left: 15px;
+
+                    
+
+                    .swiper_packages_inside {
+                        .swiper-container {
+                            .packages_header {
+                                position: relative;
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 10px;
+        
+                                h6 {}
+        
+                                .packages_next_prev {
+                                    width: 85px;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: space-evenly;
+        
+                                    .swiper-button-next {
+                                        width: 30px;
+                                        height: 30px;
+                                        background: white;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        cursor: pointer;
+                                        &::after {
+                                            content: url("../img/cars_modal/next.svg");
+                                            width: 30px;
+                                            height: 30px;
+                                            text-align: center;
+                                            line-height: 25px;
+                                        }
+                                    }
+        
+                                    .swiper-button-prev {
+                                        width: 30px;
+                                        height: 30px;
+                                        background: white;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        cursor: pointer;
+                                        &::after {
+                                            content: url("../img/cars_modal/prev.svg");
+                                            width: 30px;
+                                            height: 30px;
+                                            text-align: center;
+                                            line-height: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                            .swiper-slide {
+                                .swiper_packages_item {
+                                    background: white;
+                                    padding: 11px;
+
+                                    h6 {
+                                        border-bottom: 1px solid #dbdbdb;
+                                        padding-bottom: 10px;
+                                    }
+
+                                    .packages_description {
+                                        font-size: 12px;
+                                        font-family: Averta;
+                                    }
+
+                                    .packages_price {
+                                        font-family: Averta;
+                                        font-size: 13px;
+                                        font-weight: 600;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.25;
+                                        letter-spacing: normal;
+                                        color: #0b8071;
+                                    }
+
+                                    .request_this_package {
+                                        button {
+                                            font-size: 10px;
+                                            background-color: #0b8071;
+                                            font-family: Averta;
+                                            font-size: 10px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: normal;
+                                            letter-spacing: normal;
+                                            text-align: center;
+                                            color: #ffffff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .feedbacks {
+                .feedbacks_inside {
+                    padding: 15px 0px;
+
+                    .feedbacks_inside_header {
+                        h6 {
+                            margin-bottom: 12px;
+                            font-family: Averta;
+                            font-size: 16px;
+                            font-weight: 600;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: normal;
+                        }
+                    }
+
+                    .feedbacks_inside_item {
+                        display: flex;
+                        border-bottom: 1px solid #e0dfdf;
+                        margin-bottom: 20px;
+
+                        .feedbacks_inside_item_left {
+                            margin-right: 12px;
+
+                            img {}
+                        }
+
+                        .feedbacks_inside_item_right {
+                            width: 100%;
+
+                            .feedbacks_inside_item_right_header {
+                                display: flex;
+                                justify-content: space-between;
+                                height: 19px;
+
+                                h6 {
+                                    margin-bottom: 0;
+                                    font-family: Averta;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: normal;
+                                    letter-spacing: normal;
+                                }
+
+                                p {
+                                    font-family: Averta;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: normal;
+                                    letter-spacing: normal;
+                                    text-align: right;
+                                    color: #6b6b6b;
+                                }
+                            }
+
+                            .feedbacks_inside_item_ratings {
+                                margin-left: -3px;
+
+                                img {
+                                    width: 20px;
+                                }
+                            }
+
+                            .feedbacks_inside_item_description {
+                                font-size: 13px;
+                            }
+                        }
+
+
+                    }
+
+                    .feedbacks_inside_footer {
+                        display: flex;
+                        justify-content: space-between;
+
+                        input {
+                            font-family: Averta;
+                            font-size: 12px;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            color: #6b6b6b;
+                            width: 85%;
+                            padding-left: 10px;
+                        }
+
+                        button {
+                            width: 14%;
+                            height: 36px;
+                            border-radius: 4px;
+                            background-color: #0b8071;
+                            color: white;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .swiper_driver_details_cars {
+        .driver_details_cars_inside {
+            .driver_details_cars_item {
+                .driver_details_cars_item_rides {
+                    button {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .driver_details_content {
+        .about_driver_info {
+            .about_driver_info_left {
+                .about_driver_info_img {
+                    margin-bottom: 10px;
+                }
+
+                .about_driver_info_content {
+
+                    p {
+                        padding-left: 0px !important;
+                    }
+
+                    .about_driver_info_ratings {
+                        padding-left: 0px !important;
+                    }
+
+                    ul {
+                        padding-left: 0px !important;
+
+                        li {
+                            font-size: 14px !important;
+                        }
+                    }
+                }
+            }
+
+            .about_driver_info_right {
+                button {
+                    height: 30px !important;
+                    width: 80px !important;
+                    font-size: 13px !important;
+                }
+            }
+        }
+
+        .swiper_driver_details_cars {
+            
+
+            .driver_details_cars_inside {
+                width: 100% !important;
+                .driver_details_cars_header {
+                    width: 100% !important;
+                }
+                .driver_details_cars_item {
+                    img {
+                        height: 60px !important;
+                    }
+
+                    .driver_details_cars_item_rides {
+                        button {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .available_dates_and_swiper_packages {
+            flex-wrap: wrap;
+
+            .available_dates {
+                width: 100% !important;
+                padding-right: 0px !important;
+
+                .available_dates_inside {
+                    #datetime-demo-holder {
+                        .calendar-actions {
+                            .label {
+                                font-size: 13px !important;
+                            }
+                        }
+
+                        .calendar-datepicker {
+                            th {
+                                font-size: 11px !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .swiper_packages {
+                width: 100% !important;
+                padding-left: 0px !important;
+
+                .request_this_package {
+                    button {
+                        width: 100% !important;
+                        font-size: 7px !important;
+                    }
+                }
+            }
+        }
+
+        .feedbacks {
+            .feedbacks_inside_footer {
+                input {
+                    width: 80% !important;
+                }
+
+                button {
+                    font-size: 13px;
+                    width: 18% !important;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 530px) {
+    .feedbacks {
+        .feedbacks_inside {
+            .feedbacks_inside_item {
+                .feedbacks_inside_item_right {
+                    .feedbacks_inside_item_right_header {
+                        flex-wrap: wrap !important;
+                        height: auto !important;
+
+                        p {
+                            margin-bottom: 0px !important;
+                        }
+                    }
+                }
+            }
+
+            .feedbacks_inside_footer {
+                input {
+                    width: 62% !important;
+                }
+
+                button {
+                    width: 35% !important;
+                }
+            }
+        }
+    }
+}

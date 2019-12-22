@@ -1,0 +1,72 @@
+#comments{
+    .user{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        &:nth-last-child(1){
+            margin-bottom: 0;
+        }
+        .user_img{
+            img{
+                width: 70px;
+                height: 70px;
+                object-fit: contain;
+                border-radius: 2px;
+            }}
+        .comment{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 15px;
+            .name{
+                p{
+                    font-family: Averta;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: black;
+                    margin-bottom: 0px;
+                }
+            }
+            .rating{
+                display: flex;
+                align-items: center;
+                margin-bottom: 4px;
+                margin-top: 4px;
+                .stars{
+                    display: flex;
+                }
+                p{
+                    font-family: Averta;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: right;
+                    color: #6b6b6b;
+                    margin-bottom: 0px;
+                    margin-left: 10px;
+                }
+            }
+            .text{
+                p{
+                    font-family: Averta;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #6b6b6b;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

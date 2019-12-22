@@ -1,0 +1,29 @@
+#packages{
+    .all_routes{
+        ul{
+            cursor: pointer;
+        }
+        .new_route{
+            display: none;
+            border: none;
+            padding: 12px 13px;
+            label{
+                font-family: Averta;
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #0b8071;
+            }
+            .select-selected{
+                width: 170px;
+                height: 36px;
+            }
+            .custom-selectbox {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

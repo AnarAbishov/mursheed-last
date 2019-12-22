@@ -1,0 +1,109 @@
+.heading{
+    font-family: Averta;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: black;
+}
+.new_route{
+    width: 100%;
+    border-radius: 4px;
+    border: solid 1px #dfdfdf;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .cost{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0 !important;
+    }
+    .inputs{
+        margin-bottom: 0 !important;
+        margin-right: 10px;
+        label{
+            font-family: Averta;
+            font-size: 14px !important;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: black;
+        }
+        .select-selected{
+            width: 211px;
+            height: 36px;
+            padding: 8px 16px !important;
+            &::after{
+                top: 15px !important;
+                right: 10x;
+            }
+        }
+        .select-arrow-active::after {
+            top: 9px!important;
+        }
+    }
+    
+}
+.all_routes{
+
+    ul{
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+        li{
+            width: 29%;
+            display: inline-block;
+            &:nth-last-child(1){
+                width: 10%;
+            }
+
+        }
+    }
+    .thead{
+        width: 100%;
+        // border-bottom:1px solid #dfdfdf;
+        li{
+            font-family: Averta;
+            font-size: 12px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 1px;
+            color: #666666;
+        }
+    }
+    // .line{
+    //     width: 109%;
+    //     height: 1px;
+    //     background-color: #dfdfdf;
+    //     margin: 0 auto;
+    // }
+    .tbody{
+        width: 100%;
+        li{
+            font-family: Averta;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #666666;
+            i{
+                margin-right: 10px;
+                &:nth-last-child(1){
+                    margin-right: 0;
+                }
+            }
+        }
+       
+    }
+}

@@ -1,0 +1,39 @@
+#about{
+    .banner_area{
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .content_area{
+        width: 80%;
+        margin: 0px auto;
+        .header{
+            padding-top: 50px;
+            h1{
+                font-family: Averta;
+                font-size: 25px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #324150;
+            }
+        }
+        .content{
+            p{
+                padding: 10px 0 10px 0;
+                font-family: Averta;
+                font-size: 15px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.63;
+                letter-spacing: normal;
+                color: black;
+              
+            }
+        }
+    }
+}

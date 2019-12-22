@@ -1,0 +1,55 @@
+#mursheed_app{
+    margin-top: 80px;
+    .mursheed_app_inside{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .mursheed_app_left{
+            padding-left: 55px;
+            h6{
+                font-family: Averta;
+                font-size: 23px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                margin-bottom: 22px;
+            }
+            p{
+                opacity: 0.75;
+                font-family: Averta;
+                font-size: 14px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                margin-bottom: 30px;
+            }
+        }
+        .mursheed_app_right{
+    
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #swiper{
+        height: 450 !important;
+    }
+    #mursheed_app{
+        .mursheed_app_inside{
+            flex-direction: column;
+            .mursheed_app_left{
+                padding-left: 0px !important;
+                margin-bottom: 50px;
+            }
+            .mursheed_app_right{
+                img{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+  }

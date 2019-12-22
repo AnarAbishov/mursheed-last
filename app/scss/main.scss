@@ -1,0 +1,60 @@
+
+$main-color:#0b8071;
+$bg-color: #f7f7f7;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap');
+@import "../fonts/averta/stylesheet.css";
+
+@import "../libs/bootstrap/scss/bootstrap.scss";
+@import "variable.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "_swiper.scss";
+@import "_start_your_journey.scss";
+@import "_why_mursheed.scss";
+@import "_swiper_most_popular_drivers.scss";
+@import "_swiper_popular_attractions_locations.scss";
+@import "_swiper_our_offers_partners.scss";
+@import "_swiper_crated_for.scss";
+@import "_swiper_latest_tourists_reviews.scss";
+@import "_mursheed_app.scss";
+@import "_driver_details.scss";
+@import "about.scss";
+@import "breadcumbs.scss";
+@import "offers.scss";
+@import "pagination.scss";
+@import "popular_locations.scss";   
+@import "filter.scss";   
+@import "guides_drivers.scss"; 
+@import "driver_price.scss"; 
+@import "login_register.scss"; 
+@import "profile_driver.scss";
+@import "profile_driver_car.scss";
+@import "profile_driver_personal.scss";
+@import "profile_driver_rides.scss";
+@import "profile_comments.scss";
+@import "profile_routes.scss";
+@import "profile_packages.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// body{
+//     font-family: 'Open Sans', sans-serif;
+// }
+
+
+

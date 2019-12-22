@@ -1,0 +1,340 @@
+
+
+    .checkbox_container {
+        display: block;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-family: Averta;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        color: #666666;
+    }
+    
+    .checkbox_container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    .checkbox_container .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: #eee;
+        border-radius: 2px;
+        border: 1px solid #dfdfdf;
+        
+    }
+    
+    .checkbox_container:hover input~.checkmark {
+        background-color: #ccc;
+    }
+    
+    .checkbox_container input:checked~.checkmark {
+        background-color: $main-color;
+    }
+    
+    .checkbox_container .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    
+    .checkbox_container input:checked~.checkmark:after {
+        display: block;
+    }
+    
+    .checkbox_container .checkmark:after {
+        left: 5px;
+        top: 2px;
+        width: 5px;
+        height: 8px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    .radio_container {
+        display: block;
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        font-family: Averta;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        color:black;
+        margin-bottom: 0;
+    }
+    
+    .radio_container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    .radio_container .checkmark {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 16px;
+        width: 16px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+    
+    .radio_container:hover input~.checkmark {
+        background-color: $main-color;
+    }
+    
+    .radio_container input:checked~.checkmark {
+        background-color: #fff;
+        border:2px solid $main-color
+    }
+    
+    .radio_container .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    
+    .radio_container input:checked~.checkmark:after {
+        display: block;
+    }
+    
+    .radio_container .checkmark:after {
+        top: 2px;
+        left: 2px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $main-color;
+    }
+    
+    .custom-selectbox {
+        position: relative;
+        font-family: Arial;
+        width: 100%;
+    }
+    
+    .custom-selectbox select {
+        display: none;
+    }
+    
+    .select-selected {
+        background-color: transparent;
+    }
+    
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #dfdfdf transparent transparent transparent;
+    }
+    
+    .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #dfdfdf transparent;
+        top: 7px;
+    }
+    
+    .select-items div,
+    .select-selected {
+        font-family: Averta;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #666666;
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: solid 1px #dfdfdf;
+        // border: 1px solid transparent;
+        // border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .select-items {
+        position: absolute;
+        background-color: #fff;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        border-radius: 3px;
+        div{
+            border: none !important;
+
+        }
+    }
+    
+    .select-hide {
+        display: none;
+    }
+    
+    .select-items div:hover,
+    .same-as-selected {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .radio_buttons{
+        padding:10px 20px;
+        border-radius: 4px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+        border: solid 1px $main-color;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        height: 75px;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+    .filter{
+        background-color: #f7f7f7;
+        border-radius: 4px;
+        .filter_header{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border-bottom:1px solid #dee2e6;
+            
+            h4{
+                font-family: Averta;
+                font-size: 18px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: black;
+            }
+            p{
+                margin-bottom: 0;
+                font-family: Averta;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: right;
+                color: $main-color;
+            }
+        }
+        .filter_body{
+            .filter_item{
+                .item_header{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 20px 10px 20px;
+                    align-items: center;
+                    cursor: pointer;
+                    
+                    .plus{
+                        i{
+                            color: $main-color;
+                            font-size: 15px;
+                        }
+                    }
+                    .activate{
+                        display: none;
+                    }
+                    h6{
+                        font-family: Averta;
+                        font-size: 16px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.25;
+                        letter-spacing: normal;
+                        color: black;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                    }
+                }
+                
+                }
+                .item_body{
+                    display: flex;
+                    justify-content: center;
+                    padding: 5px 20px 15px 20px;
+                }
+            }
+            .by_car{
+                flex-direction: column;
+                .custom-selectbox{
+                    margin-bottom: 10px;
+                }
+            }
+            .by_language{
+                flex-direction: column;
+                .checkbox_header{
+                    font-family: Averta;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #666666;
+                }
+            }
+            .by_gender{
+                flex-direction: column;
+                .checkbox_header{
+                    font-family: Averta;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #666666;
+                }
+            }
+            .by_availability{
+                flex-direction: column;
+                .checkbox_header{
+                    font-family: Averta;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #666666;
+                }
+            }
+        .border{
+            width: 90%;
+            margin: 0 auto;
+            background-color: #dee2e6!important;
+            height: 1px;
+            border-radius: 5px;
+        }
+    }

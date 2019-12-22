@@ -1,0 +1,45 @@
+#breadcumbs{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    ul{
+        margin: 0;
+        padding-left: 0;
+        li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 20px;
+           
+            a{
+                position: relative;
+                text-decoration: none;
+                font-family: Averta;
+                font-size: 14px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #999999;
+                &::before{
+                    content: url("../img/breadcumbs/right.svg");
+                    position: absolute;
+                    // background-image: url("../img/breadcumbs/right.svg");
+                    top: 0px;
+                    right: -15px;
+                    z-index: 9999;
+                }
+                
+            }
+            &:nth-last-child(1){
+                a{
+                    color: $main-color !important;
+                    &::before{
+                        content:"";
+                    }
+                }
+            }
+        }
+    }
+}

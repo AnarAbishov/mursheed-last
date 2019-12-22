@@ -1,0 +1,96 @@
+#popular_locations{
+    margin-bottom: 50px;
+    .most_popular_drivers_bottom_item {
+        // border: 1px solid #c9c9c9;
+        margin: 1px;
+        box-shadow: 0px 0px 0px 1px #c9c9c9;
+        border-radius: 3px;
+        text-align: left;
+        margin-bottom: 20px;
+        img {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        .most_popular_drivers_name{
+            margin-left: 12px;
+            font-family: Averta;
+            font-size: 16px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+        }
+        .most_popular_drivers_bottom_item_ratings{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            img{
+                width: 20px;
+                margin-bottom: 0px;
+                margin-left: 10px;
+            }
+            p{
+                margin-left: 11px;
+                font-family: Averta;
+                font-size: 13px;
+                margin-bottom: 0px;
+            }
+            span{
+                font-family: Averta;
+                font-size: 13px;
+                color: #888888;
+                line-height: 26px;
+                margin-left: 10px;                                
+            }
+        }
+        p{
+            margin-left: 12px;
+            font-family: Averta;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        .most_popular_drivers_bottom_item_rides{
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0px;
+            p{
+    
+            }
+            .unavailable{
+                width: 90px;
+                height: 20px;
+                border-radius: 2px;
+                background-color: #ac1b1b;  
+                font-family: Averta;
+                font-size: 10px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #ffffff;
+                margin-right: 12px;
+                line-height: 8px;
+            }
+            .available{
+                width: 90px;
+                height: 20px;
+                border-radius: 2px;
+                background-color: #38b77b;  
+                font-family: Averta;
+                font-size: 10px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #ffffff; 
+                margin-right: 12px;
+                line-height: 8px;
+            }
+        }
+    }
+}

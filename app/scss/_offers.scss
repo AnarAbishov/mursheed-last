@@ -1,0 +1,40 @@
+#offers {
+    margin-bottom: 50px;
+    .our_offers_partners_bottom_item {
+        margin: 1px;
+        box-shadow: 0px 0px 0px 1px #c9c9c9;
+        border-radius: 3px;
+        text-align: left;
+        position: relative;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+        }
+
+        .item_position_bottom {
+            position: absolute;
+            bottom: 0;
+
+            .our_offers_partners_name {
+                margin-left: 12px;
+                font-family: Averta;
+                font-size: 16px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: white;
+            }
+
+            p {
+                margin-left: 12px;
+                font-family: Averta;
+                font-size: 13px;
+                margin-bottom: 4px;
+                color: white;
+            }
+        }
+    }
+}

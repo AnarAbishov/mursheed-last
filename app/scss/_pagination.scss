@@ -1,0 +1,60 @@
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    div{
+        background-color: #f7f7f7;
+        display: inline-block;
+        ul{
+            margin: 0;
+            padding: 0;
+            .active{
+                opacity: 1!important;
+            }
+            li{
+                cursor: pointer;
+                list-style: none;
+                display: inline-block;
+                padding: 3px 7px;
+                position: relative;
+                opacity: 0.5;
+                font-family: Averta;
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: black;
+                &::before{
+                    content: "";
+                    width: 1px;
+                    height: 15px;
+                    border: solid 0.5px #dfdfdf;
+                    position: absolute;
+                    top: 20%;
+                    right: -2px;
+                }
+                &:nth-last-child(1){
+                    border-left: 1px solid #8080803b;
+                    &::before{
+                        content: " ";
+                        display: none;
+                    }
+                }
+                &:nth-last-child(2){
+                    // border-left: 1px solid grey;
+                    &::before{
+                        content: " ";
+                        display: none;
+                    }
+                }
+                &:nth-child(1){
+                    border-right: 1px solid #8080803b;
+                    &::before{
+                        content: " ";
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
