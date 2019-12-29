@@ -1,4 +1,3 @@
-
 var x, i, j, selElmnt, a, b, c;
 /*look for any elements with the class "custom-selectbox":*/
 x = document.getElementsByClassName("custom-selectbox");

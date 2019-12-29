@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
+    <style>
+        .profile_img {
+            width: 15%;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: flex-start !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -84,167 +94,135 @@
         </div>
     </header>
     <section id="breadcumbs">
-            <div class="container">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="offers.html">Offers</a></li>
-                </ul>
-            </div>
-        </section>
-    <section id="offers">
         <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <div class="item_body">
-                        <div class="custom-selectbox">
-                            <select>
-                                <option value="0">Countries</option>
-                                <option value="1">Azerbaijan</option>
-                                <option value="2">Turkey</option>
-                                <option value="3">Germany</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item_body">
-                        <div class="custom-selectbox">
-                            <select>
-                                <option value="0">Cities</option>
-                                <option value="1">Baku</option>
-                                <option value="2">Qazax</option>
-                                <option value="3">Ganja</option>
-                                <option value="4">Shaki</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item_body">
-                        <div class="custom-selectbox">
-                            <select>
-                                <option value="0">Place</option>
-                                <option value="1">Restaurant</option>
-                                <option value="2">Cafe</option>
-                                <option value="3">Playground</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ul>
+                <li><a href="@Url.Action(" Index","Home")">Home</a></li>
+                <li><a href="@Url.Action(" Index","FlightReservation")">Flight Reservation</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="guides_drivers">
+        <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                        <div class="our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle1.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class="our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                <!--#region Guides & Drivers paging-->
+                <div class="col-md-12">
+                    <div class="content">
+                        <div class="header">
+                            <h4>Flight Reservation<span>(12)</span></h4>
+                            <div class="custom-selectbox">
+                                <select>
+                                    <option value="0">All cities</option>
+                                    <option value="1">Baku</option>
+                                    <option value="2">Qazax</option>
+                                    <option value="3">Ganja</option>
+                                    <option value="4">Shaki</option>
+                                </select>
+                            </div>
                         </div>
-                </div>
-                <div class="col-md-3">
-                        <div class="our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle2.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
+                        <div class="body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="person_details">
+                                        <div class="profile">
+                                            <div class="profile_img">
+                                                <img style="width:100%"
+                                                    src="http://almursheed.com/Custom/img/azal.png" />
+                                            </div>
+                                            <div class="profile_details">
+                                                <h4>Azerbaijan Airlines</h4>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="light-btn">Details</button>
+                                        </div>
+                                    </div>
                                 </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle3.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
+                                <div class="col-md-6">
+                                    <div class="person_details">
+                                        <div class="profile">
+                                            <div class="profile_img">
+                                                <img style="width:100%"
+                                                    src="http://almursheed.com/Custom/img/azal.png" />
+                                            </div>
+                                            <div class="profile_details">
+                                                <h4>Azerbaijan Airlines</h4>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="light-btn">Details</button>
+                                        </div>
+                                    </div>
                                 </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle4.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
+                                <div class="col-md-6">
+                                    <div class="person_details">
+                                        <div class="profile">
+                                            <div class="profile_img">
+                                                <img style="width:100%"
+                                                    src="http://almursheed.com/Custom/img/azal.png" />
+                                            </div>
+                                            <div class="profile_details">
+                                                <h4>Azerbaijan Airlines</h4>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="light-btn">Details</button>
+                                        </div>
+                                    </div>
                                 </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle1.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
+                                <div class="col-md-6">
+                                    <div class="person_details">
+                                        <div class="profile">
+                                            <div class="profile_img">
+                                                <img style="width:100%"
+                                                    src="http://almursheed.com/Custom/img/azal.png" />
+                                            </div>
+                                            <div class="profile_details">
+                                                <h4>Azerbaijan Airlines</h4>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="light-btn">Details</button>
+                                        </div>
+                                    </div>
                                 </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle2.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
+                                <div class="col-md-6">
+                                    <div class="person_details">
+                                        <div class="profile">
+                                            <div class="profile_img">
+                                                <img style="width:100%"
+                                                    src="http://almursheed.com/Custom/img/azal.png" />
+                                            </div>
+                                            <div class="profile_details">
+                                                <h4>Azerbaijan Airlines</h4>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="light-btn">Details</button>
+                                        </div>
+                                    </div>
                                 </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle3.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
+                                <div class="col-md-6">
+                                    <div class="person_details">
+                                        <div class="profile">
+                                            <div class="profile_img">
+                                                <img style="width:100%"
+                                                    src="http://almursheed.com/Custom/img/azal.png" />
+                                            </div>
+                                            <div class="profile_details">
+                                                <h4>Azerbaijan Airlines</h4>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="light-btn">Details</button>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
                         </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle4.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle1.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle2.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle3.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle4.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
-                        </div>
-                </div>
-            </div>
-            <div class="pagination">
-                <div>
-                        <ul>
+                    </div>
+                    <div class="pagination">
+                        <div>
+                            <ul>
                                 <li>
                                     <img src="img/pagination/left-arrow.svg" alt="">
                                 </li>
@@ -260,8 +238,10 @@
                                     <img src="img/pagination/right-arrow.svg" alt="">
                                 </li>
                             </ul>
+                        </div>
+                    </div>
                 </div>
-                
+                <!--#endregion Guides & Drivers paging-->
             </div>
         </div>
     </section>
@@ -290,7 +270,7 @@
                         <div class="site-map">
                             <p class="header-text">Site map</p>
                             <ul>
-                                <li><a href="">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="">Guides & Drivers</a></li>
                                 <li><a href="offers.html">Offers</a></li>
@@ -331,7 +311,6 @@
         </div>
     </footer>
     <script src="js/selectbox.js"></script>
-
     <script src="js/script.js"></script>
 </body>
 

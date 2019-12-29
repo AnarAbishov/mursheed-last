@@ -90,7 +90,7 @@
         <div class="container">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="driver_register.html">Driver Register</a></li>
+                <li><a href="tourist_register.html">Tourist Register</a></li>
             </ul>
         </div>
     </section>
@@ -101,10 +101,11 @@
                 <div class="col-md-8">
                     <div class="wrapper">
                         <div class="header">
-                            <h3>Driver Register</h3>
+                            <h3>Tourist Register</h3>
                         </div>
                         <div class="form">
-                            <form onSubmit="return confirm('Şərtlərimizlə razısan, tülək ?');" method="POST" @returnUrl" id="form-horizontal" enctype="multipart/form-data"
+                            <form onSubmit="return confirm('Şərtlərimizlə razısan, tülək ?');" method="POST" @returnUrl"
+                                id="form-horizontal" enctype="multipart/form-data"
                                 class="driverRegister form-horizontal form-wizard-wrapper wizard" autocomplete="off">
                                 <h3>Info</h3>
                                 <fieldset>
@@ -136,134 +137,19 @@
                                                 <option>Norway</option>
                                             </select>
                                             <span asp-validation-for="CountryId" class="text-danger"></span>
-                                            <span asp-validation-for="CountryId" class="text-danger"></span>
                                         </div>
                                         <!--end form-group-->
-                                        <div class="form-group mb-0 inputs">
-                                            <label asp-for="LanguageIds">Language</label>
-                                            <select class="form-control select2MultipleDropDown formField"
-                                                asp-for="LanguageIds" multiple="multiple" asp-items="ViewBag.Languages">
-                                                <option>Azerbaijani</option>
-                                                <option>Russian</option>
-                                                <option>English</option>
-                                                <option>Turkish</option>
-                                                <option>Russian</option>
-                                                <option>English</option>
-                                                <option>Turkish</option>
-                                            </select>
-                                            <span asp-validation-for="LanguageIds" class="text-danger"></span>
-                                        </div>
                                         <!--end form-group-->
-                                        <div class="form-group mb-0 inputs">
-                                            <label asp-for="Photo" class="col-form-label">Photo</label>
+                                        <div class="form-group inputs">
+                                            <label asp-for="AdditionalInfo" class="col-form-label">Additional
+                                                Info</label>
                                             <div class="">
-                                                <input asp-for="Photo" class="form-control formField" type="file"
-                                                    placeholder="@Html.DisplayNameFor(m => m.Photo)">
-                                                <span asp-validation-for="Photo" class="text-danger"></span>
+                                                <input asp-for="AdditionalInfo" class="form-control formField"
+                                                    type="text" placeholder="More About Yourself" autocomplete="off">
+                                                <span asp-validation-for="AdditionalInfo" class="text-danger"></span>
                                             </div>
                                         </div>
                                         <!--end form-group-->
-                                    </div>
-                                </fieldset>
-                                <!--end fieldset-->
-
-                                <h3>Car</h3>
-                                <fieldset>
-                                    <div class="custom-container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group inputs">
-                                                    <label asp-for="BrandId">Brand</label>
-                                                    <select onchange="onChangeSelect(this)"
-                                                        class="form-control fillChildSelect formField" asp-for="BrandId"
-                                                        asp-items="ViewBag.Brands">
-                                                        <option>Audi</option>
-                                                        <option>BMW</option>
-                                                        <option>Mercedes</option>
-                                                    </select>
-                                                    <span asp-validation-for="BrandId" class="text-danger"></span>
-                                                </div>
-                                                <!--end form-group-->
-                                                <div class="form-group inputs">
-                                                    <label asp-for="ModelId">Model</label>
-                                                    <select class="form-control formField" asp-for="ModelId">
-                                                        <option>A1</option>
-                                                        <option>A2</option>
-                                                        <option>A3</option>
-                                                        <option>A4</option>
-                                                    </select>
-                                                    <span asp-validation-for="ModelId" class="text-danger"></span>
-                                                </div>
-                                                <!--end form-group-->
-                                                <div class="form-group inputs">
-                                                    <label asp-for="CarPhotos" class="col-form-label">Car Photos</label>
-                                                    <div class="">
-                                                        <input asp-for="CarPhotos" class="form-control formField"
-                                                            type="file" multiple="multiple">
-                                                        <span asp-validation-for="CarPhotos" class="text-danger"></span>
-                                                    </div>
-                                                </div>
-                                                <!--end form-group-->
-                                            </div>
-                                        </div>
-                                        <!--end row-->
-                                    </div>
-                                </fieldset>
-                                <!--end fieldset-->
-
-                                <h3>Additional</h3>
-                                <fieldset>
-                                    <div class="custom-container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group inputs">
-                                                    <label asp-for="GovernmentalId" class="col-form-label">Governmental
-                                                        Id</label>
-                                                    <div class="">
-                                                        <input asp-for="GovernmentalId" class="form-control formField"
-                                                            type="text" value="" autocomplete="off"
-                                                            placeholder="Your Governmental Id">
-                                                        <span asp-validation-for="GovernmentalId"
-                                                            class="text-danger"></span>
-                                                    </div>
-                                                </div>
-                                                <!--end form-group-->
-                                                <div class="form-group inputs">
-                                                    <label asp-for="DriverLicenseId" class="col-form-label">Driver
-                                                        License Id</label>
-                                                    <div class="">
-                                                        <input asp-for="DriverLicenseId" class="form-control formField"
-                                                            type="text" value="" autocomplete="off"
-                                                            placeholder="Your Driver Dicense Id">
-                                                        <span asp-validation-for="DriverLicenseId"
-                                                            class="text-danger"></span>
-                                                    </div>
-                                                </div>
-                                                <!--end form-group-->
-                                                <div class="form-group inputs">
-                                                    <label asp-for="PhoneNumber" class="col-form-label">Phone
-                                                        Number</label>
-                                                    <div class="">
-                                                        <input asp-for="PhoneNumber" class="form-control formField"
-                                                            type="tel" value="" autocomplete="off"
-                                                            placeholder="Your Phone Number">
-                                                        <span asp-validation-for="PhoneNumber"
-                                                            class="text-danger"></span>
-                                                    </div>
-                                                </div>
-                                                <!--end form-group-->
-                                                <div class="form-group inputs">
-                                                    <label asp-for="Birthdate" class="col-form-label">Birthdate </label>
-                                                    <div class="">
-                                                        <input asp-for="Birthdate" class="form-control formField"
-                                                            type="date" value="" autocomplete="off">
-                                                        <span asp-validation-for="Birthdate" class="text-danger"></span>
-                                                    </div>
-                                                </div>
-                                                <!--end form-group-->
-                                            </div>
-                                        </div>
-                                        <!--end row-->
                                     </div>
                                 </fieldset>
                                 <!--end fieldset-->
@@ -300,6 +186,7 @@
                                                     </div>
                                                     <span asp-validation-for="Username" class="text-danger"></span>
                                                 </div>
+
                                                 <div class="form-group inputs">
                                                     <label asp-for="Password">Password</label>
                                                     <div class="input-group">
@@ -404,11 +291,10 @@
             </div>
         </div>
     </footer>
-    <script src="js/selectbox.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/selectbox.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
     <script src="js/sweetalert.min.js"></script>
     <script src="js/SwalUtility.js" asp-append-version="true"></script>
     <script src="js/jquery.steps.min.js"></script>

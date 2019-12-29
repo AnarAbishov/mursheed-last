@@ -90,7 +90,7 @@
         <div class="container">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="driver_register.html">Driver Register</a></li>
+                <li><a href="guide_register.html">Guide Register</a></li>
             </ul>
         </div>
     </section>
@@ -101,7 +101,7 @@
                 <div class="col-md-8">
                     <div class="wrapper">
                         <div class="header">
-                            <h3>Driver Register</h3>
+                            <h3>Guide Register</h3>
                         </div>
                         <div class="form">
                             <form onSubmit="return confirm('Şərtlərimizlə razısan, tülək ?');" method="POST" @returnUrl" id="form-horizontal" enctype="multipart/form-data"
@@ -147,9 +147,6 @@
                                                 <option>Russian</option>
                                                 <option>English</option>
                                                 <option>Turkish</option>
-                                                <option>Russian</option>
-                                                <option>English</option>
-                                                <option>Turkish</option>
                                             </select>
                                             <span asp-validation-for="LanguageIds" class="text-danger"></span>
                                         </div>
@@ -167,50 +164,6 @@
                                 </fieldset>
                                 <!--end fieldset-->
 
-                                <h3>Car</h3>
-                                <fieldset>
-                                    <div class="custom-container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group inputs">
-                                                    <label asp-for="BrandId">Brand</label>
-                                                    <select onchange="onChangeSelect(this)"
-                                                        class="form-control fillChildSelect formField" asp-for="BrandId"
-                                                        asp-items="ViewBag.Brands">
-                                                        <option>Audi</option>
-                                                        <option>BMW</option>
-                                                        <option>Mercedes</option>
-                                                    </select>
-                                                    <span asp-validation-for="BrandId" class="text-danger"></span>
-                                                </div>
-                                                <!--end form-group-->
-                                                <div class="form-group inputs">
-                                                    <label asp-for="ModelId">Model</label>
-                                                    <select class="form-control formField" asp-for="ModelId">
-                                                        <option>A1</option>
-                                                        <option>A2</option>
-                                                        <option>A3</option>
-                                                        <option>A4</option>
-                                                    </select>
-                                                    <span asp-validation-for="ModelId" class="text-danger"></span>
-                                                </div>
-                                                <!--end form-group-->
-                                                <div class="form-group inputs">
-                                                    <label asp-for="CarPhotos" class="col-form-label">Car Photos</label>
-                                                    <div class="">
-                                                        <input asp-for="CarPhotos" class="form-control formField"
-                                                            type="file" multiple="multiple">
-                                                        <span asp-validation-for="CarPhotos" class="text-danger"></span>
-                                                    </div>
-                                                </div>
-                                                <!--end form-group-->
-                                            </div>
-                                        </div>
-                                        <!--end row-->
-                                    </div>
-                                </fieldset>
-                                <!--end fieldset-->
-
                                 <h3>Additional</h3>
                                 <fieldset>
                                     <div class="custom-container">
@@ -224,18 +177,6 @@
                                                             type="text" value="" autocomplete="off"
                                                             placeholder="Your Governmental Id">
                                                         <span asp-validation-for="GovernmentalId"
-                                                            class="text-danger"></span>
-                                                    </div>
-                                                </div>
-                                                <!--end form-group-->
-                                                <div class="form-group inputs">
-                                                    <label asp-for="DriverLicenseId" class="col-form-label">Driver
-                                                        License Id</label>
-                                                    <div class="">
-                                                        <input asp-for="DriverLicenseId" class="form-control formField"
-                                                            type="text" value="" autocomplete="off"
-                                                            placeholder="Your Driver Dicense Id">
-                                                        <span asp-validation-for="DriverLicenseId"
                                                             class="text-danger"></span>
                                                     </div>
                                                 </div>
@@ -300,6 +241,7 @@
                                                     </div>
                                                     <span asp-validation-for="Username" class="text-danger"></span>
                                                 </div>
+                                                
                                                 <div class="form-group inputs">
                                                     <label asp-for="Password">Password</label>
                                                     <div class="input-group">
