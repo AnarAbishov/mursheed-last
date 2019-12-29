@@ -1,0 +1,46 @@
+#offers{
+    img{
+        width: 100%;
+    }
+    section{
+        header{
+            margin: 30px 0px;
+        }
+    }
+    .offers-loc-header{
+        h2{
+            display: flex;
+            align-items: center;
+
+            span{
+                margin-left: 10px;
+                background-color: #0b8071;
+            }
+        }
+    }
+    .offers-thumbnails{
+        margin-top: 30px;
+        
+        img{
+            margin-bottom: 30px;
+        }
+    }
+    .promotion-code{
+        span{
+            background-color: darkgoldenrod;
+        }
+    }
+    .discount{
+        span{
+            background-color: #0b8071;
+        }
+    }
+    .offers-contact{
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none; 
+        }
+        margin-bottom: 30px;
+    }
+}

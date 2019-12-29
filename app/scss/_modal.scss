@@ -1,0 +1,21 @@
+.overlay{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.7);
+    display: none;
+
+    .popup{
+        height: auto;
+        margin: 10vh auto;
+        width: 70%;
+
+        img{
+            width: 100%;
+            box-shadow: 0px 0px 25px black;
+        }
+    }
+}
