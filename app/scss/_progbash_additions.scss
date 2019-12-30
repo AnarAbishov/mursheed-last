@@ -104,9 +104,12 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 //guide_register.hmtl, tourist_register.html
-input,
-select {
-    width: 100% !important;
+
+.guide-register-section, .tourist-register-section{
+    input,
+    select {
+        width: 100% !important;
+    }
 }
 input[type="file"]{
     padding: 10px 15px !important;
