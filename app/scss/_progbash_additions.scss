@@ -105,9 +105,12 @@ input[type=range]:focus::-ms-fill-upper {
 
 //guide_register.hmtl, tourist_register.html
 
+#login_register .wrapper .form .inputs input{
+    width: 100% !important;
+}
+
 .guide-register-section,
 .tourist-register-section {
-
     input,
     select {
         width: 100% !important;
@@ -125,19 +128,19 @@ input[type="file"] {
 .select2-container--default .select2-selection--multiple {
     background-color: transparent;
     border: 1px solid #dfdfdf;
-    height: 46px !important;
+    height: auto !important;
 }
 
 .select2-search__field {
-    height: 44px !important;
+    height: 40px !important;
     border: none !important;
     margin: 0px !important;
-    padding: 0px 13px !important;
+    padding: 0px 5px !important;
     background-color: #f7f7f7 !important;
 }
-
 .select2-selection--multiple {
     border: 1px solid #dfdfdf !important;
+    background-color: #f7f7f7 !important;
 }
 
 select.form-control {
@@ -147,7 +150,7 @@ select.form-control {
 
 .select2-selection__rendered {
     height: 100%;
-    overflow-y: scroll !important;
+    // overflow-y: scroll !important;
 }
 
 .custom-container {
@@ -174,4 +177,12 @@ ul.dashed {
 ul.dashed>li:before {
     content: "-";
     margin-right: 30px;
+}
+
+//accomodations page price slider:
+.ui-slider-range{
+    background-color: #1A7F70;
+}
+.price-range-slider .item_header{
+    padding: 10px 0px !important;
 }

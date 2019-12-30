@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -157,17 +159,18 @@
                             </div>
                             <div class="border"></div>
                             <div class="filter_item">
-                                <div class="item_header ">
-                                    <h6>By room</h6>
-                                    <div class="plus activate"><i class="fas fa-plus"></i></div>
-                                    <div class="plus"><i class="fas fa-minus"></i></div>
-                                </div>
                                 <div class="item_body by_language">
                                     <div data-role="rangeslider"
                                         class="align-items-center d-flex justify-content-between">
-                                        <label for="price-min">Price:</label>
-                                        <input type="range" name="price-min" id="price-min" value="50" min="0"
-                                            max="1000">
+                                        <div class="price-range-slider">
+                                            <div class="item_header">
+                                                <h6 >By price</h6>   
+                                            </div>
+                                            <p>
+                                                <input type="text" id="amount" readonly style="border:0; color:#1A7F70; background-color: transparent;">
+                                            </p>
+                                            <div id="slider-range"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -363,8 +366,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/selectbox.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/jquery-slider.js"></script>
 </body>
 
 </html>
