@@ -105,18 +105,23 @@ input[type=range]:focus::-ms-fill-upper {
 
 //guide_register.hmtl, tourist_register.html
 
-.guide-register-section, .tourist-register-section{
+.guide-register-section,
+.tourist-register-section {
+
     input,
     select {
         width: 100% !important;
     }
 }
-input[type="file"]{
+
+input[type="file"] {
     padding: 10px 15px !important;
 }
-.select2-selection__rendered{
+
+.select2-selection__rendered {
     background-color: #f7f7f7;
 }
+
 .select2-container--default .select2-selection--multiple {
     background-color: transparent;
     border: 1px solid #dfdfdf;
@@ -139,7 +144,8 @@ select.form-control {
     background-color: transparent !important;
     height: 46px !important;
 }
-.select2-selection__rendered{
+
+.select2-selection__rendered {
     height: 100%;
     overflow-y: scroll !important;
 }
@@ -150,8 +156,19 @@ select.form-control {
 }
 
 //show and hide password buttons
-button.view, button.view_confrim{
+button.view,
+button.view_confrim {
     background-color: #F7F7F7;
     border: 1px solid #DFDFDF;
     border-left: none;
+}
+
+//list-style-type: dashed
+ul.dashed {
+    list-style-type: none;
+}
+
+ul.dashed>li:before {
+    content: "-";
+    margin-right: 30px;
 }
