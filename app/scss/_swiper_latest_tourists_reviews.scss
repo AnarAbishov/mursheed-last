@@ -114,10 +114,43 @@
             font-size: 18px !important;
         }
         .swiper-button-next{
-            right: -15px !important;
+            right: -7px !important;
         }
         .swiper-button-prev{
-            left: -15px !important;
+            left: -7px !important;
+        }
+    }
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    #swiper_latest_tourists_reviews{
+        .swiper_latest_tourists_reviews_top{
+            align-items: baseline;
+           margin: 0px 25px 10px !important;
+           h6{
+               font-size: 16px !important;
+           }
+        }
+        .swiper_latest_tourists_reviews_bottom{
+            .swiper-slide {
+                .swiper_latest_tourists_reviews_bottom_item{
+                    width: 90% !important;
+                }
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 448px) {
+    #swiper_latest_tourists_reviews{
+        .swiper_latest_tourists_reviews_top{
+            h6{
+                font-size: 14px !important;
+            }
+            a{
+                font-size: 14px !important;
+            }
         }
     }
   }

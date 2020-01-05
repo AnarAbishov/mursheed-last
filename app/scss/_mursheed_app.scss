@@ -34,6 +34,23 @@
     }
 }
 
+@media only screen and (max-width: 991px) {
+    #swiper{
+        height: 450 !important;
+    }
+    #mursheed_app{
+        .mursheed_app_inside{
+            flex-direction: column;
+            .mursheed_app_left{
+                margin-bottom: 45px;
+            }
+            .mursheed_app_right{
+              
+            }
+        }
+    }
+  }
+
 @media only screen and (max-width: 768px) {
     #swiper{
         height: 450 !important;
@@ -50,6 +67,46 @@
                     width: 100% !important;
                 }
             }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #swiper{
+        height: 450 !important;
+    }
+    #mursheed_app{
+        margin-top: 40px !important;
+        .mursheed_app_inside{
+            flex-direction: column;
+            .mursheed_app_left{
+                padding-left: 0px !important;
+                margin-bottom: 50px;
+                h6{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 13px !important;
+                }
+            }
+            .mursheed_app_right{
+                img{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 448px) {
+    #swiper{
+        height: 450 !important;
+    }
+    #mursheed_app{
+        margin-top: 40px !important;
+        .app_btn{
+            display: flex;
+            justify-content: space-evenly;
         }
     }
   }

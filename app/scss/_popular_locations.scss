@@ -8,7 +8,7 @@
         text-align: left;
         margin-bottom: 20px;
         img {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             width: 100%;
         }
         .most_popular_drivers_name{
@@ -94,3 +94,53 @@
         }
     }
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    #swiper_popular_attractions_locations{
+      .swiper_popular_attractions_locations_top{
+        // margin: 0 5px 10px!important;
+      }
+     .swiper_popular_attractions_locations_bottom{
+        .swiper-button-next{
+            right: -7px !important;
+        }
+        .swiper-button-prev{
+            right: -7px !important;
+        }
+     }
+        
+    }
+  }
+
+  @media only screen and (max-width: 575px) {
+    #popular_locations {
+      .most_popular_drivers_bottom_item{
+        margin: 15px 30px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 448px) {
+    #swiper_popular_attractions_locations{
+      .swiper_popular_attractions_locations_top{
+        margin: 0 5px 10px!important;
+        h6{
+            font-size: 14px !important;
+        }
+        a{
+            font-size: 14px !important;
+        }
+      }
+     .swiper_popular_attractions_locations_bottom{
+        .swiper-button-next{
+            right: -7px !important;
+        }
+        .swiper-button-prev{
+            right: -7px !important;
+        }
+     }
+        
+    }
+  }

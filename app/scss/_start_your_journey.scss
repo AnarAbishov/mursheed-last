@@ -95,3 +95,39 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 600px) {
+  #start_your_journey{
+    margin: 40px 0 !important;
+    .start_your_journey_top{
+      margin-bottom: 25px;
+      h6{
+      font-size: 22px !important;
+      }
+    }
+    .start_your_journey_bottom{
+      input{
+        font-size: 13px;
+        width: 30% !important;
+      }
+      button{
+        min-width: 65px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #start_your_journey{
+    .start_your_journey_top{
+
+    }
+    .start_your_journey_bottom{
+      input{
+        font-size: 12px;
+        padding-left: 6px !important;
+      }
+    }
+  }
+}

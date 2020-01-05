@@ -122,46 +122,7 @@ header{
         }
     }
 }
-@media only screen and (max-width:590px){
-    header{
-        font-size: 13px !important;
-        a{
-            font-size: 15px !important;
-        }
-        button{
-            min-width: 100px !important;
-            font-size: 13px !important;
-        }
-        .logo{
-            img{
-                width: 95%;
-            }
-        }
-        .currency-country{
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-            flex-direction: column;
-            .country{
-                margin-left: 0 !important;
-            }
-        }
-        .buttons{
-            display: flex;
-            flex-direction: column;
-        }
-        
 
-    }
-}
-@media only screen and (max-width:420px){
-    header{
-        nav{
-            li{
-                margin-right: 3px !important;
-            }
-        }
-    }
-}
 @media only screen and (max-width:992px){
     .country{
         margin-left: 20px !important;
@@ -172,5 +133,84 @@ header{
     }
     a{
         font-size: 15px !important;
+    }
+}
+
+@media only screen and (max-width:590px){
+    header{
+        font-size: 13px !important;
+        .inner-header{
+            .inside-inner{
+                a{
+                    font-size: 13px !important;
+                }
+            }
+        }
+        a{
+            font-size: 15px !important;
+        }
+        button{
+            min-width: 100px !important;
+            font-size: 13px !important;
+        }
+        .logo{
+            img{
+                width: 165px !important;
+            }
+        }
+        .currency-country{
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            flex-direction: column;
+            .currency{
+                .custom-selectbox{
+                    .select-selected{
+                        font-size: 13px !important;
+                    }
+                }
+            }
+            .country{
+                margin-left: 0 !important;
+                .custom-selectbox{
+                    .select-selected{
+                        font-size: 13px !important;
+                    }
+                }
+            }
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            button:nth-child(2){
+                margin-bottom: 0px !important;
+            }
+        }
+        
+
+    }
+}
+@media only screen and (max-width:420px){
+    header{
+        .logo{
+            img{
+                width: 130px !important;
+            }
+        }
+        .buttons{
+            button{
+                min-width: 70px!important;
+            }
+        }
+        nav{
+            li{
+                margin-right: 3px !important;
+            }
+        }
+        .menu{
+            ul{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
     }
 }

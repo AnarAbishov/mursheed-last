@@ -3,9 +3,9 @@ var swiper = new Swiper('#swiper_most_popular_drivers .swiper_most_popular_drive
     spaceBetween: 10,
     loop: true,
     loopFillGroupWithBlank: true,
-    autoplay: {
-      delay: 3000,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    // },
     speed: 3000,
     pagination: {
       el: '.swiper-pagination',

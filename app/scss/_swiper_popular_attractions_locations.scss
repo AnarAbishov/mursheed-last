@@ -138,10 +138,37 @@
             font-size: 18px !important;
         }
         .swiper-button-next{
-            right: -15px !important;
+            right: -7px !important;
         }
         .swiper-button-prev{
-            left: -15px !important;
+            left: -7px !important;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #swiper_popular_attractions_locations{
+        .swiper_popular_attractions_locations_top{
+            align-items: baseline;
+            margin: 0px 5px 10px;
+            h6{
+                font-size: 16px !important;
+            }
+        }
+        .swiper_popular_attractions_locations_bottom{
+            .popular_attractions_locations_bottom_item{
+                width: 90% !important;
+            }
+        }
+        
+        
+    }
+  }
+
+  @media only screen and (max-width: 448px) {
+    #swiper_popular_attractions_locations{
+        .swiper_popular_attractions_locations_top{
+            margin: 0px 5px 10px!important;
         }
     }
   }

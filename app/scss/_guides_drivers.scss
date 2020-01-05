@@ -136,3 +136,146 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 500px) {
+    #guides_drivers{
+        padding: 15px 0px;
+        .radio_buttons{
+            label{
+                font-size: 15px;
+            }
+        }
+        .filter{
+            .filter_header{
+                h4{
+                    font-size: 16px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+            .filter_body{
+                .filter_item{
+                    .item_header{
+                        h6{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .content{
+          .header{
+            h4{
+                font-size: 17px;
+            }
+            .custom-selectbox{
+                width: 33% !important;
+            }
+          }
+          .body{
+            .person_details{
+                flex-wrap: wrap;
+                .profile{
+                    width: 100%;
+                    justify-content: center;
+                    padding: 20px 0 3px 0 !important;
+                    .profile_img{
+
+                    }
+                    .profile_details{
+                        margin-left: 15px;
+                        
+                        h4{
+                            font-size: 17px;
+                        }
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                }
+                .buttons{
+                    width: 100%;
+                    justify-content: center;
+                    flex-direction: row;
+                    // margin-left: 20px;
+                    .reyting{
+                        margin-right: 15px;
+                    }
+                    button{
+                        min-width: 60px !important;
+                       margin-right: 15px;
+                    }
+                 
+                }
+            }
+          }
+      }
+    }
+  }
+
+
+  @media only screen and (max-width: 345px) {
+    #guides_drivers{
+      .content{
+          .header{
+            h4{
+                font-size: 17px;
+            }
+            .custom-selectbox{
+                width: 37% !important;
+            }
+          }
+          .body{
+            .person_details{
+                flex-wrap: wrap;
+                .profile{
+                    width: 100%;
+                    justify-content: center;
+                    .profile_img{
+
+                    }
+                    .profile_details{
+                        margin-left: 15px;
+                        
+                        h4{
+                            font-size: 15px;
+                        }
+                        p{
+                            font-size: 13px;
+                        }
+                        .div{
+                            button{
+                                min-width: 30px !important;
+                                margin-right: 5px;
+                                padding: 5px 9px;
+                            }
+                        }
+                    }
+                }
+                .buttons{
+                    width: 100%;
+                    justify-content: center;
+                    flex-direction: row;
+                    // margin-left: 20px;
+                    .reyting{
+                        margin-right: 9px;
+                    }
+                    button{
+                        min-width: 60px !important;
+                       margin-right: 9px;
+                    }
+                 
+                }
+            }
+          }
+      }
+    }
+  }
+
+
+
+  
+
+  

@@ -4,7 +4,7 @@
         width: 100%;
         // height: 100px;
         background-color: #F7F7F7;
-        padding: 60px;
+        padding: 60px 0px;
         .header{
             text-align: center;
             margin-bottom: 20px;
@@ -226,3 +226,218 @@
         }
     }
 }
+
+@media only screen and (max-width:991px){
+    #login_register{
+        background-color: #f7f7f7;
+        .wrapper{
+            // background-color: white;
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+    #login_register{
+        .container{
+            max-width: 100%;
+            .wrapper{
+                padding: 25px 0px;
+                .header{
+                    h3{
+                        font-size: 25px;
+                    }
+                }
+                .form{
+                    form{
+                        width: 100% !important;
+                        .InputGroup{
+                            // flex-wrap: wrap;
+                            label{
+                                width: 130px;
+                                height: 130px;
+                            }
+                        }
+                        .inputs{
+                            margin-top: 10px;
+                            label{
+                                font-size: 16px;
+                            }
+                            input{
+                                font-size: 14px;
+                            }
+                        }
+                        .remember_forgot{
+                            margin-bottom: 5px;
+                        }
+                        .submit_reg{
+                            font-size: 16px !important;
+                            width: 100% !important;
+                        }
+                        .have_acc{
+                            a{
+                                font-size: 13px !important;
+                            }
+                        }
+                    }
+                  
+                }
+                .driver_register{
+                    .header{
+                        h3{
+                            font-size: 18px;
+                        }
+                    }
+                    .form{
+                        form{
+                            .inputs{
+                                margin-bottom: 20px;
+                                label{
+                                    font-size: 15px;
+                                }
+                                .custom-selectbox{
+                                    .select-selected{
+                                        font-size: 14px;
+                                    }
+                                }
+                                input{
+                                    width: 100%;
+                                }
+                                .password{
+                                    width: 100%;
+                                }
+                            }
+                            input{
+                                width: 100%;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        
+    }
+}
+
+
+
+@media only screen and (max-width:576px){
+    #login_register{
+        .container{
+            max-width: 100%;
+            .wrapper{
+                padding: 25px 0px;
+                .header{
+                    margin-bottom: 5px;
+                    h3{
+                        font-size: 22px;
+                    }
+                }
+                .form{
+                    form{
+                        width: 100% !important;
+                        .InputGroup{
+                            flex-wrap: wrap;
+                            justify-content: space-evenly;
+                            label{
+                                width: 49%;
+                                height: 130px;
+                                margin: 0px 0px 10px 0px;
+                            }
+                        }
+                        .inputs{
+                            margin-top: 10px;
+                            label{
+                                font-size: 16px;
+                            }
+                            input{
+                                font-size: 14px;
+                            }
+                        }
+                        .remember_forgot{
+                            margin-bottom: 5px;
+                        }
+                        .submit_reg{
+                            font-size: 16px !important;
+                            width: 100% !important;
+                        }
+                        .have_acc{
+                            a{
+                                font-size: 13px !important;
+                            }
+                        }
+                    }
+                  
+                }
+            }
+        }
+        
+    }
+}
+
+
+@media only screen and (max-width:400px){
+    #login_register{
+        .container{
+            max-width: 100%;
+            .wrapper{
+                padding: 25px 0px;
+                .header{
+                    margin-bottom: 5px;
+                    h3{
+                        font-size: 22px;
+                    }
+                }
+                .form{
+                    form{
+                        width: 100% !important;
+                        .InputGroup{
+                            flex-wrap: wrap;
+                            justify-content: space-evenly;
+                            label{
+                                width: 100%;
+                                height: 130px;
+                                margin: 0px 0px 10px 0px;
+                            }
+                        }
+                        .inputs{
+                            margin-top: 10px;
+                            label{
+                                font-size: 16px;
+                            }
+                            input{
+                                font-size: 14px;
+                                width: 100% !important;
+
+                            }
+                            .password{
+                                width: 100% !important;
+                            }
+                        }
+                        .remember_forgot{
+                            margin-bottom: 5px;
+                        }
+                        .submit_reg{
+                            font-size: 16px !important;
+                            width: 100% !important;
+                        }
+                        .have_acc{
+                            a{
+                                font-size: 13px !important;
+                            }
+                        }
+                        .btn_login{
+                            input{
+                                width: 100% !important;
+                            }
+                        }
+                    }
+                  
+                }
+            }
+        }
+        
+    }
+}
+

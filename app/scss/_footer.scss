@@ -21,7 +21,7 @@ footer{
             // width: 25%;
             .logo{
                 img{
-                    width: 60%;
+                    width: 70%;
                 }
             }
             .description{
@@ -93,28 +93,59 @@ footer{
         
     }
 }
+
+
+
 @media only screen and (max-width:769px){
     footer{
+        padding: 25px 0px !important;
         .social{
-            li{
-                margin-right: 5px !important;
-                img{
-                    width: 80%;
+            .description{
+                p{
+                    font-size: 13px !important;
+                }
+            }
+            .follow-us{
+                li{
+                    margin-right: 5px !important;
+                    img{
+                        width: 80%;
+                    }
+                }
+            }
+            
+        }
+        .site-map{
+            ul{
+                li{
+                    a{
+                        font-size: 13px !important;
+                    }
                 }
             }
         }
         .contact-subscribe{
+            .contact{
+                ul{
+                    li{
+                        a{
+                            font-size: 13px !important;
+                        }
+                    }
+                }
+            }
             .subscribe{
                 .send{
                     input::placeholder{
                         font-size: 12px;
                     }
+                    button{
+                        min-width: 30px!important;
+                    }
                 }
             }
         }
-        .header-text{
-            margin-top: 25px;
-        }
+       
         .site-map{
             p{
                 margin-top: 0 !important;
@@ -122,12 +153,36 @@ footer{
         }
     }
 }
-@media only screen and (max-width:590px){
+@media only screen and (max-width:575px){
     footer{
-        .logo{
-            img{
-                width: 35% !important;
+        .social{
+            .logo{
+                img{
+                    width: 125px !important;
+                }
+            }
+            .description{
+                padding: 10px 0 10px 0 !important;
+                p{
+                    font-size: 13px !important;
+                }
+            }
+            .follow-us{
+                margin-bottom: 20px;
             }
         }
+        .site-map{
+            ul{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .more{
+            ul{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        
     }
 }

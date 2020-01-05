@@ -38,3 +38,12 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 575px) {
+    #offers {
+      .our_offers_partners_bottom_item{
+        margin: 15px 30px;
+      }
+    }
+  }

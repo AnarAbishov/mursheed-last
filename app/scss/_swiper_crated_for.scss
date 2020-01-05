@@ -121,9 +121,22 @@
     }
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 448px) {
     #swiper_crated_for{
         .swiper-container{
+            .swiper-wrapper{
+                .swiper-slide{
+                    .crated_for_center{
+                        span{
+                            font-size: 14px !important;
+                            margin-bottom: 0px !important;
+                        }
+                        p{
+                            font-size: 13px !important;
+                        }
+                    }
+                }
+            }
             .swiper-button-next{
                 right: 7px;
             }

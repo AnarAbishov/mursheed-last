@@ -178,10 +178,96 @@
             font-size: 18px !important;
         }
         .swiper-button-next{
-            right: -15px !important;
+            right: -7px !important;
         }
         .swiper-button-prev{
-            left: -15px !important;
+            left: -7px !important;
         }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #swiper_most_popular_drivers{
+       .swiper_most_popular_drivers_top{
+           align-items: baseline;
+           margin: 0px 25px 10px !important;
+
+           h6{
+               font-size: 17px;
+           }
+          
+       }
+       .swiper_most_popular_drivers_bottom{
+           .swiper_most_popular_drivers_bottom_center{
+               .swiper-slide{
+                   .most_popular_drivers_bottom_item{
+                       width: 90% !important;
+                       img{
+                        margin-bottom: 10px !important;
+                       }
+                    .most_popular_drivers_bottom_item_ratings{
+                        align-items: flex-end;
+                        img{
+                            margin-bottom: 0px !important;
+                        }
+                        p{
+                         margin-bottom: 0px !important;
+                        }
+                        span{
+                            line-height: 20px !important;
+                        }
+                    }
+                   }
+                   
+               }
+               .swiper-button-next{
+                   right: -7px !important;
+               }
+               .swiper-button-prev{
+                right: -7px !important;
+            }
+           }
+       }
+    }
+  }
+
+
+  @media only screen and (max-width: 448px) {
+    #swiper_most_popular_drivers{
+       .swiper_most_popular_drivers_top{
+           align-items: baseline;
+           margin: 0px 5px 10px !important;
+           h6{
+               font-size: 14px !important;
+           }
+           a{
+               font-size: 14px !important;
+           }
+          
+       }
+       .swiper_most_popular_drivers_bottom{
+           .swiper_most_popular_drivers_bottom_center{
+               .swiper-slide{
+                   .most_popular_drivers_bottom_item{
+                       img{
+                        margin-bottom: 10px !important;
+                       }
+                    .most_popular_drivers_bottom_item_ratings{
+                        align-items: flex-end;
+                        img{
+                            margin-bottom: 0px !important;
+                        }
+                        p{
+                         margin-bottom: 0px !important;
+                        }
+                        span{
+                            line-height: 20px !important;
+                        }
+                    }
+                   }
+                   
+               }
+           }
+       }
     }
   }
