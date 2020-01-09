@@ -1,0 +1,90 @@
+@media screen and (max-width: 900px){
+    //common
+    .pagination{
+        display: flex;
+        justify-content: center;
+    }
+    //index.html
+    .start_your_journey_bottom{
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .start_your_journey_bottom input, .start_your_journey_bottom button{
+        width: 90% !important;
+        margin: 10px 0px !important;
+    }
+    .swiper_most_popular_drivers_top, .swiper_popular_attractions_locations_top, .swiper_our_offers_partners_top{
+        width: 90%;
+        margin: 20px auto !important;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    h6{
+        margin: 0;
+    }
+
+    #swiper_most_popular_drivers, #swiper_popular_attractions_locations, .swiper_our_offers_partners_bottom, .swiper_our_offers_partners_bottom_item, .swiper_latest_tourists_reviews_bottom{
+        width: 90%;
+        margin: auto;
+    }
+    .swiper-slide, .swiper-slide-active{
+        margin: 10px 0;
+    }
+    
+    .mursheed_app_left{
+        text-align: center;
+    }
+    .site-map{
+        margin-top: 25px;
+    }
+
+    //flightreservation.html
+    .aviacompany{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px;
+    }
+    .aviacompany_img{
+        width: 20%;
+        margin-right: 20px;
+    }
+    .flight_details .buttons button{
+        width: 100%;
+        margin: auto;
+    }
+
+    //driver_details.html
+    .about_driver_info_left{
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    //driver_register.html
+    .actions{
+        display: flex !important;
+        justify-content: center;
+    }   
+    .actions ul{
+        padding: 0;
+    }
+    .custom-container .col-md-12{
+        padding: 0;
+    }
+    
+    //register pages
+
+    button.view, button.view_confrim{
+        position: absolute;
+        right: 5px;
+        bottom: 0;
+        top: 0;
+        padding: 0;
+        min-width: 10px !important;
+        border-right: none;
+        padding-left: 10px;
+    }
+}
