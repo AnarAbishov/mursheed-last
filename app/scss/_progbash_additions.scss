@@ -105,6 +105,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 //guide_register.hmtl, tourist_register.html
 
+
 #login_register .wrapper .form .inputs input{
     width: 100% !important;
 }
@@ -150,7 +151,6 @@ select.form-control {
 
 .select2-selection__rendered {
     height: 100%;
-    // overflow-y: scroll !important;
 }
 
 .custom-container {
@@ -186,3 +186,105 @@ ul.dashed>li:before {
 .price-range-slider .item_header{
     padding: 10px 0px !important;
 }
+
+//driver_register.html
+.select2-selection--single{
+    height: 46px !important; 
+    padding: 8px 10px;
+}
+.select2-selection__rendered{
+    color: #000;
+}
+.select2-selection__arrow{
+    display: none;
+}
+.select2-selection--single {
+    border: 1px solid #dfdfdf !important;
+    background-color: #f7f7f7 !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #E5E5E5 !important;
+    color: black !important;
+}
+.custom-offers-container{
+    padding: 0;
+    margin: auto;
+    width: 80%;
+}
+.custom-offers-container label{
+    font-family: Averta;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+}
+
+#swiper_popular_attractions_locations .swiper-slide a{
+    color: black;
+}
+
+#swiper_popular_attractions_locations .swiper-slide a:hover{
+    text-decoration: none;
+}
+
+//custom small navigation bar for mobile devices
+.small-menu nav{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.right-side-nav{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.right-side-nav button{
+    margin: 5px;
+}
+.small-menu i{
+    font-size: 2em;
+    cursor: pointer;
+    padding-top: 25px;
+}
+.small-menu i:hover{
+    transition: .3s ease;
+    color: rgb(0,128,114);
+}
+.sub-menu{
+    display: none;
+}
+.sub-menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+.sub-menu ul li a{
+    text-decoration: none;
+    font-family: Averta;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+    display: block;
+    padding: 14px 0px;
+}
+.sub-menu ul li a:hover{
+    transition: .3s ease;
+    color: rgb(0,128,114);    
+}
+
+.small-menu{
+    display: none;
+}
+

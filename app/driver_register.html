@@ -85,6 +85,30 @@
                 </nav>
             </div>
         </div>
+        <div class="small-menu">
+            <div class="custom-container">
+                <nav>
+                    <div class="left-side-nav">
+                        <i id="menu-btn" class="fas fa-bars"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="guides_drivers.html">Guides & Drivers</a></li>
+                                <li><a href="accomodation.html">Accomodation</a></li>
+                                <li><a href="flightreservation.html">Flight Reservation</a></li>
+                                <li><a href="attractivelocation.html">Attractive Location</a></li>
+                                <li><a href="offers.html">Offers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-side-nav">
+                        <button class="light-btn">Login</button>
+                        <button class="dark-btn">Register</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
     </header>
     <section id="breadcumbs">
         <div class="container">
@@ -108,7 +132,7 @@
                                 class="driverRegister form-horizontal form-wizard-wrapper wizard" autocomplete="off">
                                 <h3>Info</h3>
                                 <fieldset>
-                                    <div class="custom-container">
+                                    <div>
                                         <div class="form-group inputs">
                                             <label asp-for="Firstname" class="col-form-label">Name</label>
                                             <div class="">
@@ -129,14 +153,21 @@
                                         <!--end form-group-->
                                         <div class="form-group mb-0 inputs">
                                             <label asp-for="CountryId">Country</label>
-                                            <select class="form-control fillChildSelect formField" asp-for="CountryId"
-                                                asp-items="ViewBag.Countries">
+                                            <select class="js-example-basic-single form-control" name="state" asp-for="CountryId" asp-items="ViewBag.Countries">
                                                 <option>Azerbaijan</option>
                                                 <option>Turkey</option>
                                                 <option>Norway</option>
                                             </select>
                                             <span asp-validation-for="CountryId" class="text-danger"></span>
-                                            <span asp-validation-for="CountryId" class="text-danger"></span>
+                                        </div>
+                                        <!--end form-group-->
+                                        <div class="form-group mb-0 inputs driver-photo-container">
+                                            <label asp-for="Photo" class="col-form-label">Photo</label>
+                                            <div>
+                                                <input asp-for="Photo" class="form-control formField" type="file"
+                                                    placeholder="@Html.DisplayNameFor(m => m.Photo)">
+                                                <span asp-validation-for="Photo" class="text-danger"></span>
+                                            </div>
                                         </div>
                                         <!--end form-group-->
                                         <div class="form-group mb-0 inputs">
@@ -156,30 +187,19 @@
                                             </select>
                                             <span asp-validation-for="LanguageIds" class="text-danger"></span>
                                         </div>
-                                        <!--end form-group-->
-                                        <div class="form-group mb-0 inputs driver-photo-container">
-                                            <label asp-for="Photo" class="col-form-label">Photo</label>
-                                            <div>
-                                                <input asp-for="Photo" class="form-control formField" type="file"
-                                                    placeholder="@Html.DisplayNameFor(m => m.Photo)">
-                                                <span asp-validation-for="Photo" class="text-danger"></span>
-                                            </div>
-                                        </div>
-                                        <!--end form-group-->
-                                    </div>
+                                        <!--end form-group-->  
+                                    </div class="custom-container" >
                                 </fieldset>
                                 <!--end fieldset-->
 
                                 <h3>Car</h3>
                                 <fieldset>
-                                    <div class="custom-container">
+                                    <div>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group inputs">
                                                     <label asp-for="BrandId">Brand</label>
-                                                    <select onchange="onChangeSelect(this)"
-                                                        class="form-control fillChildSelect formField" asp-for="BrandId"
-                                                        asp-items="ViewBag.Brands">
+                                                    <select class="js-example-basic-single formField" onchange="onChangeSelect(this)" asp-for="BrandId" asp-items="ViewBag.Brands">
                                                         <option>Audi</option>
                                                         <option>BMW</option>
                                                         <option>Mercedes</option>
@@ -189,7 +209,7 @@
                                                 <!--end form-group-->
                                                 <div class="form-group inputs">
                                                     <label asp-for="ModelId">Model</label>
-                                                    <select class="form-control formField" asp-for="ModelId">
+                                                    <select class="js-example-basic-single formField" asp-for="ModelId">
                                                         <option>A1</option>
                                                         <option>A2</option>
                                                         <option>A3</option>
@@ -423,9 +443,8 @@
             $('a[href="#finish"]').click(function () {
                 $(".driverRegister").submit();
             });
-        });
-        $(document).ready(function() {
             $('.js-example-basic-multiple').select2();
+            $('.js-example-basic-single').select2();
         });
     </script>
 </body>

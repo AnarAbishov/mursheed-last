@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
+    <link href="css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -28,7 +29,6 @@
                         <a href="index.html">
                             <img src="img/header/logo.svg" alt="">
                         </a>
-
                     </div>
                     <div class="right-side-header">
                         <div class="currency-country">
@@ -84,184 +84,213 @@
         </div>
     </header>
     <section id="breadcumbs">
-            <div class="container">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="offers.html">Offers</a></li>
-                </ul>
-            </div>
-        </section>
-    <section id="offers">
         <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="offers.html">Offers</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="offers">
+        <div class="custom-offers-container">
             <div class="row mb-4">
                 <div class="col-md-4">
                     <div class="item_body">
-                        <div class="custom-selectbox">
-                            <select>
-                                <option value="0">Countries</option>
-                                <option value="1">Azerbaijan</option>
-                                <option value="2">Turkey</option>
-                                <option value="3">Germany</option>
+                        <div class="form-group mb-0 inputs">
+                            <label asp-for="CountryId" class="col-form-label">Country</label>
+                            <select class="js-example-basic-single form-control" name="state" asp-for="CountryId"
+                                asp-items="ViewBag.Countries">
+                                <option>Azerbaijan</option>
+                                <option>Turkey</option>
+                                <option>Norway</option>
                             </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="item_body">
-                        <div class="custom-selectbox">
-                            <select>
-                                <option value="0">Cities</option>
-                                <option value="1">Baku</option>
-                                <option value="2">Qazax</option>
-                                <option value="3">Ganja</option>
-                                <option value="4">Shaki</option>
+                        <div class="form-group mb-0 inputs">
+                            <label asp-for="CountryId" class="col-form-label">City</label>
+                            <select class="js-example-basic-single form-control" name="state" asp-for="CountryId"
+                                asp-items="ViewBag.Countries">
+                                <option>Azerbaijan</option>
+                                <option>Turkey</option>
+                                <option>Norway</option>
                             </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="item_body">
-                        <div class="custom-selectbox">
-                            <select>
-                                <option value="0">Place</option>
-                                <option value="1">Restaurant</option>
-                                <option value="2">Cafe</option>
-                                <option value="3">Playground</option>
+                        <div class="form-group mb-0 inputs">
+                            <label asp-for="CountryId" class="col-form-label">Place</label>
+                            <select class="js-example-basic-single form-control" name="state" asp-for="CountryId"
+                                asp-items="ViewBag.Countries">
+                                <option>Azerbaijan</option>
+                                <option>Turkey</option>
+                                <option>Norway</option>
                             </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class="our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle1.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class="our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle1.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class="our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class="our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle2.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle2.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle3.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle3.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle4.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle4.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle1.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle1.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle2.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle2.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle3.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle3.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle4.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle4.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
-                        <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle1.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                    <a href="offers_single.html">
+                        <div class="our_offers_partners_bottom_item">
+                            <img src="./img/our_offers/rectangle1.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle2.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle2.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle3.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle3.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
+                    <a href="offers_single.html">
                         <div class=" our_offers_partners_bottom_item">
-                                <img src="./img/our_offers/rectangle4.jpg" alt="">
-                                <div class="item_position_bottom">
-                                    <p class=" our_offers_partners_name">The House Cafe</p>
-                                    <p>Azerbaijan, Baku</p>
-                                </div>
+                            <img src="./img/our_offers/rectangle4.jpg" alt="">
+                            <div class="item_position_bottom">
+                                <p class=" our_offers_partners_name">The House Cafe</p>
+                                <p>Azerbaijan, Baku</p>
+                            </div>
                         </div>
+                    </a>
                 </div>
             </div>
             <div class="pagination">
                 <div>
-                        <ul>
-                                <li>
-                                    <img src="img/pagination/left-arrow.svg" alt="">
-                                </li>
-                                <li class="active">1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li>5</li>
-                                <li>6</li>
-                                <li>-</li>
-                                <li>8</li>
-                                <li>
-                                    <img src="img/pagination/right-arrow.svg" alt="">
-                                </li>
-                            </ul>
+                    <ul>
+                        <li>
+                            <img src="img/pagination/left-arrow.svg" alt="">
+                        </li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>-</li>
+                        <li>8</li>
+                        <li>
+                            <img src="img/pagination/right-arrow.svg" alt="">
+                        </li>
+                    </ul>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -330,9 +359,15 @@
             </div>
         </div>
     </footer>
-    <script src="js/selectbox.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/select2.min.js"></script>
 
-    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-single').select2();
+        });
+    </script>
 </body>
 
 </html>

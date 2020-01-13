@@ -4,6 +4,13 @@
         display: flex;
         justify-content: center;
     }
+    .small-menu{
+        display: block;
+    }
+
+    .menu, .center-header .buttons{
+        display: none;
+    }
     //index.html
     .start_your_journey_bottom{
         display: flex !important;
@@ -74,6 +81,18 @@
     .custom-container .col-md-12{
         padding: 0;
     }
+    #login_register .col-md-8 .wrapper{
+        padding: 0 !important;
+    }
+
+    #login_register div.form{
+        width: 80%;
+        margin: auto;
+    }
+
+    .wizard > .content > .body{
+        position: static;
+    }
     
     //register pages
 
@@ -87,4 +106,15 @@
         border-right: none;
         padding-left: 10px;
     }
+
+    #guides_drivers .content .body .person_details{
+        flex-direction: column;
+
+        .buttons button{
+            margin: 5px;
+        }
+    }
+
 }
+
+
