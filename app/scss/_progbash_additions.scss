@@ -288,3 +288,18 @@ ul.dashed>li:before {
     display: none;
 }
 
+#login_register .wrapper .form .InputGroup{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+}
+
+// #login_register .wrapper .form .InputGroup label{
+//     width: 30% !important;
+//     margin: 10px auto;
+// }
+
+#login_register .wrapper .form .submit_reg{
+    width: 100% !important;
+    margin: auto;
+}

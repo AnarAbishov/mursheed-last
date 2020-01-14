@@ -114,6 +114,22 @@
             margin: 5px;
         }
     }
+    
+    #login_register .wrapper .form .InputGroup{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+    }
+    #login_register .wrapper .form .InputGroup label{
+        width: 100% !important;
+        margin: 10px auto;
+    }
+
+    #login_register .wrapper .form .submit_reg{
+        width: 100% !important;
+        margin: auto;
+    }
 
 }
 
