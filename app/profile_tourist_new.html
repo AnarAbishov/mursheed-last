@@ -170,39 +170,36 @@
                         </div>
                         <div id="journey" class="tab_content">
                             <div class="details table-responsive">
-                                <table id="tourist-journey-table" class="display table-bordered">
+                                <table id="tourist-journey-table" class="display">
                                     <thead>
                                         <tr>
+                                            <th>Country</th>
                                             <th>Start date</th>
                                             <th>End date</th>
-                                            <th>Country</th>
                                             <th>Total Cost</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="text-center">
+                                    <tbody>
                                         <tr>
-                                            <td><input type="datetime" disabled value="01.01.2020"></td>
-                                            <td><input type="datetime" disabled value="05.01.2020"></td>
-                                            <td class="country-td">Azerbaijan<i class="fas fa-plus-circle"></i></td class="country-td">
-                                            <td><input type="number" class="text-center" style="width: 70%; outline: none; border: none;" value="23"><span>$</span></td>
+                                            <td class="country-td">Azerbaijan</td>
+                                            <td class="date-td"><input type="datetime"disabled value="01.01.2020"></td class="date-td">
+                                            <td class="date-td"><input type="datetime"disabled value="05.01.2020"></td>
+                                            <td class="cost-td"><input disabled type="number" class="text-center" style="width: 70%; outline: none; border: none;" value="23"><span>$</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input type="datetime" disabled value="01.01.2020"></td>
-                                            <td><input type="datetime" disabled value="05.01.2020"></td>
-                                            <td class="country-td">Turkey<i class="fas fa-plus-circle"></td>
-                                            <td><input type="number" class="text-center" style="width: 70%; outline: none; border: none;"><span>$</span></td>
+                                            <td class="country-td">Azerbaijan</td>
+                                            <td class="date-td"><input type="datetime"disabled value="01.01.2020"></td>
+                                            <td class="date-td"><input type="datetime"disabled value="05.01.2020"></td>
+                                            <td class="cost-td"><input disabled type="number" class="text-center" style="width: 70%; outline: none; border: none;" value="23"><span>$</span></td class="cost-td">
                                         </tr>
                                         <tr>
-                                            <td><input type="datetime" disabled value="01.01.2020"></td>
-                                            <td><input type="datetime" disabled value="05.01.2020"></td>
-                                            <td class="country-td">Spain<i class="fas fa-plus-circle"></i></td>
-                                            <td><input type="number" class="text-center" style="width: 70%; outline: none; border: none;"><span>$</span></td>
+                                            <td class="country-td">Azerbaijan</td>
+                                            <td class="date-td"><input type="datetime"disabled value="01.01.2020"></td>
+                                            <td class="date-td"><input type="datetime"disabled value="05.01.2020"></td>
+                                            <td class="cost-td"><input disabled type="number" class="text-center" style="width: 70%; outline: none; border: none;" value="23"><span>$</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="save">
-                                    <button class="save-btn">Save changes</button>
-                                </div>
                             </div>
                         </div>
                         <div id="account" class="tab_content">
@@ -370,6 +367,8 @@
             $('.js-example-basic-multiple').select2();
             $('.js-example-basic-single').select2();
             $('#tourist-journey-table').DataTable();
+            $(".previous").html("<");
+            $(".next").html(">");
         });
     </script>
 </body>

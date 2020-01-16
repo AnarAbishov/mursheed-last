@@ -98,13 +98,12 @@
 
     button.view, button.view_confrim{
         position: absolute;
-        right: 5px;
+        right: 1px;
         bottom: 0;
         top: 0;
-        padding: 0;
         min-width: 10px !important;
         border-right: none;
-        padding-left: 10px;
+        padding: 0 10px;
     }
 
     #guides_drivers .content .body .person_details{
@@ -130,7 +129,6 @@
         width: 100% !important;
         margin: auto;
     }
-
 }
 
 
