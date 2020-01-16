@@ -1,0 +1,32 @@
+//customizing jquery datatable
+.dataTables_filter, .dataTables_info, .dataTables_length{
+    display: none;
+}
+
+#tourist-journey-table {
+    border: 1px solid #DFDFDF;
+    border-radius: 5px;
+}
+
+#tourist-journey-table input{
+    background-color: transparent;
+    border: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+    padding: 2px;
+    margin-top: 20px;
+}
+table.dataTable tbody th, table.dataTable tbody td{
+    color: #7B7B7B;
+    padding: 0px 0px;
+}
+table.dataTable thead th{
+    border-bottom: 2px solid #DFDFDF;
+}
+
+tbody i{
+    color: limegreen;
+    padding: 5px 5px;
+    cursor: pointer;
+}

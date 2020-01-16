@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+        integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <style>
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner-header">
+            <div class="container">
+                <div class="inside-inner">
+                    <a href="">Support</a>
+                    <a href="">Contact us</a>
+                </div>
+            </div>
+        </div>
+        <div class="center-header">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/header/logo.svg" alt="">
+                        </a>
+
+                    </div>
+                    <div class="right-side-header">
+                        <div class="currency-country">
+                            <div class="currency">
+                                <span>Currency</span>
+                                <!-- <p>AZN</p> -->
+                                <div class="custom-selectbox">
+                                    <select>
+                                        <option value="0">AZN</option>
+                                        <option value="1">Dollar</option>
+                                        <option value="2">Euro</option>
+                                        <option value="3">TL</option>
+                                        <option value="4">Rubl</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="country">
+                                <span>Country</span>
+                                <div class="custom-selectbox">
+                                    <select>
+                                        <option value="0">Azerbaijan</option>
+                                        <option value="1">Turkey</option>
+                                        <option value="2">Germany</option>
+                                        <option value="3">France</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="buttons">
+                            <button class="light-btn">Login</button>
+                            <button class="dark-btn">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="menu">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="guides_drivers.html">Guides & Drivers</a></li>
+                        <li><a href="accomodation.html">Accomodation</a></li>
+                        <li><a href="flightreservation.html">Flight Reservation</a></li>
+                        <li><a href="attractivelocation.html">Attractive Location</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="small-menu">
+            <div class="custom-container">
+                <nav>
+                    <div class="left-side-nav">
+                        <i id="menu-btn" class="fas fa-bars"></i>
+                        <div class="sub-menu">
+                            <ul>
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="guides_drivers.html">Guides & Drivers</a></li>
+                                <li><a href="accomodation.html">Accomodation</a></li>
+                                <li><a href="flightreservation.html">Flight Reservation</a></li>
+                                <li><a href="attractivelocation.html">Attractive Location</a></li>
+                                <li><a href="offers.html">Offers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-side-nav">
+                        <button class="light-btn">Login</button>
+                        <button class="dark-btn">Register</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="profile_driver">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <div class="tab_headers">
+                        <ul class="tabs">
+                            <li class="active"><a href="#personal">Personal info</a></li>
+                            <li><a href="#account">Account</a></li>
+                            <li><a href="#journey">Journey table</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                        <div class="profile">
+                                <div class="profile_img">
+                                    <img src="img/popular_location/rectangle2.jpg" alt="">
+                                </div>
+                                <div class="name_date">
+                                    <h1>Vilayat Muslumzada</h1>
+                                    <p>User since date (12.12.19- 120 days)</p>
+                                </div>
+                        </div>
+                    <div class="tab_container">
+                        <div id="personal" class="tab_content">
+                            <div class="details">
+                                <form>
+                                    <div class="inputs">
+                                        <label for="name">First Name</label>
+                                        <input id="name" type="text" placeholder="Your First Name">
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="name">Last Name</label>
+                                        <input id="last-name" type="text" placeholder="Your Last Name">
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="birthdate">Birthdate</label>
+                                        <input id="birthdate" type="date" placeholder="Your birthdate">
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="country">Country</label>
+                                        <select class="js-example-basic-single form-control" name="state" asp-for="CountryId" asp-items="ViewBag.Countries">
+                                            <option>Azerbaijan</option>
+                                            <option>Turkey</option>
+                                            <option>Norway</option>
+                                        </select>
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="additional-info">Additional Info</label>
+                                        <input id="additional-info" type="text" placeholder="More about yourself">
+                                    </div>
+                                    <div class="save">
+                                        <button class="save-btn">Save changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="journey" class="tab_content">
+                            <div class="details table-responsive">
+                                <table id="w-auto tourist-journey-table" class="display table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Start date</th>
+                                            <th>End date</th>
+                                            <th>Country</th>
+                                            <th>Total Cost</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td><input type="datetime" disabled value="01.01.2020"></td>
+                                            <td><input type="datetime" disabled value="05.01.2020"></td>
+                                            <td class="country-td">Azerbaijan<i class="fas fa-plus-circle"></i></td class="country-td">
+                                            <td><input type="number" class="text-center" style="width: 70px; outline: none; border: none;" value="23"><span>$</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="datetime" disabled value="01.01.2020"></td>
+                                            <td><input type="datetime" disabled value="05.01.2020"></td>
+                                            <td class="country-td">Turkey<i class="fas fa-plus-circle"></td>
+                                            <td><input type="number" class="text-center" style="width: 70px; outline: none; border: none;"><span>$</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="datetime" disabled value="01.01.2020"></td>
+                                            <td><input type="datetime" disabled value="05.01.2020"></td>
+                                            <td class="country-td">Spain<i class="fas fa-plus-circle"></i></td>
+                                            <td><input type="number" class="text-center" style="width: 70px; outline: none; border: none;"><span>$</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="save">
+                                    <button class="save-btn">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="account" class="tab_content">
+                            <div class="details">
+                                <div class="form-group inputs">
+                                    <label asp-for="Email">Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="far fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" asp-for="Email"
+                                            class="form-control formField" placeholder="Your Email"
+                                            autocomplete="off" style="width: 80% !important;">
+                                    </div>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group inputs">
+                                    <label asp-for="Phone">Phone</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="fas fa-phone"></i></span>
+                                        </div>
+                                        <input type="text" asp-for="Phone"
+                                            class="form-control formField" placeholder="Your Phone"
+                                            autocomplete="off" style="width: 80% !important;">
+                                    </div>
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group inputs">
+                                    <label asp-for="Username">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="far fa-user"></i></span>
+                                        </div>
+                                        <input style="width: 80% !important;" type="text"
+                                            asp-for="Username" class="form-control formField"
+                                            autocomplete="off" placeholder="Your Username">
+                                    </div>
+                                    <span asp-validation-for="Username" class="text-danger"></span>
+                                </div>
+                                <div class="form-group inputs">
+                                    <label asp-for="Password">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
+                                        <input id="password_input" 
+                                        style="width: 80% !important;" 
+                                        type="password"
+                                        asp-for="Password" 
+                                        class="form-control formField"
+                                        placeholder="Your Password">
+                                        <button type="button" class="view"><img src="img/login/view-copy.svg" alt=""></button>
+                                    </div>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                <div class="form-group inputs">
+                                    <label asp-for="confirmPassword">Confirm Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-user"></i></span>
+                                        </div>
+                                        <input id="confrim_password_input" style="width: 80% !important;" type="password" asp-for="confirmPassword" class="form-control formField" placeholder="Confirm Your Password">
+                                        <button type="button" class="view_confrim"><img src="img/login/view-copy.svg" alt=""></button>
+                                    </div>
+                                    <span asp-validation-for="confirmPassword" class="text-danger"></span>
+                                </div>
+                                <div class="save">
+                                    <button class="save-btn">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="social">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/footer/logo-dark.svg" alt=""></a>
+                            </div>
+                            <div class="description">
+                                <p>Mursheed helps you to have an unforgettable experience anywhere you travel to. </p>
+                            </div>
+                            <div class="follow-us">
+                                <p class="header-text">Follow us</p>
+                                <li><a href=""><img src="img/footer/facebook-letter-logo.svg" alt=""></a></li>
+                                <li><a href=""><img src="img/footer/instagram.svg" alt=""></a></li>
+                                <li><a href=""><img src="img/footer/twitter-logo-silhouette.svg" alt=""></a></li>
+                                <li><a href=""><img src="img/footer/linkedin-letters.svg" alt=""></a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="site-map">
+                            <p class="header-text">Site map</p>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="">Guides & Drivers</a></li>
+                                <li><a href="offers.html">Offers</a></li>
+                                <li><a href="">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="more">
+                            <p class="header-text">More</p>
+                            <ul>
+                                <li><a href="terms_conditions.html">Terms & conditions</a></li>
+                                <li><a href="privacypolicy.html">Privacy policy</a></li>
+                                <li><a href="">Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact-subscribe">
+                            <div class="contact">
+                                <p class="header-text">Contact us</p>
+                                <ul>
+                                    <li><a href="">info@mursheed.com</a></li>
+                                    <li><a href="">+994 50 808 08 01</a></li>
+                                </ul>
+                            </div>
+                            <div class="subscribe">
+                                <p class="header-text">Subscribe</p>
+                                <div class="send">
+                                    <input placeholder="your email address" type="text">
+                                    <button><img src="img/footer/send.svg" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/selectbox.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/SwalUtility.js" asp-append-version="true"></script>
+    <script src="js/jquery.steps.min.js"></script>
+    <script src="js/jquery.form-wizard.init.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/driverRegister.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a[href="#finish"]').click(function () {
+                $(".driverRegister").submit();
+            });
+            $('.js-example-basic-multiple').select2();
+            $('.js-example-basic-single').select2();
+            $('#tourist-journey-table').DataTable();
+        });
+    </script>
+</body>
+
+</html>
