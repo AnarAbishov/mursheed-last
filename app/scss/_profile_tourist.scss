@@ -1,6 +1,6 @@
 //customizing jquery datatable
-.dataTables_filter, .dataTables_info, .dataTables_length{
-    display: none;
+.dataTables_filter, .dataTables_info, .dataTables_length, .next, .previous{
+    display: none !important;
 }
 
 #tourist-journey-table {
@@ -64,3 +64,8 @@ textarea{
     border-radius: 5px;
     outline: none;
 }
+td.country-td.sorting_1{
+    padding: 12px 10px;
+}
+
+
