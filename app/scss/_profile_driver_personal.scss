@@ -7,6 +7,10 @@
         padding: 24px 32px;
         display: flex;
         align-items: center;
+        justify-content: space-evenly;
+        .driver_info{
+            text-align: right;
+        }
         .profile_img{
             width: 72px;
             height: 72px;

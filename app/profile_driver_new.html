@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
-    <style>
-    </style>
+    <link href="css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -30,7 +29,6 @@
                         <a href="index.html">
                             <img src="img/header/logo.svg" alt="">
                         </a>
-
                     </div>
                     <div class="right-side-header">
                         <div class="currency-country">
@@ -120,8 +118,8 @@
                             <li><a href="#car">Car</a></li>
                             <li><a href="#rides">Rides table</a></li>
                             <li><a href="#routes">Routes</a></li>
-                            <li><a href="#packages">Packages</a></li>
-                            <li><a href="#comments">Comments</a></li>
+                            <li><a href="#account">Account</a></li>
+                            <li><a href="#available">Available dates</a></li>
                         </ul>
                     </div>
                 </div>
@@ -134,39 +132,75 @@
                             <h1>Vilayat Muslumzada</h1>
                             <p>User since date (12.12.19- 120 days)</p>
                         </div>
+                        <div class="driver_info">
+                            <p>Total rides: 5</p>
+                            <p>Rating: 4/5
+                                <!-- <div class="about_driver_info_ratings">
+                                            <img src="./img/driver_details/star-copy.svg" alt="">
+                                            <img src="./img/driver_details/star-copy.svg" alt="">
+                                            <img src="./img/driver_details/star-copy.svg" alt="">
+                                            <img src="./img/driver_details/star-copy.svg" alt="">
+                                            <img src="./img/driver_details/star-copy.svg" alt="">
+                                            <span>(12)</span>
+                                        </div> -->
+                            </p>
+                            <p>Earning: 102</p>
+                        </div>
                     </div>
                     <div class="tab_container">
                         <div id="personal" class="tab_content">
-
                             <div class="details">
                                 <form>
                                     <div class="inputs">
-                                        <label for="name">Company Name</label>
-                                        <input id="name" type="text" placeholder="Your Company Name">
+                                        <label for="name">First Name</label>
+                                        <input id="name" type="text" placeholder="Your First Name">
                                     </div>
                                     <div class="inputs">
-                                        <label for="age">Age</label>
-                                        <input id="age" type="text" placeholder="Your Age">
+                                        <label for="last-name">Last Name</label>
+                                        <input id="last-name" type="text" placeholder="Your Last Name">
                                     </div>
                                     <div class="inputs">
-                                        <label class="required" for="">
-                                            Add language
-                                        </label>
-                                        <div class="custom-selectbox w-trash">
-                                            <select>
-                                                <option value="0">All languages</option>
-                                                <option value="1">English</option>
-                                                <option value="2">Russian</option>
-                                            </select>
-                                            <div class="trash">
-                                                <i class="fas fa-trash"></i>
-                                            </div>
+                                        <label for="birthdate">Birthdate</label>
+                                        <input id="birthdate" type="date" placeholder="Your Birthdate">
+                                    </div>
+                                    <div class="form-group inputs driver-photo-container">
+                                        <label asp-for="Photo" class="col-form-label">Photo</label>
+                                        <div>
+                                            <input asp-for="Photo" class="form-control formField" type="file"
+                                                placeholder="@Html.DisplayNameFor(m => m.Photo)">
+                                            <span asp-validation-for="Photo" class="text-danger"></span>
                                         </div>
-
                                     </div>
-                                    <div class="add_lang">
-                                        <i class="fas fa-plus"></i>
-                                        <p>add language</p>
+                                    <div class="inputs">
+                                        <label for="phone">Phone</label>
+                                        <input id="phone" type="text" placeholder="Your Phone Number">
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="country">Country</label>
+                                        <select class="js-example-basic-single form-control" name="state"
+                                            asp-for="CountryId" asp-items="ViewBag.Countries">
+                                            <option>Azerbaijan</option>
+                                            <option>Turkey</option>
+                                            <option>Norway</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group mb-0 inputs">
+                                        <label asp-for="LanguageIds">Language</label>
+                                        <select class="js-example-basic-multiple js-states form-control"
+                                            id="id_label_multiple" multiple="multiple">
+                                            <option value="">Azerbaijani</option>
+                                            <option value="">Russian</option>
+                                            <option value="">English</option>
+                                            <option value="">Deutsch</option>
+                                            <option value="">Spanish</option>
+                                            <option value="">French</option>
+                                            <option value="">Italian</option>
+                                            <option value="">Georgian</option>
+                                            <option value="">Iranian</option>
+                                            <option value="">Arabic</option>
+                                            <option value="">Armenian</option>
+                                        </select>
+                                        <span asp-validation-for="LanguageIds" class="text-danger"></span>
                                     </div>
                                     <div class="save">
                                         <button class="save-btn">Save changes</button>
@@ -177,47 +211,38 @@
                         <div id="car" class="tab_content">
                             <div class="details">
                                 <form action="">
-                                    <div class="inputs">
-                                        <label class="required" for="">
-                                            Add language
-                                        </label>
-                                        <div class="custom-selectbox">
-                                            <select>
-                                                <option value="0">All languages</option>
-                                                <option value="1">English</option>
-                                                <option value="2">Russian</option>
-                                            </select>
-                                        </div>
-
+                                    <div class="form-group inputs">
+                                        <label asp-for="BrandId">Brand</label>
+                                        <select class="js-example-basic-single formField"
+                                            onchange="onChangeSelect(this)" asp-for="BrandId"
+                                            asp-items="ViewBag.Brands">
+                                            <option>Audi</option>
+                                            <option>BMW</option>
+                                            <option>Mercedes</option>
+                                        </select>
+                                        <span asp-validation-for="BrandId" class="text-danger"></span>
                                     </div>
-                                    <div class="inputs">
-
-                                        <div class="custom-selectbox">
-                                            <select>
-                                                <option value="0">All languages</option>
-                                                <option value="1">English</option>
-                                                <option value="2">Russian</option>
-                                            </select>
-                                        </div>
-
+                                    <!--end form-group-->
+                                    <div class="form-group inputs">
+                                        <label asp-for="ModelId">Model</label>
+                                        <select class="js-example-basic-single formField" asp-for="ModelId">
+                                            <option>A1</option>
+                                            <option>A2</option>
+                                            <option>A3</option>
+                                            <option>A4</option>
+                                        </select>
+                                        <span asp-validation-for="ModelId" class="text-danger"></span>
                                     </div>
-                                    <div class="inputs">
-
-                                        <div class="custom-selectbox">
-                                            <select>
-                                                <option value="0">All languages</option>
-                                                <option value="1">English</option>
-                                                <option value="2">Russian</option>
-                                            </select>
+                                    <!--end form-group-->
+                                    <div class="form-group inputs">
+                                        <label asp-for="CarPhotos" class="col-form-label">Car Photos</label>
+                                        <div>
+                                            <input asp-for="CarPhotos" class="form-control formField" type="file"
+                                                multiple="multiple" id="add-photo" max="2">
+                                            <span asp-validation-for="CarPhotos" class="text-danger"></span>
                                         </div>
+                                        <div class="car-img-container">
 
-                                    </div>
-                                    <div class="inputs">
-
-                                        <div class='file-input'>
-                                            <input type='file'>
-                                            <span class='button'><img src="img/profile/upload.svg" alt=""></span>
-                                            <span class='label' data-js-label>upload image</label>
                                         </div>
                                     </div>
                                     <div class="save">
@@ -225,7 +250,6 @@
                                     </div>
                                 </form>
                             </div>
-
                         </div>
                         <div id="rides" class="tab_content">
                             <div class="details">
@@ -349,7 +373,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div id="packages" class="tab_content">
+                        <div id="account" class="tab_content">
                             <div class="details">
                                 <form action="">
                                     <div class="inputs">
@@ -653,7 +677,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div id="comments" class="tab_content">
+                        <div id="available" class="tab_content">
                             <div class="details">
                                 <div class="user">
                                     <div class="user_img">
@@ -810,10 +834,69 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/tabs.js"></script>
     <script src="js/selectbox.js"></script>
+    <script src="js/tabs.js"></script>
     <script src="js/accordion.js"></script>
-    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/SwalUtility.js" asp-append-version="true"></script>
+    <script src="js/jquery.steps.min.js"></script>
+    <script src="js/jquery.form-wizard.init.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/driverRegister.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2();
+            $('.js-example-basic-single').select2();
+
+            $(function () {
+                var imagesPreview = function (input, placeToInsertImagePreview) {
+                    if(input.files) {
+                        var filesAmount = input.files.length;
+                        for (i = 0; i < filesAmount; i++) {
+                            var reader = new FileReader();
+                            reader.onload = function (event) {
+                                $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+                            }
+                            reader.readAsDataURL(input.files[i]);
+                        }
+                    }
+                    let imgCount = $(".car-img-container img").length;
+                    if(imgCount >= 5){
+                        $("#add-photo").attr('disabled', 'disabled');
+                    }
+                };
+                $('#add-photo').on('change', function () {
+                    let carImgContainer = $(".car-img-container");
+                    let singleImg = document.createElement("div");
+                    singleImg.setAttribute("class", "single-image-container");
+                    let carOverlay = document.createElement("div");
+                    carOverlay.setAttribute("class", "car-overlay");
+                    let zoomBtn = document.createElement("button");
+                    let deleteBtn = document.createElement("button");
+                    deleteBtn.setAttribute("class", "delete-btn")
+                    zoomBtn.innerHTML = "<i class='fas fa-search-plus'></i>";
+                    deleteBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
+                    imagesPreview(this, singleImg);
+                    carImgContainer.append(singleImg);
+                    singleImg.append(carOverlay);
+                    carOverlay.append(zoomBtn);
+                    carOverlay.append(deleteBtn)
+
+                    deleteBtn.addEventListener("click", function(){
+                        let question = confirm("Are you sure to delete this photo ?");
+                        if(question){
+                            this.parentNode.parentNode.parentNode.removeChild(singleImg);
+                        }
+                        else{
+                            return;
+                        }
+                    }); 
+                });
+            });
+        });
+    </script>
     <script src="js/navbar.js"></script>
 </body>
 

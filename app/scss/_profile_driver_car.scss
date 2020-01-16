@@ -91,6 +91,61 @@
               .file-input.-chosen > .label {
                 opacity: 1;
               }
+
+              .car-img-container{
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-wrap: wrap;
+
+                .single-image-container{
+                    width: 25%;
+                    margin: 20px;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover .car-overlay{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                    .car-overlay{
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: visibility 0s, opacity 0.3s linear;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(0,0,0,.7);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        button{
+                            background-color: transparent;
+                            color: white;
+                            border: 1px solid white;
+                            border-radius: 50%;
+                            height: 40px;
+                            width: 40px;
+                            margin: 5px;
+                            cursor: pointer;
+                            outline: none;
+                        }
+
+                        .delete-btn:hover{
+                            color: orangered;
+                            border: 1px solid orangered;
+                            transition: .3s ease;
+                        }
+                    }
+                }
+                img{
+                    width: 100%;
+                }
+              }
         }
     }
 }
