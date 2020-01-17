@@ -111,7 +111,6 @@
     <section id="profile_driver">
         <div class="container">
             <div class="row">
-                <div class="col-md-1"></div>
                 <div class="col-md-3">
                     <div class="tab_headers">
                         <ul class="tabs">
@@ -124,7 +123,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-9">
                     <div class="profile">
                         <div class="profile_img">
                             <img src="img/popular_location/rectangle2.jpg" alt="">
@@ -299,9 +298,9 @@
                             </li> -->
                             <div class="details">
                                 <form action="">
-                                    <p class="heading">Add new route</p>
+                                    <p class="heading">Add new package</p>
                                     <div class="new_route">
-                                        <div class="inputs">
+                                        <div class="inputs"">
                                             <label for="">From</label>
                                             <div class="custom-selectbox ">
                                                 <select>
@@ -311,7 +310,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="inputs">
+                                        <div class="inputs"">
                                             <label for="">To</label>
                                             <div class="custom-selectbox ">
                                                 <select>
@@ -321,12 +320,83 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="inputs cost">
-                                            <label for="">Route Cost</label>
+                                        <div class="inputs"">
+                                            <label for="">Cost</label>
                                             <input type="text" placeholder="100$" style="height: 36px;">
                                         </div>
-                                        <div class="inputs">
-                                            <label for="">Add Package</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="details">
+                                <form action="">
+                                    <p class="heading">Assign Route</p>
+                                    <div class="new_route">
+                                        <div class="inputs"">
+                                            <label for="">From</label>
+                                            <div class="custom-selectbox ">
+                                                <select>
+                                                    <option value="0">All languages</option>
+                                                    <option value="1">English</option>
+                                                    <option value="2">Russian</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="inputs"">
+                                            <label for="">To</label>
+                                            <div class="custom-selectbox ">
+                                                <select>
+                                                    <option value="0">All languages</option>
+                                                    <option value="1">English</option>
+                                                    <option value="2">Russian</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="inputs"">
+                                            <label for="">Package Name</label>
+                                            <div class="custom-selectbox ">
+                                                <select>
+                                                    <option value="0">All languages</option>
+                                                    <option value="1">English</option>
+                                                    <option value="2">Russian</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="details">
+                                <form action="">
+                                    <p class="heading">Packages</p>
+                                    <div class="new_route">
+                                        <div class="inputs"">
+                                            <label for="">From</label>
+                                            <div class="custom-selectbox ">
+                                                <select>
+                                                    <option value="0">All languages</option>
+                                                    <option value="1">English</option>
+                                                    <option value="2">Russian</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="inputs"">
+                                            <label for="">To</label>
+                                            <div class="custom-selectbox ">
+                                                <select>
+                                                    <option value="0">All languages</option>
+                                                    <option value="1">English</option>
+                                                    <option value="2">Russian</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="inputs"">
+                                            <label for="">Package Name</label>
+                                            <div class="custom-selectbox ">
+                                                <select>
+                                                    <option value="0">All languages</option>
+                                                    <option value="1">English</option>
+                                                    <option value="2">Russian</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
@@ -405,7 +475,34 @@
                         </div>
                         <div id="available" class="tab_content">
                             <div class="details">
-                                
+                                <form>
+                                    <div class="inputs">
+                                        <label for="tourist_name">Tourist name</label>
+                                        <input id="tourist_name" type="text" placeholder="Tourist name">
+                                    </div>
+                                    <p>Available Dates</p>
+                                    <div class="journey">
+                                        <div class="details table-responsive">
+                                            <table id="driver-time-table" class="display">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Start date</th>
+                                                        <th>End date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="datetime" value="01.01.2020"></td class="date-td">
+                                                        <td><input type="datetime" value="05.01.2020"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="save">
+                                        <button class="save-btn">Save changes</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -496,6 +593,7 @@
             $('.js-example-basic-multiple').select2();
             $('.js-example-basic-single').select2();
             $('#driver-ride-table').DataTable();
+            $("#driver-time-table").DataTable();
             $(function () {
                 var imagesPreview = function (input, placeToInsertImagePreview) {
                     if(input.files) {
