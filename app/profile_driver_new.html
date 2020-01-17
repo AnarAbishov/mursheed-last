@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
@@ -172,10 +173,6 @@
                                         </div>
                                     </div>
                                     <div class="inputs">
-                                        <label for="phone">Phone</label>
-                                        <input id="phone" type="text" placeholder="Your Phone Number">
-                                    </div>
-                                    <div class="inputs">
                                         <label for="country">Country</label>
                                         <select class="js-example-basic-single form-control" name="state"
                                             asp-for="CountryId" asp-items="ViewBag.Countries">
@@ -260,17 +257,33 @@
                                     </div>
                                     <p>Journey</p>
                                     <div class="journey">
-                                        <div class="inputs">
-                                            <label for="price">Price</label>
-                                            <input id="price" type="text" placeholder="580$">
-                                        </div>
-                                        <div class="inputs">
-                                            <label for="start">Start date</label>
-                                            <input type="date" placeholder="Date">
-                                        </div>
-                                        <div class="inputs">
-                                            <label for="End">End date</label>
-                                            <input type="date" placeholder="Date">
+                                        <div class="details table-responsive">
+                                            <table id="driver-ride-table" class="display">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Start date</th>
+                                                        <th>End date</th>
+                                                        <th>Total Cost</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="datetime"disabled value="01.01.2020"></td class="date-td">
+                                                        <td><input type="datetime"disabled value="05.01.2020"></td>
+                                                        <td><input disabled type="number" style="width: 30%; outline: none; border: none;" value="23"><span>$</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="datetime"disabled value="01.01.2020"></td>
+                                                        <td><input type="datetime"disabled value="05.01.2020"></td>
+                                                        <td><input disabled type="number" style="width: 30%; outline: none; border: none;" value="23"><span>$</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="datetime"disabled value="01.01.2020"></td>
+                                                        <td><input type="datetime"disabled value="05.01.2020"></td>
+                                                        <td><input disabled type="number" style="width: 30%; outline: none; border: none;" value="23"><span>$</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                     <div class="save">
@@ -280,6 +293,10 @@
                             </div>
                         </div>
                         <div id="routes" class="tab_content">
+                            <!-- <li class="icons">
+                                <i class="fas fa-pencil-alt"></i>
+                                <i class="fas fa-trash-alt"></i>
+                            </li> -->
                             <div class="details">
                                 <form action="">
                                     <p class="heading">Add new route</p>
@@ -306,460 +323,89 @@
                                         </div>
                                         <div class="inputs cost">
                                             <label for="">Route Cost</label>
-                                            <p>100$</p>
+                                            <input type="text" placeholder="100$" style="height: 36px;">
+                                        </div>
+                                        <div class="inputs">
+                                            <label for="">Add Package</label>
                                         </div>
                                     </div>
-                                    <p class="heading">All routes</p>
-                                    <div class="all_routes details">
-                                        <div class="thead">
-                                            <ul>
-                                                <li>FROM</li>
-                                                <li>TO</li>
-                                                <li>COST</li>
-                                                <li></li>
-                                            </ul>
-                                        </div>
-                                        <div class="line"></div>
-                                        <div class="tbody">
-                                            <ul>
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li class="icons">
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li>
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li>
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li>
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li>
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-
                                 </form>
                             </div>
                         </div>
                         <div id="account" class="tab_content">
                             <div class="details">
-                                <form action="">
-                                    <div class="inputs">
-                                        <label for="">Package Name</label>
-                                        <input type="text" placeholder="Package Name">
+                                <div class="form-group inputs">
+                                    <label asp-for="Email">Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="far fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" asp-for="Email"
+                                            class="form-control formField" placeholder="Your Email"
+                                            autocomplete="off" style="width: 80% !important;">
                                     </div>
-                                    <div class="inputs">
-                                        <label for="">Package Price</label>
-                                        <input type="text" placeholder="Package Price">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group inputs">
+                                    <label asp-for="Phone">Phone</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="fas fa-phone"></i></span>
+                                        </div>
+                                        <input type="text" asp-for="Phone"
+                                            class="form-control formField" placeholder="Your Phone"
+                                            autocomplete="off" style="width: 80% !important;">
                                     </div>
-                                    <p class="heading">Add new route</p>
-                                    <div class="new_route">
-                                        <div class="inputs">
-                                            <label for="">From</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
-                                                    <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
-                                                </select>
-                                            </div>
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group inputs">
+                                    <label asp-for="Username">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="far fa-user"></i></span>
                                         </div>
-                                        <div class="inputs">
-                                            <label for="">To</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
-                                                    <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="inputs cost">
-                                            <label for="">Route Cost</label>
-                                            <p>100$</p>
-                                        </div>
+                                        <input style="width: 80% !important;" type="text"
+                                            asp-for="Username" class="form-control formField"
+                                            autocomplete="off" placeholder="Your Username">
                                     </div>
-                                    <p class="heading">All routes</p>
-                                    <div class="all_routes details">
-                                        <div class="thead">
-                                            <ul>
-                                                <li>FROM</li>
-                                                <li>TO</li>
-                                                <li>COST</li>
-                                                <li></li>
-                                            </ul>
-                                        </div>
-                                        <div class="line"></div>
-                                        <div class="tbody">
-                                            <ul class="item_header">
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li class="icons">
-                                                    <i class="fas fa-pencil-alt "></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-                                            <div class="new_route">
-                                                <div class="inputs">
-                                                    <label for="">From</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs">
-                                                    <label for="">To</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs cost">
-                                                    <label for="">Route Cost</label>
-                                                    <p>100$</p>
-                                                </div>
-                                            </div>
-                                            <ul class="item_header">
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li>
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-                                            <div class="new_route">
-                                                <div class="inputs">
-                                                    <label for="">From</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs">
-                                                    <label for="">To</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs cost">
-                                                    <label for="">Route Cost</label>
-                                                    <p>100$</p>
-                                                </div>
-
-                                            </div>
-                                            <ul class="item_header">
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li>
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-                                            <div class="new_route">
-                                                <div class="inputs">
-                                                    <label for="">From</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs">
-                                                    <label for="">To</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs cost">
-                                                    <label for="">Route Cost</label>
-                                                    <p>100$</p>
-                                                </div>
-
-                                            </div>
-                                            <ul class="item_header">
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li>
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-                                            <div class="new_route">
-                                                <div class="inputs">
-                                                    <label for="">From</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs">
-                                                    <label for="">To</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs cost">
-                                                    <label for="">Route Cost</label>
-                                                    <p>100$</p>
-                                                </div>
-
-                                            </div>
-                                            <ul class="item_header">
-                                                <li>Baku</li>
-                                                <li>Nakhcivan</li>
-                                                <li>300$</li>
-                                                <li>
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </li>
-                                            </ul>
-                                            <div class="new_route">
-                                                <div class="inputs">
-                                                    <label for="">From</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs">
-                                                    <label for="">To</label>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-selectbox ">
-                                                        <select>
-                                                            <option value="0">All languages</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">Russian</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="inputs cost">
-                                                    <label for="">Route Cost</label>
-                                                    <p>100$</p>
-                                                </div>
-
-                                            </div>
-                                        </div>
+                                    <span asp-validation-for="Username" class="text-danger"></span>
+                                </div>
+                                <div class="form-group inputs">
+                                    <label asp-for="Password">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
+                                        <input id="password_input" 
+                                        style="width: 80% !important;" 
+                                        type="password"
+                                        asp-for="Password" 
+                                        class="form-control formField"
+                                        placeholder="Your Password">
+                                        <button type="button" class="view"><img src="img/login/view-copy.svg" alt=""></button>
                                     </div>
-                                </form>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                <div class="form-group inputs">
+                                    <label asp-for="confirmPassword">Confirm Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="far fa-user"></i></span>
+                                        </div>
+                                        <input id="confrim_password_input" style="width: 80% !important;" type="password" asp-for="confirmPassword" class="form-control formField" placeholder="Confirm Your Password">
+                                        <button type="button" class="view_confrim"><img src="img/login/view-copy.svg" alt=""></button>
+                                    </div>
+                                    <span asp-validation-for="confirmPassword" class="text-danger"></span>
+                                </div>
+                                <div class="save">
+                                    <button class="save-btn">Save changes</button>
+                                </div>
                             </div>
                         </div>
                         <div id="available" class="tab_content">
                             <div class="details">
-                                <div class="user">
-                                    <div class="user_img">
-                                        <img src="img/profile/rectangle.jpg" alt="">
-                                    </div>
-                                    <div class="comment">
-                                        <div class="name">
-                                            <p>Sofie Hubert</p>
-                                        </div>
-                                        <div class="rating">
-                                            <div class="stars">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                            </div>
-                                            <div class="date">
-                                                <p>18 June 2019</p>
-                                            </div>
-                                        </div>
-                                        <div class="text">
-                                            <p>But also the leap into electronic, remaining essentially wdwdwq
-                                                unchanged. It was popularised in the 1960s with the release of Letraset
-                                                sheets containing Lorem Ipsum passages, and more </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="user">
-                                    <div class="user_img">
-                                        <img src="img/profile/rectangle.jpg" alt="">
-                                    </div>
-                                    <div class="comment">
-                                        <div class="name">
-                                            <p>Sofie Hubert</p>
-                                        </div>
-                                        <div class="rating">
-                                            <div class="stars">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                            </div>
-                                            <div class="date">
-                                                <p>18 June 2019</p>
-                                            </div>
-                                        </div>
-                                        <div class="text">
-                                            <p>But also the leap into electronic, remaining essentially unchanged. It
-                                                was popularised in the 1960s with the release of Letraset sheets
-                                                containing Lorem Ipsum passages, and more </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="user">
-                                    <div class="user_img">
-                                        <img src="img/profile/rectangle.jpg" alt="">
-                                    </div>
-                                    <div class="comment">
-                                        <div class="name">
-                                            <p>Sofie Hubert</p>
-                                        </div>
-                                        <div class="rating">
-                                            <div class="stars">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                                <img src="img/profile/star.svg" alt="">
-                                            </div>
-                                            <div class="date">
-                                                <p>18 June 2019</p>
-                                            </div>
-                                        </div>
-                                        <div class="text">
-                                            <p>But also the leap into electronic, remaining essentially unchanged. It
-                                                was popularised in the 1960s with the release of Letraset sheets
-                                                containing Lorem Ipsum passages, and more </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -849,7 +495,7 @@
         $(document).ready(function () {
             $('.js-example-basic-multiple').select2();
             $('.js-example-basic-single').select2();
-
+            $('#driver-ride-table').DataTable();
             $(function () {
                 var imagesPreview = function (input, placeToInsertImagePreview) {
                     if(input.files) {
