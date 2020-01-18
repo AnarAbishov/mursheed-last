@@ -8,7 +8,7 @@ tr.shown td.details-control {
 }
     
 //customizing jquery datatable
-.dataTables_filter, .dataTables_info, .dataTables_length, .next, .previous{
+.dataTables_filter, .dataTables_info, .dataTables_length{
     display: none !important;
 }
 tr.odd{

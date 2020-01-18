@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
-    <link href="css/select2.min.css" rel="stylesheet"/>
+    <link href="css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -157,26 +158,28 @@
                                     </div>
                                     <div class="inputs">
                                         <label for="last-name">Last Name</label>
-                                        <input autocomplete="off" id="last-name" type="text" placeholder="Your Last Name">
+                                        <input autocomplete="off" id="last-name" type="text"
+                                            placeholder="Your Last Name">
                                         <!-- <span asp-validation-for="name" class="text-danger"></span> -->
                                     </div>
                                     <div class="inputs">
                                         <label for="birthdate">Birthdate</label>
-                                        <input autocomplete="off" id="birthdate" type="date" placeholder="Your Birthdate">
+                                        <input autocomplete="off" id="birthdate" type="date"
+                                            placeholder="Your Birthdate">
                                         <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
                                     </div>
                                     <div class="form-group inputs driver-photo-container">
                                         <label asp-for="Photo" class="col-form-label">Photo</label>
                                         <div>
-                                            <input autocomplete="off" asp-for="Photo" class="form-control formField" type="file"
-                                                placeholder="@Html.DisplayNameFor(m => m.Photo)">
+                                            <input autocomplete="off" asp-for="Photo" class="form-control formField"
+                                                type="file" placeholder="@Html.DisplayNameFor(m => m.Photo)">
                                             <span asp-validation-for="Photo" class="text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="inputs">
                                         <label for="country">Country</label>
-                                        <select class="select2DropDown form-control" name="state"
-                                            asp-for="CountryId" asp-items="ViewBag.Countries">
+                                        <select class="select2DropDown form-control" name="state" asp-for="CountryId"
+                                            asp-items="ViewBag.Countries">
                                             <option>Azerbaijan</option>
                                             <option>Turkey</option>
                                             <option>Norway</option>
@@ -213,9 +216,8 @@
                                 <form action="">
                                     <div class="form-group inputs">
                                         <label asp-for="BrandId">Brand</label>
-                                        <select class="select2DropDown formField"
-                                            onchange="onChangeSelect(this)" asp-for="BrandId"
-                                            asp-items="ViewBag.Brands">
+                                        <select class="select2DropDown formField" onchange="onChangeSelect(this)"
+                                            asp-for="BrandId" asp-items="ViewBag.Brands">
                                             <option>Audi</option>
                                             <option>BMW</option>
                                             <option>Mercedes</option>
@@ -237,8 +239,8 @@
                                     <div class="form-group inputs">
                                         <label asp-for="CarPhotos" class="col-form-label">Car Photos</label>
                                         <div>
-                                            <input autocomplete="off" asp-for="CarPhotos" class="form-control formField" type="file"
-                                                multiple="multiple" id="add-photo" max="2">
+                                            <input autocomplete="off" asp-for="CarPhotos" class="form-control formField"
+                                                type="file" multiple="multiple" id="add-photo" max="2">
                                             <span asp-validation-for="CarPhotos" class="text-danger"></span>
                                         </div>
                                         <div class="car-img-container">
@@ -295,37 +297,27 @@
                         <div id="rides" class="tab_content">
                             <div class="details">
                                 <form>
-                                    <div class="inputs">
-                                        <label for="tourist_name">Tourist name</label>
-                                        <input autocomplete="off" id="tourist_name" type="text" placeholder="Tourist name">
-                                        <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
-                                    </div>
                                     <p>Journey</p>
-                                    <div class="journey">
-                                        <div class="details table-responsive">
-                                            <table id="driver-ride-table" class="display">
+                                    <div class="journey" style="padding:0; margin: 0; border: none;">
+                                        <div class="details table-responsive" style="padding: 0;">
+                                            <table id="testDataLoad" class="table table-striped table-bordered  nowrap"
+                                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>
                                                     <tr>
-                                                        <th>Start date</th>
-                                                        <th>End date</th>
-                                                        <th>Total Cost</th>
+                                                        <th>Country</th>
+                                                        <th></th>
+                                                        <th>From date</th>
+                                                        <th>To date</th>
+                                                        <th>Price</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td><input autocomplete="off" type="datetime"disabled value="01.01.2020"></td class="date-td">
-                                                        <td><input autocomplete="off" type="datetime"disabled value="05.01.2020"></td>
-                                                        <td><input autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;" value="23"><span>$</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><input autocomplete="off" type="datetime"disabled value="01.01.2020"></td>
-                                                        <td><input autocomplete="off" type="datetime"disabled value="05.01.2020"></td>
-                                                        <td><input autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;" value="23"><span>$</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><input autocomplete="off" type="datetime"disabled value="01.01.2020"></td>
-                                                        <td><input autocomplete="off" type="datetime"disabled value="05.01.2020"></td>
-                                                        <td><input autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;" value="23"><span>$</span></td>
+                                                        <th>Country</th>
+                                                        <th></th>
+                                                        <th>From date</th>
+                                                        <th>To date</th>
+                                                        <th>Price</th>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -348,174 +340,183 @@
                                     <div class="new_route">
                                         <div class="inputs"">
                                             <label for="">From</label>
-                                            <div class="custom-selectbox">
-                                                <select class="route-from" name="routeFrom" required>
-                                                    <option value="0">All languages</option>
-                                                    <option value="Baku">Baku</option>
-                                                    <option value="Ganja">Ganja</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="inputs">
-                                            <label for="">To</label>
-                                            <div class="custom-selectbox">
-                                                <select class="route-to" name="routeTo" required>
-                                                    <option value="0">All languages</option>
-                                                    <option value="Sumgait">Sumgait</option>
-                                                    <option value="Mingachevir">Mingachevir</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="inputs"">
-                                            <label for="">Cost</label>
-                                            <input type="number" class="route-price" autocomplete="off" placeholder="100$" style="height: 36px;" name="routeCost" required min="1">
-                                        </div>
-                                        <div class="inputs">
-                                            <label for="">Add package</label>
-                                            <div class="package-control-container">
-                                                <button class="add-route-btn"><i class="fas fa-plus"></i></button>
-                                                <button class="delete-route-btn"><i class="fas fa-trash-alt"></i></button>
-                                            </div>
+                                            <div class=" custom-selectbox">
+                                            <select class="route-from" name="routeFrom" required>
+                                                <option value="0">All languages</option>
+                                                <option value="Baku">Baku</option>
+                                                <option value="Ganja">Ganja</option>
+                                            </select>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
-                            <div class="details">
-                                <form>
                                     <div class="inputs">
-                                        <label for="tourist_name">Routes</label>
-                                        <div class="journey">
-                                            <div class="details table-responsive">
-                                                <table id="driver-route-table" class="display">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Start date</th>
-                                                            <th>End date</th>
-                                                            <th>Total Cost</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><input class="from-route-table" autocomplete="off" type="datetime" disabled></td>
-                                                            <td><input class="to-route-table" autocomplete="off" type="datetime" disabled></td>
-                                                            <td><input class="route-price-table" autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;"><span>$</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                        <label for="">To</label>
+                                        <div class="custom-selectbox">
+                                            <select class="route-to" name="routeTo" required>
+                                                <option value="0">All languages</option>
+                                                <option value="Sumgait">Sumgait</option>
+                                                <option value="Mingachevir">Mingachevir</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="save">
-                                        <button class="save-btn">Save changes</button>
+                                    <div class="inputs"">
+                                            <label for="">Cost</label>
+                                            <input type=" number" class="route-price" autocomplete="off"
+                                        placeholder="100$" style="height: 36px;" name="routeCost" required min="1">
                                     </div>
-                                </form>
+                                    <div class="inputs">
+                                        <label for="">Add package</label>
+                                        <div class="package-control-container">
+                                            <button class="add-route-btn"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                    </div>
                             </div>
+                            </form>
                         </div>
-                        <div id="account" class="tab_content">
-                            <div class="details">
-                                <div class="form-group inputs">
-                                    <label asp-for="Email">Email</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i
-                                                    class="far fa-envelope"></i></span>
+                        <div class="details">
+                            <form>
+                                <div class="inputs">
+                                    <label for="tourist_name">Routes</label>
+                                    <div class="journey">
+                                        <div class="details table-responsive">
+
+                                            <table id="driver-route-table" class="display">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Start date</th>
+                                                        <th>End date</th>
+                                                        <th>Total Cost</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input class="from-route-table" autocomplete="off"
+                                                                type="datetime" disabled></td>
+                                                        <td><input class="to-route-table" autocomplete="off"
+                                                                type="datetime" disabled></td>
+                                                        <td><input class="route-price-table" autocomplete="off" disabled
+                                                                type="number"
+                                                                style="width: 30%; outline: none; border: none;"><span>$</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
                                         </div>
-                                        <input autocomplete="off" type="email" asp-for="Email"
-                                            class="form-control formField" placeholder="Your Email"
-                                            autocomplete="off" style="width: 80% !important;">
                                     </div>
-                                    <span asp-validation-for="Email" class="text-danger"></span>
-                                </div>
-                                <div class="form-group inputs">
-                                    <label asp-for="Phone">Phone</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i
-                                                    class="fas fa-phone"></i></span>
-                                        </div>
-                                        <input autocomplete="off" type="text" asp-for="Phone"
-                                            class="form-control formField" placeholder="Your Phone"
-                                            autocomplete="off" style="width: 80% !important;">
-                                    </div>
-                                    <span asp-validation-for="Phone" class="text-danger"></span>
-                                </div>
-                                <div class="form-group inputs">
-                                    <label asp-for="Username">Username</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i
-                                                    class="far fa-user"></i></span>
-                                        </div>
-                                        <input autocomplete="off" style="width: 80% !important;" type="text"
-                                            asp-for="Username" class="form-control formField"
-                                            autocomplete="off" placeholder="Your Username">
-                                    </div>
-                                    <span asp-validation-for="Username" class="text-danger"></span>
-                                </div>
-                                <div class="form-group inputs">
-                                    <label asp-for="Password">Password</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
-                                        <input autocomplete="off" id="password_input" 
-                                        style="width: 80% !important;" 
-                                        type="password"
-                                        asp-for="Password" 
-                                        class="form-control formField"
-                                        placeholder="Your Password">
-                                        <button type="button" class="view"><img src="img/login/view-copy.svg" alt=""></button>
-                                    </div>
-                                    <span asp-validation-for="Password" class="text-danger"></span>
-                                </div>
-                                <div class="form-group inputs">
-                                    <label asp-for="confirmPassword">Confirm Password</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="far fa-user"></i></span>
-                                        </div>
-                                        <input autocomplete="off" id="confrim_password_input" style="width: 80% !important;" type="password" asp-for="confirmPassword" class="form-control formField" placeholder="Confirm Your Password">
-                                        <button type="button" class="view_confrim"><img src="img/login/view-copy.svg" alt=""></button>
-                                    </div>
-                                    <span asp-validation-for="confirmPassword" class="text-danger"></span>
                                 </div>
                                 <div class="save">
                                     <button class="save-btn">Save changes</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
-                        <div id="available" class="tab_content">
-                            <div class="details">
-                                <form>
-                                    <div class="inputs">
-                                        <label for="available">Available dates</label>
-                                        <div class="journey">
-                                            <div class="details table-responsive">
-                                                <table id="driver-time-table" class="display" style="border: none;">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>From</th>
-                                                            <th>To</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><input autocomplete="off" type="date" value="2020-01-01" style="background-color: transparent; border: none;"></td>
-                                                            <td><input autocomplete="off" type="date" value="2020-01-05" style="background-color: transparent; border: none;"></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
+                    </div>
+                    <div id="account" class="tab_content">
+                        <div class="details">
+                            <div class="form-group inputs">
+                                <label asp-for="Email">Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-envelope"></i></span>
                                     </div>
-                                    <div class="save">
-                                        <button class="save-btn">Save changes</button>
+                                    <input autocomplete="off" type="email" asp-for="Email"
+                                        class="form-control formField" placeholder="Your Email" autocomplete="off"
+                                        style="width: 80% !important;">
+                                </div>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group inputs">
+                                <label asp-for="Phone">Phone</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
                                     </div>
-                                </form>
+                                    <input autocomplete="off" type="text" asp-for="Phone" class="form-control formField"
+                                        placeholder="Your Phone" autocomplete="off" style="width: 80% !important;">
+                                </div>
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group inputs">
+                                <label asp-for="Username">Username</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-user"></i></span>
+                                    </div>
+                                    <input autocomplete="off" style="width: 80% !important;" type="text"
+                                        asp-for="Username" class="form-control formField" autocomplete="off"
+                                        placeholder="Your Username">
+                                </div>
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="form-group inputs">
+                                <label asp-for="Password">Password</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i
+                                                class="far fa-user"></i></span></div>
+                                    <input autocomplete="off" id="password_input" style="width: 80% !important;"
+                                        type="password" asp-for="Password" class="form-control formField"
+                                        placeholder="Your Password">
+                                    <button type="button" class="view"><img src="img/login/view-copy.svg"
+                                            alt=""></button>
+                                </div>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group inputs">
+                                <label asp-for="confirmPassword">Confirm Password</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-user"></i></span>
+                                    </div>
+                                    <input autocomplete="off" id="confrim_password_input" style="width: 80% !important;"
+                                        type="password" asp-for="confirmPassword" class="form-control formField"
+                                        placeholder="Confirm Your Password">
+                                    <button type="button" class="view_confrim"><img src="img/login/view-copy.svg"
+                                            alt=""></button>
+                                </div>
+                                <span asp-validation-for="confirmPassword" class="text-danger"></span>
+                            </div>
+                            <div class="save">
+                                <button class="save-btn">Save changes</button>
                             </div>
                         </div>
                     </div>
+                    <div id="available" class="tab_content">
+                        <div class="details">
+                            <form>
+                                <div class="inputs">
+                                    <label for="available">Available dates</label>
+                                    <div class="journey">
+                                        <div class="details table-responsive">
+                                            <table id="driver-time-table" class="display" style="border: none;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>From</th>
+                                                        <th>To</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input autocomplete="off" type="date" value="2020-01-01"
+                                                                style="background-color: transparent; border: none;">
+                                                        </td>
+                                                        <td><input autocomplete="off" type="date" value="2020-01-05"
+                                                                style="background-color: transparent; border: none;">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="save">
+                                    <button class="save-btn">Save changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-1"></div>
             </div>
+            <div class="col-md-1"></div>
+        </div>
         </div>
     </section>
     <footer>
@@ -598,6 +599,7 @@
     <script src="plugin/datatable/datatables.min.js"></script>
     <script src="js/profile_driver.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/profile/profileTourist.js"></script>
     <script src="js/add-route.js"></script>
 </body>
 
