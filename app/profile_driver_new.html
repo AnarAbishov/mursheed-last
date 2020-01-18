@@ -11,6 +11,7 @@
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
     <link href="css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/">
 </head>
 
 <body>
@@ -303,107 +304,70 @@
                                 <i class="fas fa-trash-alt"></i>
                             </li> -->
                             <div class="details">
-                                <form action="">
-                                    <p class="heading">Add new package</p>
+                                <form action="" id="add-route-form">
+                                    <p class="heading">Add new route</p>
                                     <div class="new_route">
                                         <div class="inputs"">
                                             <label for="">From</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
+                                            <div class="custom-selectbox">
+                                                <select class="route-from" name="route-from" required>
                                                     <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
+                                                    <option value="Baku">Baku</option>
+                                                    <option value="Ganja">Ganja</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="inputs"">
+                                        <div class="inputs">
                                             <label for="">To</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
+                                            <div class="custom-selectbox">
+                                                <select class="route-to" name="route-to" required>
                                                     <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
+                                                    <option value="Sumgait">Sumgait</option>
+                                                    <option value="Mingachevir">Mingachevir</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="inputs"">
                                             <label for="">Cost</label>
-                                            <input autocomplete="off" type="text" placeholder="100$" style="height: 36px;">
+                                            <input class="route-price" autocomplete="off" type="number" placeholder="100$" style="height: 36px;" name="route-cost" required min="1">
                                         </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="details">
-                                <form action="">
-                                    <p class="heading">Assign Route</p>
-                                    <div class="new_route">
-                                        <div class="inputs"">
-                                            <label for="">From</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
-                                                    <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="inputs"">
-                                            <label for="">To</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
-                                                    <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="inputs"">
-                                            <label for="">Package Name</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
-                                                    <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
-                                                </select>
+                                        <div class="inputs">
+                                            <label for="">Add package</label>
+                                            <div class="package-control-container">
+                                                <button class="add-route-btn"><i class="fas fa-plus"></i></button>
+                                                <button class="delete-route-btn"><i class="fas fa-trash-alt"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                             <div class="details">
-                                <form action="">
-                                    <p class="heading">Packages</p>
-                                    <div class="new_route">
-                                        <div class="inputs"">
-                                            <label for="">From</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
-                                                    <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
-                                                </select>
+                                <form>
+                                    <div class="inputs">
+                                        <label for="tourist_name">Routes</label>
+                                        <div class="journey">
+                                            <div class="details table-responsive">
+                                                <table id="driver-route-table" class="display">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Start date</th>
+                                                            <th>End date</th>
+                                                            <th>Total Cost</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><input class="from-route-table" autocomplete="off" type="datetime"disabled value=""></td>
+                                                            <td><input class="to-route-table" autocomplete="off" type="datetime"disabled value=""></td>
+                                                            <td><input class="route-price-table" autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;" value=""><span>$</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
-                                        <div class="inputs"">
-                                            <label for="">To</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
-                                                    <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="inputs"">
-                                            <label for="">Package Name</label>
-                                            <div class="custom-selectbox ">
-                                                <select>
-                                                    <option value="0">All languages</option>
-                                                    <option value="1">English</option>
-                                                    <option value="2">Russian</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                    </div>
+                                    <div class="save">
+                                        <button class="save-btn">Save changes</button>
                                     </div>
                                 </form>
                             </div>
@@ -483,26 +447,24 @@
                             <div class="details">
                                 <form>
                                     <div class="inputs">
-                                        <label for="tourist_name">Tourist name</label>
-                                        <input autocomplete="off" id="tourist_name" type="text" placeholder="Tourist name">
-                                    </div>
-                                    <p>Available Dates</p>
-                                    <div class="journey">
-                                        <div class="details table-responsive">
-                                            <table id="driver-time-table" class="display">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Start date</th>
-                                                        <th>End date</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><input autocomplete="off" type="date" value="01.01.2020" style="background-color: transparent; border: none;"></td>
-                                                        <td><input autocomplete="off" type="date" value="05.01.2020" style="background-color: transparent; border: none;"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                        <label for="available">Available dates</label>
+                                        <div class="journey">
+                                            <div class="details table-responsive">
+                                                <table id="driver-time-table" class="display" style="border: none;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>From</th>
+                                                            <th>To</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><input autocomplete="off" type="date" value="01.01.2020" style="background-color: transparent; border: none;"></td>
+                                                            <td><input autocomplete="off" type="date" value="05.01.2020" style="background-color: transparent; border: none;"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="save">
@@ -583,10 +545,11 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="plugin/jquery-validate/jquery.validate.min.js"></script>
+    <script src="plugin/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="js/selectbox.js"></script>
     <script src="js/tabs.js"></script>
     <script src="js/accordion.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="js/SwalUtility.js" asp-append-version="true"></script>
     <script src="js/jquery.steps.min.js"></script>
@@ -594,59 +557,7 @@
     <script src="js/select2.min.js"></script>
     <script src="js/driverRegister.js" asp-append-version="true"></script>
     <script src="plugin/datatable/datatables.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.select2MultipleDropDown').select2();
-            $('.select2DropDown').select2();
-            $('#driver-ride-table').DataTable();
-            $("#driver-time-table").DataTable();
-            $(function () {
-                var imagesPreview = function (input, placeToInsertImagePreview) {
-                    if(input.files) {
-                        var filesAmount = input.files.length;
-                        for (i = 0; i < filesAmount; i++) {
-                            var reader = new FileReader();
-                            reader.onload = function (event) {
-                                $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
-                            }
-                            reader.readAsDataURL(input.files[i]);
-                        }
-                    }
-                    let imgCount = $(".car-img-container img").length;
-                    if(imgCount >= 5){
-                        $("#add-photo").attr('disabled', 'disabled');
-                    }
-                };
-                $('#add-photo').on('change', function () {
-                    let carImgContainer = $(".car-img-container");
-                    let singleImg = document.createElement("div");
-                    singleImg.setAttribute("class", "single-image-container");
-                    let carOverlay = document.createElement("div");
-                    carOverlay.setAttribute("class", "car-overlay");
-                    let zoomBtn = document.createElement("button");
-                    let deleteBtn = document.createElement("button");
-                    deleteBtn.setAttribute("class", "delete-btn")
-                    zoomBtn.innerHTML = "<i class='fas fa-search-plus'></i>";
-                    deleteBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
-                    imagesPreview(this, singleImg);
-                    carImgContainer.append(singleImg);
-                    singleImg.append(carOverlay);
-                    carOverlay.append(zoomBtn);
-                    carOverlay.append(deleteBtn)
-
-                    deleteBtn.addEventListener("click", function(){
-                        let question = confirm("Are you sure to delete this photo ?");
-                        if(question){
-                            this.parentNode.parentNode.parentNode.removeChild(singleImg);
-                        }
-                        else{
-                            return;
-                        }
-                    }); 
-                });
-            });
-        });
-    </script>
+    <script src="js/profile_driver.js"></script>
     <script src="js/navbar.js"></script>
 </body>
 

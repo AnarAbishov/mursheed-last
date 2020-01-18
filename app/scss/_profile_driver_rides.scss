@@ -5,6 +5,25 @@
 #driver_time_table{
   border: none;
 }
+#driver-route-table{
+  border: none;
+  color: #666666 !important;
+  th{
+    text-transform: uppercase;
+    font-size: .8em;
+  }
+  td{
+    font-size: .8em;
+  }
+  tr.odd{
+    background-color: transparent;
+  }
+  input{
+    padding: 0 !important;
+    border: none !important; 
+    background: transparent;
+  }
+}
 #profile_driver{
     #rides{
         p{
