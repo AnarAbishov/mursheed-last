@@ -1,4 +1,3 @@
-
 var acc = document.getElementsByClassName("item_header");
 var i;
 
