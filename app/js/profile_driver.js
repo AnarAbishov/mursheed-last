@@ -4,7 +4,18 @@ $(document).ready(function () {
     $('#driver-ride-table').DataTable();
     $("#driver-time-table").DataTable();
     $("#driver-route-table").DataTable();
+    let deleteBtn = $(".delete-btn");
+    let singleImg = $(".single-img-container")
 
+    deleteBtn.click(function(){
+        let question = confirm("Are you sure to delete this photo ?");
+        if (question) {
+            this.parentNode.parentNode.removeChild(singleImg);
+        } 
+        else {
+            return;
+        }
+    });
 
     $(function () {
         var imagesPreview = function (input, placeToInsertImagePreview) {
@@ -18,36 +29,38 @@ $(document).ready(function () {
                     reader.readAsDataURL(input.files[i]);
                 }
             }
-            let imgCount = $(".car-img-container img").length;
-            if (imgCount >= 5) {
+            let imgCount = $(".single-image-container").length;
+            if (imgCount >= 6) {
                 $("#add-photo").attr('disabled', 'disabled');
             }
         };
+        
         $('#add-photo').on('change', function () {
             let carImgContainer = $(".car-img-container");
-            let singleImg = document.createElement("div");
-            singleImg.setAttribute("class", "single-image-container");
+            let jsSingleImg = document.createElement("div");
+            jsSingleImg.setAttribute("class", "single-image-container");
             let carOverlay = document.createElement("div");
             carOverlay.setAttribute("class", "car-overlay");
             let zoomBtn = document.createElement("button");
-            let deleteBtn = document.createElement("button");
-            deleteBtn.setAttribute("class", "delete-btn")
+            let jsDeleteBtn = document.createElement("button");
+            jsDeleteBtn.setAttribute("class", "delete-btn")
             zoomBtn.innerHTML = "<i class='fas fa-search-plus'></i>";
-            deleteBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
-            imagesPreview(this, singleImg);
-            carImgContainer.append(singleImg);
-            singleImg.append(carOverlay);
+            jsDeleteBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
+            imagesPreview(this, jsSingleImg);
+            carImgContainer.append(jsSingleImg);
+            jsSingleImg.append(carOverlay);
             carOverlay.append(zoomBtn);
-            carOverlay.append(deleteBtn)
+            carOverlay.append(jsDeleteBtn)
 
-            deleteBtn.addEventListener("click", function () {
+            jsDeleteBtn.addEventListener("click", function () {
                 let question = confirm("Are you sure to delete this photo ?");
                 if (question) {
-                    this.parentNode.parentNode.parentNode.removeChild(singleImg);
+                    this.parentNode.parentNode.parentNode.removeChild(jsSingleImg);
                 } else {
                     return;
                 }
             });
         });
+
     });
 });

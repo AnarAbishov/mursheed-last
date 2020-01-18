@@ -24,6 +24,7 @@
     background: transparent;
   }
 }
+
 #profile_driver{
     #rides{
         p{
@@ -46,6 +47,15 @@
             margin-top: 20px;
             padding: 14px;
             #driver-ride-table{
+              thead{
+                padding-bottom: 20px;
+              }
+              th,td{
+                font-size: .8em !important;
+              }
+              th{
+                text-transform: uppercase;
+              }
               border: 1px solid #DFDFDF;
               color: #666666 !important;
               tr.odd{
