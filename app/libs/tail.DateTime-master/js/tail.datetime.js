@@ -651,7 +651,7 @@
                 var checked = (this.view.date.getHours() > 12)? 'checked="checked" ': '';
                 fields.push(
                     '<label class="timepicker-switch" data-am="AM" data-pm="PM">' +
-                        '<input type="checkbox" value="1" data-input="PM" ' + checked + '/><span></span>' +
+                        '<input autocomplete="off" type="checkbox" value="1" data-input="PM" ' + checked + '/><span></span>' +
                     '</label>'
                 );
             }

@@ -127,7 +127,7 @@ second parameter is optional and, if set, MUST be an object with your **tail.Dat
         <script type="text/javascript" src="js/tail.datetime.min.js"></script>
         <!-- <script type="text/javascript" src="langs/tail.datetime-{lang}.js"></script> -->
 
-        <input type="text" class="tail-datetime-field" />
+        <input autocomplete="off" type="text" class="tail-datetime-field" />
 
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", function(){

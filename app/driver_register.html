@@ -136,7 +136,7 @@
                                         <div class="form-group inputs">
                                             <label asp-for="Firstname" class="col-form-label">Name</label>
                                             <div class="">
-                                                <input asp-for="Firstname" class="form-control formField" type="text"
+                                                <input autocomplete="off" asp-for="Firstname" class="form-control formField" type="text"
                                                     value="" placeholder="Your Name" autocomplete="off">
                                                 <span asp-validation-for="Firstname" class="text-danger"></span>
                                             </div>
@@ -145,7 +145,7 @@
                                         <div class="form-group inputs">
                                             <label asp-for="Lastname" class="col-form-label">Surname</label>
                                             <div class="">
-                                                <input asp-for="Lastname" class="form-control formField" type="text"
+                                                <input autocomplete="off" asp-for="Lastname" class="form-control formField" type="text"
                                                     value="" placeholder="Your Surname" autocomplete="off">
                                                 <span asp-validation-for="Lastname" class="text-danger"></span>
                                             </div>
@@ -164,7 +164,7 @@
                                         <div class="form-group mb-0 inputs driver-photo-container">
                                             <label asp-for="Photo" class="col-form-label">Photo</label>
                                             <div>
-                                                <input asp-for="Photo" class="form-control formField" type="file"
+                                                <input autocomplete="off" asp-for="Photo" class="form-control formField" type="file"
                                                     placeholder="@Html.DisplayNameFor(m => m.Photo)">
                                                 <span asp-validation-for="Photo" class="text-danger"></span>
                                             </div>
@@ -221,7 +221,7 @@
                                                 <div class="form-group inputs">
                                                     <label asp-for="CarPhotos" class="col-form-label">Car Photos</label>
                                                     <div class="">
-                                                        <input asp-for="CarPhotos" class="form-control formField"
+                                                        <input autocomplete="off" asp-for="CarPhotos" class="form-control formField"
                                                             type="file" multiple="multiple">
                                                         <span asp-validation-for="CarPhotos" class="text-danger"></span>
                                                     </div>
@@ -243,7 +243,7 @@
                                                     <label asp-for="GovernmentalId" class="col-form-label">Governmental
                                                         Id</label>
                                                     <div class="">
-                                                        <input asp-for="GovernmentalId" class="form-control formField"
+                                                        <input autocomplete="off" asp-for="GovernmentalId" class="form-control formField"
                                                             type="text" value="" autocomplete="off"
                                                             placeholder="Your Governmental Id">
                                                         <span asp-validation-for="GovernmentalId"
@@ -255,7 +255,7 @@
                                                     <label asp-for="DriverLicenseId" class="col-form-label">Driver
                                                         License Id</label>
                                                     <div class="">
-                                                        <input asp-for="DriverLicenseId" class="form-control formField"
+                                                        <input autocomplete="off" asp-for="DriverLicenseId" class="form-control formField"
                                                             type="text" value="" autocomplete="off"
                                                             placeholder="Your Driver Dicense Id">
                                                         <span asp-validation-for="DriverLicenseId"
@@ -267,7 +267,7 @@
                                                     <label asp-for="PhoneNumber" class="col-form-label">Phone
                                                         Number</label>
                                                     <div class="">
-                                                        <input asp-for="PhoneNumber" class="form-control formField"
+                                                        <input autocomplete="off" asp-for="PhoneNumber" class="form-control formField"
                                                             type="tel" value="" autocomplete="off"
                                                             placeholder="Your Phone Number">
                                                         <span asp-validation-for="PhoneNumber"
@@ -278,7 +278,7 @@
                                                 <div class="form-group inputs">
                                                     <label asp-for="Birthdate" class="col-form-label">Birthdate </label>
                                                     <div class="">
-                                                        <input asp-for="Birthdate" class="form-control formField"
+                                                        <input autocomplete="off" asp-for="Birthdate" class="form-control formField"
                                                             type="date" value="" autocomplete="off">
                                                         <span asp-validation-for="Birthdate" class="text-danger"></span>
                                                     </div>
@@ -303,7 +303,7 @@
                                                             <span class="input-group-text"><i
                                                                     class="far fa-envelope"></i></span>
                                                         </div>
-                                                        <input type="email" asp-for="Email"
+                                                        <input autocomplete="off" type="email" asp-for="Email"
                                                             class="form-control formField" placeholder="Your Email"
                                                             autocomplete="off" style="width: 80% !important;">
                                                     </div>
@@ -316,7 +316,7 @@
                                                             <span class="input-group-text"><i
                                                                     class="far fa-user"></i></span>
                                                         </div>
-                                                        <input style="width: 80% !important;" type="text"
+                                                        <input autocomplete="off" style="width: 80% !important;" type="text"
                                                             asp-for="Username" class="form-control formField"
                                                             autocomplete="off" placeholder="Your Username">
                                                     </div>
@@ -326,7 +326,7 @@
                                                     <label asp-for="Password">Password</label>
                                                     <div class="input-group">
                                                         <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
-                                                        <input id="password_input" 
+                                                        <input autocomplete="off" id="password_input" 
                                                         style="width: 80% !important;" 
                                                         type="password"
                                                         asp-for="Password" 
@@ -342,7 +342,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text"><i class="far fa-user"></i></span>
                                                         </div>
-                                                        <input id="confrim_password_input" style="width: 80% !important;" type="password" asp-for="confirmPassword" class="form-control formField" placeholder="Confirm Your Password">
+                                                        <input autocomplete="off" id="confrim_password_input" style="width: 80% !important;" type="password" asp-for="confirmPassword" class="form-control formField" placeholder="Confirm Your Password">
                                                         <button type="button" class="view_confrim"><img src="img/login/view-copy.svg" alt=""></button>
                                                     </div>
                                                     <span asp-validation-for="confirmPassword" class="text-danger"></span>
@@ -415,7 +415,7 @@
                             <div class="subscribe">
                                 <p class="header-text">Subscribe</p>
                                 <div class="send">
-                                    <input placeholder="your email address" type="text">
+                                    <input autocomplete="off" placeholder="your email address" type="text">
                                     <button><img src="img/footer/send.svg" alt=""></button>
                                 </div>
                             </div>

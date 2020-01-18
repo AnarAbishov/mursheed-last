@@ -30,22 +30,21 @@ a.paginate_button{
 table.dataTable thead th, table.dataTable tbody td{
     background-color: transparent !important;
     font-size: .8em;
-    padding: 10px 10px;
+    padding: 10px;
 }
 table.dataTable thead th{
     border: none !important;
     text-transform: uppercase;
     color: #666 !important;
 }
+
 .country-td{
     color: #666 !important;
     padding: 0px 10px;
+    width: 200px;
 }
 .pagination{
     margin-top: 20px;
-}
-.country-td{
-    width: 200px;
 }
 .date-td{
     width: 100px !important;
@@ -65,4 +64,6 @@ td.country-td.sorting_1{
     padding: 12px 10px;
 }
 
-
+th.sorting_asc, th.sorting{
+    padding: 10px !important;
+}

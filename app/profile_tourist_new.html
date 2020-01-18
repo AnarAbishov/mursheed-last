@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
     <link href="css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="plugin/datatable/datatables.min.css">
     <style>
     </style>
 </head>
@@ -140,15 +140,18 @@
                                 <form>
                                     <div class="inputs">
                                         <label for="name">First Name</label>
-                                        <input id="name" type="text" placeholder="Your First Name">
+                                        <input autocomplete="off" id="name" type="text" placeholder="Your First Name">
+                                        <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
                                     </div>
                                     <div class="inputs">
                                         <label for="name">Last Name</label>
-                                        <input id="last-name" type="text" placeholder="Your Last Name">
+                                        <input autocomplete="off" id="last-name" type="text" placeholder="Your Last Name">
+                                        <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
                                     </div>
                                     <div class="inputs">
                                         <label for="birthdate">Birthdate</label>
-                                        <input id="birthdate" type="date" placeholder="Your birthdate">
+                                        <input autocomplete="off" id="birthdate" type="date" placeholder="Your birthdate">
+                                        <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
                                     </div>
                                     <div class="inputs">
                                         <label for="country">Country</label>
@@ -161,6 +164,7 @@
                                     <div class="inputs">
                                         <label for="additional-info">Additional Info</label>
                                         <textarea name="" id="" cols="10" id="additional-info" placeholder="More about yourself"></textarea>
+                                        <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
                                     </div>
                                     <div class="save">
                                         <button class="save-btn">Save changes</button>
@@ -182,21 +186,21 @@
                                     <tbody>
                                         <tr>
                                             <td class="country-td">Azerbaijan</td>
-                                            <td class="date-td"><input type="datetime"disabled value="01.01.2020"></td class="date-td">
-                                            <td class="date-td"><input type="datetime"disabled value="05.01.2020"></td>
-                                            <td class="cost-td"><input disabled type="number" style="width: 30%; outline: none; border: none;" value="234"><span>$</span></td>
+                                            <td class="date-td"><input autocomplete="off" type="datetime"disabled value="01.01.2020"></td class="date-td">
+                                            <td class="date-td"><input autocomplete="off" type="datetime"disabled value="05.01.2020"></td>
+                                            <td class="cost-td"><input autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;" value="234"><span>$</span></td>
                                         </tr>
                                         <tr>
                                             <td class="country-td">Azerbaijan</td>
-                                            <td class="date-td"><input type="datetime"disabled value="01.01.2020"></td>
-                                            <td class="date-td"><input type="datetime"disabled value="05.01.2020"></td>
-                                            <td class="cost-td"><input disabled type="number" style="width: 30%; outline: none; border: none;" value="23"><span>$</span></td>
+                                            <td class="date-td"><input autocomplete="off" type="datetime"disabled value="01.01.2020"></td>
+                                            <td class="date-td"><input autocomplete="off" type="datetime"disabled value="05.01.2020"></td>
+                                            <td class="cost-td"><input autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;" value="23"><span>$</span></td>
                                         </tr>
                                         <tr>
                                             <td class="country-td">Azerbaijan</td>
-                                            <td class="date-td"><input type="datetime"disabled value="01.01.2020"></td>
-                                            <td class="date-td"><input type="datetime"disabled value="05.01.2020"></td>
-                                            <td class="cost-td"><input disabled type="number" style="width: 30%; outline: none; border: none;" value="2"><span>$</span></td>
+                                            <td class="date-td"><input autocomplete="off" type="datetime"disabled value="01.01.2020"></td>
+                                            <td class="date-td"><input autocomplete="off" type="datetime"disabled value="05.01.2020"></td>
+                                            <td class="cost-td"><input autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;" value="2"><span>$</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -211,7 +215,7 @@
                                             <span class="input-group-text"><i
                                                     class="far fa-envelope"></i></span>
                                         </div>
-                                        <input type="email" asp-for="Email"
+                                        <input autocomplete="off" type="email" asp-for="Email"
                                             class="form-control formField" placeholder="Your Email"
                                             autocomplete="off" style="width: 80% !important;">
                                     </div>
@@ -224,7 +228,7 @@
                                             <span class="input-group-text"><i
                                                     class="fas fa-phone"></i></span>
                                         </div>
-                                        <input type="text" asp-for="Phone"
+                                        <input autocomplete="off" type="text" asp-for="Phone"
                                             class="form-control formField" placeholder="Your Phone"
                                             autocomplete="off" style="width: 80% !important;">
                                     </div>
@@ -237,7 +241,7 @@
                                             <span class="input-group-text"><i
                                                     class="far fa-user"></i></span>
                                         </div>
-                                        <input style="width: 80% !important;" type="text"
+                                        <input autocomplete="off" style="width: 80% !important;" type="text"
                                             asp-for="Username" class="form-control formField"
                                             autocomplete="off" placeholder="Your Username">
                                     </div>
@@ -247,7 +251,7 @@
                                     <label asp-for="Password">Password</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
-                                        <input id="password_input" 
+                                        <input autocomplete="off" id="password_input" 
                                         style="width: 80% !important;" 
                                         type="password"
                                         asp-for="Password" 
@@ -263,7 +267,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="far fa-user"></i></span>
                                         </div>
-                                        <input id="confrim_password_input" style="width: 80% !important;" type="password" asp-for="confirmPassword" class="form-control formField" placeholder="Confirm Your Password">
+                                        <input autocomplete="off" id="confrim_password_input" style="width: 80% !important;" type="password" asp-for="confirmPassword" class="form-control formField" placeholder="Confirm Your Password">
                                         <button type="button" class="view_confrim"><img src="img/login/view-copy.svg" alt=""></button>
                                     </div>
                                     <span asp-validation-for="confirmPassword" class="text-danger"></span>
@@ -334,7 +338,7 @@
                             <div class="subscribe">
                                 <p class="header-text">Subscribe</p>
                                 <div class="send">
-                                    <input placeholder="your email address" type="text">
+                                    <input autocomplete="off" placeholder="your email address" type="text">
                                     <button><img src="img/footer/send.svg" alt=""></button>
                                 </div>
                             </div>
@@ -358,7 +362,7 @@
     <script src="js/jquery.form-wizard.init.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/driverRegister.js" asp-append-version="true"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="plugin/datatable/datatables.min.js"></script>
     <script>
         $(document).ready(function () {
             $('a[href="#finish"]').click(function () {
