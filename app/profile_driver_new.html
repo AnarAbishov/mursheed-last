@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
-    <link href="css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/">
+    <link href="css/select2.min.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -310,7 +308,7 @@
                                         <div class="inputs"">
                                             <label for="">From</label>
                                             <div class="custom-selectbox">
-                                                <select class="route-from" name="route-from" required>
+                                                <select class="route-from" name="routeFrom" required>
                                                     <option value="0">All languages</option>
                                                     <option value="Baku">Baku</option>
                                                     <option value="Ganja">Ganja</option>
@@ -320,7 +318,7 @@
                                         <div class="inputs">
                                             <label for="">To</label>
                                             <div class="custom-selectbox">
-                                                <select class="route-to" name="route-to" required>
+                                                <select class="route-to" name="routeTo" required>
                                                     <option value="0">All languages</option>
                                                     <option value="Sumgait">Sumgait</option>
                                                     <option value="Mingachevir">Mingachevir</option>
@@ -329,7 +327,7 @@
                                         </div>
                                         <div class="inputs"">
                                             <label for="">Cost</label>
-                                            <input class="route-price" autocomplete="off" type="number" placeholder="100$" style="height: 36px;" name="route-cost" required min="1">
+                                            <input type="number" class="route-price" autocomplete="off" placeholder="100$" style="height: 36px;" name="routeCost" required min="1">
                                         </div>
                                         <div class="inputs">
                                             <label for="">Add package</label>
@@ -357,9 +355,9 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td><input class="from-route-table" autocomplete="off" type="datetime"disabled value=""></td>
-                                                            <td><input class="to-route-table" autocomplete="off" type="datetime"disabled value=""></td>
-                                                            <td><input class="route-price-table" autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;" value=""><span>$</span></td>
+                                                            <td><input class="from-route-table" autocomplete="off" type="datetime" disabled></td>
+                                                            <td><input class="to-route-table" autocomplete="off" type="datetime" disabled></td>
+                                                            <td><input class="route-price-table" autocomplete="off" disabled type="number" style="width: 30%; outline: none; border: none;"><span>$</span></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -459,8 +457,8 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td><input autocomplete="off" type="date" value="01.01.2020" style="background-color: transparent; border: none;"></td>
-                                                            <td><input autocomplete="off" type="date" value="05.01.2020" style="background-color: transparent; border: none;"></td>
+                                                            <td><input autocomplete="off" type="date" value="2020-01-01" style="background-color: transparent; border: none;"></td>
+                                                            <td><input autocomplete="off" type="date" value="2020-01-05" style="background-color: transparent; border: none;"></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -559,6 +557,7 @@
     <script src="plugin/datatable/datatables.min.js"></script>
     <script src="js/profile_driver.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/add-route.js"></script>
 </body>
 
 </html>

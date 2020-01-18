@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     $(function () {
         var imagesPreview = function (input, placeToInsertImagePreview) {
-            if(input.files) {
+            if (input.files) {
                 var filesAmount = input.files.length;
                 for (i = 0; i < filesAmount; i++) {
                     var reader = new FileReader();
@@ -19,7 +19,7 @@ $(document).ready(function () {
                 }
             }
             let imgCount = $(".car-img-container img").length;
-            if(imgCount >= 5){
+            if (imgCount >= 5) {
                 $("#add-photo").attr('disabled', 'disabled');
             }
         };
@@ -40,38 +40,14 @@ $(document).ready(function () {
             carOverlay.append(zoomBtn);
             carOverlay.append(deleteBtn)
 
-            deleteBtn.addEventListener("click", function(){
+            deleteBtn.addEventListener("click", function () {
                 let question = confirm("Are you sure to delete this photo ?");
-                if(question){
+                if (question) {
                     this.parentNode.parentNode.parentNode.removeChild(singleImg);
-                }
-                else{
+                } else {
                     return;
                 }
-            }); 
+            });
         });
     });
-
-    let addRouteBtn = $(".add-route-btn");
-    let $addRouteForm = $("#add-route-form");
-    let fromRouteTable = $(".from-route-table");
-    let toRouteTable = $(".to-route-table");
-    let routePriceTable = $(".route-price-table");
-
-    addRouteBtn.click(function(e){
-        e.preventDefault();
-        let formValue = $($addRouteForm).serialize();
-        $.validator.unobtrusive.parse($addRouteForm);
-        if($addRouteForm.valid()){
-            alert("gul");  
-            let data = JSON.stringify($($addRouteForm).serializeArray()); 
-            
-        }
-        else{
-            alert("pox");
-        }
-    }); 
-
-
-
 });
