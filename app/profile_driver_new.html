@@ -176,7 +176,7 @@
                                     </div>
                                     <div class="inputs">
                                         <label for="country">Country</label>
-                                        <select class="js-example-basic-single form-control" name="state"
+                                        <select class="select2DropDown form-control" name="state"
                                             asp-for="CountryId" asp-items="ViewBag.Countries">
                                             <option>Azerbaijan</option>
                                             <option>Turkey</option>
@@ -186,7 +186,7 @@
                                     </div>
                                     <div class="form-group mb-0 inputs">
                                         <label asp-for="LanguageIds">Language</label>
-                                        <select class="js-example-basic-multiple js-states form-control"
+                                        <select class="select2MultipleDropDown js-states form-control"
                                             id="id_label_multiple" multiple="multiple">
                                             <option value="">Azerbaijani</option>
                                             <option value="">Russian</option>
@@ -214,7 +214,7 @@
                                 <form action="">
                                     <div class="form-group inputs">
                                         <label asp-for="BrandId">Brand</label>
-                                        <select class="js-example-basic-single formField"
+                                        <select class="select2DropDown formField"
                                             onchange="onChangeSelect(this)" asp-for="BrandId"
                                             asp-items="ViewBag.Brands">
                                             <option>Audi</option>
@@ -226,7 +226,7 @@
                                     <!--end form-group-->
                                     <div class="form-group inputs">
                                         <label asp-for="ModelId">Model</label>
-                                        <select class="js-example-basic-single formField" asp-for="ModelId">
+                                        <select class="select2DropDown formField" asp-for="ModelId">
                                             <option>A1</option>
                                             <option>A2</option>
                                             <option>A3</option>
@@ -596,8 +596,8 @@
     <script src="plugin/datatable/datatables.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.js-example-basic-multiple').select2();
-            $('.js-example-basic-single').select2();
+            $('.select2MultipleDropDown').select2();
+            $('.select2DropDown').select2();
             $('#driver-ride-table').DataTable();
             $("#driver-time-table").DataTable();
             $(function () {

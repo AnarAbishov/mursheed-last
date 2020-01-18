@@ -155,7 +155,7 @@
                                     </div>
                                     <div class="inputs">
                                         <label for="country">Country</label>
-                                        <select class="js-example-basic-single form-control" name="state" asp-for="CountryId" asp-items="ViewBag.Countries">
+                                        <select class="select2DropDown form-control" name="state" asp-for="CountryId" asp-items="ViewBag.Countries">
                                             <option>Azerbaijan</option>
                                             <option>Turkey</option>
                                             <option>Norway</option>
@@ -368,8 +368,8 @@
             $('a[href="#finish"]').click(function () {
                 $(".driverRegister").submit();
             });
-            $('.js-example-basic-multiple').select2();
-            $('.js-example-basic-single').select2();
+            $('.select2MultipleDropDown').select2();
+            $('.select2DropDown').select2();
             $('#tourist-journey-table').DataTable();
             $(".previous").html("<i class='fas fa-chevron-left'></i>");
             $(".next").html("<i class='fas fa-chevron-right'></i>");
