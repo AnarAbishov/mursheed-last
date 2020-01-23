@@ -26,7 +26,7 @@ addRouteBtn.click(function (e) {
         console.log(getData("routeTo"));
         fromRouteTable.attr("value", getData("routeFrom"));
         toRouteTable.attr("value", getData("routeTo"));
-        routePriceTable.attr("value", getData("routeCost"));
+        routePriceTable.attr("value", `$${getData("routeCost")}`);
     } 
     else {
         alert("poks");
