@@ -115,7 +115,6 @@
                     <div class="tab_headers">
                         <ul class="tabs">
                             <li class="active"><a href="#personal">Personal info</a></li>
-                            <li><a href="#car">Car</a></li>
                             <li><a href="#rides">Rides table</a></li>
                             <li><a href="#routes">Routes</a></li>
                             <li><a href="#account">Account</a></li>
@@ -147,8 +146,8 @@
                             <p>Earning: 102</p>
                         </div>
                     </div>
-                    <div class="tab_container">
-                        <div id="personal" class="tab_content">
+                    <div class="tab_container">    
+                    <div id="personal" class="tab_content">
                             <div class="details">
                                 <form>
                                     <div class="inputs">
@@ -210,91 +209,8 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
-                        <div id="car" class="tab_content">
-                            <div class="details">
-                                <form action="">
-                                    <div class="form-group inputs">
-                                        <label asp-for="BrandId">Brand</label>
-                                        <select class="select2DropDown formField" onchange="onChangeSelect(this)"
-                                            asp-for="BrandId" asp-items="ViewBag.Brands">
-                                            <option>Audi</option>
-                                            <option>BMW</option>
-                                            <option>Mercedes</option>
-                                        </select>
-                                        <span asp-validation-for="BrandId" class="text-danger"></span>
-                                    </div>
-                                    <!--end form-group-->
-                                    <div class="form-group inputs">
-                                        <label asp-for="ModelId">Model</label>
-                                        <select class="select2DropDown formField" asp-for="ModelId">
-                                            <option>A1</option>
-                                            <option>A2</option>
-                                            <option>A3</option>
-                                            <option>A4</option>
-                                        </select>
-                                        <span asp-validation-for="ModelId" class="text-danger"></span>
-                                    </div>
-                                    <!--end form-group-->
-                                    <div class="form-group inputs">
-                                        <label asp-for="CarPhotos" class="col-form-label">Car Photos</label>
-                                        <div>
-                                            <input autocomplete="off" asp-for="CarPhotos" class="form-control formField"
-                                                type="file" multiple="multiple" id="add-photo" max="2">
-                                            <span asp-validation-for="CarPhotos" class="text-danger"></span>
-                                        </div>
-                                        <div class="car-img-container">
-                                            <div class="single-image-container">
-                                                <div class="car-overlay">
-                                                    <button><i class="fas fa-search-plus"></i></button>
-                                                    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
-                                                </div>
-                                                <img src="img/driver_details/grancoupe.jpg" alt="">
-                                            </div>
-                                            <div class="single-image-container">
-                                                <div class="car-overlay">
-                                                    <button><i class="fas fa-search-plus"></i></button>
-                                                    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
-                                                </div>
-                                                <img src="img/driver_details/grancoup2.jpg" alt="">
-                                            </div>
-                                            <div class="single-image-container">
-                                                <div class="car-overlay">
-                                                    <button><i class="fas fa-search-plus"></i></button>
-                                                    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
-                                                </div>
-                                                <img src="img/driver_details/granscoupe3.jpg" alt="">
-                                            </div>
-                                            <div class="single-image-container">
-                                                <div class="car-overlay">
-                                                    <button><i class="fas fa-search-plus"></i></button>
-                                                    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
-                                                </div>
-                                                <img src="img/driver_details/grancoupe4.jpg" alt="">
-                                            </div>
-                                            <div class="single-image-container">
-                                                <div class="car-overlay">
-                                                    <button><i class="fas fa-search-plus"></i></button>
-                                                    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
-                                                </div>
-                                                <img src="img/driver_details/grancoupe5.png" alt="">
-                                            </div>
-                                            <div class="single-image-container">
-                                                <div class="car-overlay">
-                                                    <button><i class="fas fa-search-plus"></i></button>
-                                                    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
-                                                </div>
-                                                <img src="img/driver_details/grancoupe6.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="save">
-                                        <button class="save-btn">Save changes</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div id="rides" class="tab_content">
+                    </div>
+                    <div id="rides" class="tab_content">
                             <div class="details">
                                 <form>
                                     <p>Journey</p>
@@ -328,8 +244,8 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
-                        <div id="routes" class="tab_content">
+                    </div>
+                    <div id="routes" class="tab_content">
                             <!-- <li class="icons">
                                 <i class="fas fa-pencil-alt"></i>
                                 <i class="fas fa-trash-alt"></i>
