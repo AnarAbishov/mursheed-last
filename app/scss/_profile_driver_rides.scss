@@ -6,6 +6,11 @@
   border: none;
 }
 #driver-route-table{
+
+  .route-table-options{
+    display: none;
+  }
+  
   border: none;
   color: #666666 !important;
   th{
