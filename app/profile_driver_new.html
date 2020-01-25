@@ -358,32 +358,30 @@
                                 <form action="" id="addRouteForm">
                                     <p class="heading">Add new route</p>
                                     <div class="new_route">
-                                        <div class="inputs"">
-                                            <label for="">From</label>
-                                            <div class="custom-selectbox">
-                                                <select class="route-from" name="routeFrom" required>
-                                                    <option value="0">Select</option>
-                                                    <option value="1">Baku</option>
-                                                    <option value="2">Ganja</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="inputs">
-                                        <label for="">To</label>
-                                        <div class="custom-selectbox">
-                                            <select class="route-to" name="routeTo" required>
-                                                <option value="0">All languages</option>
-                                                <option value="1">Sumgait</option>
-                                                <option value="2">Mingachevir</option>
+                                        <div class="form-group inputs">
+                                            <label asp-for="FromRoute">From</label>
+                                            <select class="select2DropDown formField route-from" name="routeFrom">
+                                                <option>Baku</option>
+                                                <option>Ganja</option>
+                                                <option>Mingachevir</option>
                                             </select>
-                                            <span class="text-danger field-validation-valid" data-valmsg-for="routeTo"
-                                                data-valmsg-replace="true"></span>
+                                            <span asp-validation-for="FromRoute" class="text-danger"></span>
                                         </div>
+                                        <div class="form-group inputs">
+                                            <label asp-for="ToRoute">To</label>
+                                            <select class="select2DropDown formField route-to" name="routeTo">
+                                                <option>Baku</option>
+                                                <option>Ganja</option>
+                                                <option>Mingachevir</option>
+                                            </select>
+                                            <span asp-validation-for="FromRoute" class="text-danger"></span>
                                         </div>
-                                        <div class="inputs"">
-                                                    <label for="">Cost</label>
-                                                    <input type=" number" class="route-price" autocomplete="off"
-                                        placeholder="100$" style="height: 36px;" name="routeCost" required min="1">
+                                        <div class="form-group inputs">
+                                            <label asp-for="RoutePrice">Price</label>
+                                            <input autocomplete="off" asp-for="RoutePrice" class="form-control formField route-price" 
+                                            type="text" name="routePrice"
+                                            placeholder="$100" autocomplete="off">
+                                            <span asp-validation-for="RoutePrice" class="text-danger"></span>
                                         </div>
                                         <div class="inputs">
                                         <label for="">Add Route</label>

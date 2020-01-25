@@ -1,8 +1,8 @@
 let addRouteBtn = $(".add-route-btn");
 //table datas
-let fromRoute = $(".from-route-table")[0];
-let toRoute = $(".to-route-table")[0];
-let routePrice = $(".route-price-table")[0];
+let fromRoute = $(".from-route");
+let toRoute = $(".route-to");
+let routePrice = $(".route-price");
 let form = $("#addRouteForm");
 
 addRouteBtn.click(function(e){
@@ -22,12 +22,20 @@ addRouteBtn.click(function(e){
     }
 
     if (form.valid()){
+        console.log(getData("routeFrom"));
         console.log(getData("routeTo"));
-        fromRouteTable.attr("value", getData("routeFrom"));
-        toRouteTable.attr("value", getData("routeTo"));
-        routePriceTable.attr("value", `$${getData("routeCost")}`);
+        console.log(getData("routePrice"));
+        
+        fromRoute.attr("value", getData("routeFrom"));
+        toRoute.attr("value", getData("routeTo"));
+        routePrice.attr("value", `$${getData("routeCost")}`);
     } 
     else {
         alert("poks");
     }
 });
+
+let editRouteBtn = $(".edit-route-btn");
+let deleteRouteBtn = $(".delete-route-btn");
+let saveRouteBtn = $(".save-route-btn");
+
