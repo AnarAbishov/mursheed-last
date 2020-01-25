@@ -1,3 +1,4 @@
+$(document).ready(function(){
 let addRouteBtn = $(".add-route-btn");
 //table datas
 let fromRoute = $(".from-route");
@@ -39,3 +40,8 @@ let editRouteBtn = $(".edit-route-btn");
 let deleteRouteBtn = $(".delete-route-btn");
 let saveRouteBtn = $(".save-route-btn");
 
+editRouteBtn.click(function(){
+    alert("hello!");
+});
+
+});
