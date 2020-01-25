@@ -99,7 +99,7 @@ function format(row) {
 
     var card = `<div class="card">
                  <div class="card-body">
-                    <h4 class="header-title alert-info header-title p-2">Routes</h4>
+                    <h4 class="header-title ext-center header-title p-2">Routes</h4>
                      <div class="single-table">
                          <div class="table-responsive">`,
 
@@ -112,7 +112,7 @@ function format(row) {
         routeTableEnd = `</table>`;
         
         
-    //#region table
+    // region table
 
     // table first row
     routeTable += `<thead >
@@ -124,19 +124,19 @@ function format(row) {
                           </tr>
                    </thead>`;
 
-    Array.prototype.forEach.call(row.routes,
-        function (item) {
+    // Array.prototype.forEach.call(row.routes,
+    //     function (item) {
 
-            routeTable += `<tbody>
-                                <tr>
-                                    <th scope="row">${item.fromCity}</th>
-                                    <td class="class="alert-link"">${item.toCity}</td>
-                                    <td>${item.price}</td>
-                                    <td class="alert alert-primary">${item.info}</td>
-                                </tr>
-                            </tbody>`;
+    //         routeTable += `<tbody>
+    //                             <tr>
+    //                                 <th scope="row">${item.fromCity}</th>
+    //                                 <td class="class="alert-link"">${item.toCity}</td>
+    //                                 <td>${item.price}</td>
+    //                                 <td class="alert alert-primary">${item.info}</td>
+    //                             </tr>
+    //                         </tbody>`;
 
-        });
+    //     });
     routeTable += routeTableEnd;
     //#endregion DocDirection and DocDirectionDetails
     card += routeTable;
