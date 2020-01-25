@@ -1,16 +1,19 @@
 $(document).ready(function () {
     $('.select2MultipleDropDown').select2();
     $('.select2DropDown').select2();
-    $('#driver-ride-table').DataTable();
+    // $('#driver-ride-table').DataTable();
     $("#driver-time-table").DataTable();
-    $("#driver-route-table").DataTable();
+    // $("#driver-route-table").DataTable();
+
     let deleteBtn = $(".delete-btn");
     let singleImg = $(".single-img-container")
 
-    deleteBtn.click(function(){
+    deleteBtn.click(function(e){
+        e.preventDefault();
         let question = confirm("Are you sure to delete this photo ?");
         if (question) {
-            this.parentNode.parentNode.removeChild(singleImg);
+            this.parentNode.parentNode.remove();
+            // console.log(this.parentNode.parentNode);
         } 
         else {
             return;

@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('.select2MultipleDropDown').select2();
     $('.select2DropDown').select2();
 
-    var table = $('#testDataLoad').DataTable({
+    var rideLoadData = $('#rideLoadData').DataTable({
         "processing": true, // for show progress bar
         "serverSide": true, // for process server side
         "filter": true, // this is for disable filter (search box)
@@ -28,15 +28,37 @@ $(document).ready(function () {
         "order": [[1, 'asc']]
     });
 
+    // var routeTable = $('#testDataLoad').DataTable({
+    //     "processing": true, // for show progress bar
+    //     "serverSide": true, // for process server side
+    //     "filter": true, // this is for disable filter (search box)
+    //     "orderMulti": false, // for disable multiple column at once
+    //     "ordering": false,
+    //     "ajax": "objects.txt",
+
+    //     "columns": [
+    //         { "data": "country" },
+    //         {
+    //             "className": 'details-control',
+    //             "orderable": false,
+    //             "data": null,
+    //             "defaultContent": ''
+    //         },
+    //         { "data": "fromDate" },
+    //         { "data": "toDate" },
+    //         { "data": "price" }
+    //     ],
+    //     "order": [[1, 'asc']]
+    // });
     //#region row Details
     var detailRows = [];
 
-    $('#testDataLoad tbody').on('click',
+    $('#rideLoadData tbody').on('click',
         'tr td.details-control',
         function () {
 
             var tr = $(this).closest('tr');
-            var row = table.row(tr);
+            var row = rideLoadData.row(tr);
             var idx = $.inArray(tr.attr('id'), detailRows);
 
             if (row.child.isShown()) {
@@ -61,7 +83,7 @@ $(document).ready(function () {
     $('#btn-show-all-children').on('click',
         function () {
             // Enumerate all rows
-            table.rows().every(function () {
+            rideLoadData.rows().every(function () {
                 // If row has details collapsed
                 if (!this.child.isShown()) {
                     // Open this row
@@ -74,7 +96,7 @@ $(document).ready(function () {
     $('#btn-hide-all-children').on('click',
         function () {
             // Enumerate all rows
-            table.rows().every(function () {
+            rideLoadData.rows().every(function () {
                 // If row has details expanded
                 if (this.child.isShown()) {
                     // Collapse row details
@@ -84,7 +106,7 @@ $(document).ready(function () {
             });
         });
 
-    table.on('draw',
+        rideLoadData.on('draw',
         function () {
             $.each(detailRows,
                 function (i, id) {
