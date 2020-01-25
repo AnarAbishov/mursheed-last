@@ -99,7 +99,7 @@ function format(row) {
 
     var card = `<div class="card">
                  <div class="card-body">
-                    <h4 class="header-title ext-center header-title p-2">Routes</h4>
+                    <h4 class="header-title text-center header-title p-2">Routes</h4>
                      <div class="single-table">
                          <div class="table-responsive">`,
 
