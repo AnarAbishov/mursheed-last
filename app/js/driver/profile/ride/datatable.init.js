@@ -10,9 +10,9 @@ var rideDataTable = $('#rideDataTable').DataTable({
             "data": "country"
         },
         {
+            "data": null,
             "className": 'details-control',
             "orderable": false,
-            "data": null,
             "defaultContent": ''
         },
         {
