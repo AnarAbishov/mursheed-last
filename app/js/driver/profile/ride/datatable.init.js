@@ -110,8 +110,8 @@ function format(row) {
         // route table
         routeTable = `<table class="table table-hover text-center">`,
         routeTableEnd = `</table>`;
-        
-        
+
+
     // region table
 
     // table first row
@@ -123,20 +123,38 @@ function format(row) {
                               <th scope="col">Info</th>
                           </tr>
                    </thead>`;
+    // let routes = [{
+    //         "fromRoute": "Baki",
+    //         "toRoute": "Ganja",
+    //         "price": "50$",
+    //         "info": "baki-gence",
+    //     },
+    //     {
+    //         "fromRoute": "Baki",
+    //         "toRoute": "Ganja",
+    //         "price": "50$",
+    //         "info": "baki-gence",
+    //     },
+    //     {
+    //         "fromRoute": "Baki",
+    //         "toRoute": "Ganja",
+    //         "price": "50$",
+    //         "info": "baki-gence",
+    //     }
+    // ]
+    Array.prototype.forEach.call(row.route,
+        function (item) {
 
-    // Array.prototype.forEach.call(row.routes,
-    //     function (item) {
+            routeTable += `<tbody>
+                                <tr>
+                                    <th scope="row">${item.fromCity}</th>
+                                    <td class="class="alert-link"">${item.toCity}</td>
+                                    <td>${item.price}</td>
+                                    <td class="alert alert-primary">${item.info}</td>
+                                </tr>
+                            </tbody>`;
 
-    //         routeTable += `<tbody>
-    //                             <tr>
-    //                                 <th scope="row">${item.fromCity}</th>
-    //                                 <td class="class="alert-link"">${item.toCity}</td>
-    //                                 <td>${item.price}</td>
-    //                                 <td class="alert alert-primary">${item.info}</td>
-    //                             </tr>
-    //                         </tbody>`;
-
-    //     });
+        });
     routeTable += routeTableEnd;
     //#endregion DocDirection and DocDirectionDetails
     card += routeTable;

@@ -4,8 +4,15 @@
             "country": "Azerbaijan",
             "fromDate": "2011\/04\/25",
             "toDate": "2011\/04\/25",
-            "price": "$230"
-            
+            "price": "$230",
+            "route":[
+                {
+                "fromCity":"Baku",
+                "toCity":"Shaki",
+                "price":"50$",
+                "info":"baku-shaki 50 $"
+                }
+            ]
         }
     ]
 }
