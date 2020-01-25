@@ -4,30 +4,16 @@
             "country": "Azerbaijan",
             "fromDate": "2011\/04\/25",
             "toDate": "2011\/04\/25",
-            "price": "$230",
-            "routes":[
-                {
-                    "fromroute":"Baki",
-                    "toRoute":"Ganja",
-                    "price":"50$",
-                    "info":"baki-gence",
-                }
-            ]
+            "price": "$230"
+            
         },
 
         {
             "country": "Turkey",
             "fromDate": "2011\/04\/25",
             "toDate": "2011\/04\/25",
-            "price": "$330",
-            "routes":[
-                {
-                    "fromroute":"Baki",
-                    "toRoute":"Ganja",
-                    "price":"50$",
-                    "info":"baki-gence",
-                }
-            ]
+            "price": "$330"
+           
         }
     ]
 }

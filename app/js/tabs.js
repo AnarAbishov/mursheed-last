@@ -1,6 +1,6 @@
 $(document).ready(function($) {
     $('.tab_content').hide();
-    $('.tab_content:first').show();
+    $('.tab_content:eq(2)').show();
     $('.tabs li:first').addClass('active');
     $('.tabs li').click(function(event) {
       $('.tabs li').removeClass('active');
