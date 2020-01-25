@@ -4,9 +4,16 @@
             "id": "1",
             "fromRoute": [
                 {"id":1, "name":"Baki"}, 
-                {"id":2, "name":"Turkuye"}
+                {"id":2, "name":"Ganja"},
+                {"id":3, "name":"Sumgait"}, 
+                {"id":4, "name":"Mingachevir"}
             ],
-            "toRoute": "baki",
+            "toRoute": [
+                {"id":1, "name":"Baki"}, 
+                {"id":2, "name":"Ganja"},
+                {"id":3, "name":"Sumgait"}, 
+                {"id":4, "name":"Mingachevir"}
+            ],
             "price": "$230"
         }
     ]

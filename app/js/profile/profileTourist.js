@@ -13,19 +13,28 @@ $(document).ready(function () {
         "ordering": false,
         "ajax": "objects.txt",
 
-        "columns": [
-            { "data": "country" },
+        "columns": [{
+                "data": "country"
+            },
             {
                 "className": 'details-control',
                 "orderable": false,
                 "data": null,
                 "defaultContent": ''
             },
-            { "data": "fromDate" },
-            { "data": "toDate" },
-            { "data": "price" }
+            {
+                "data": "fromDate"
+            },
+            {
+                "data": "toDate"
+            },
+            {
+                "data": "price"
+            }
         ],
-        "order": [[1, 'asc']]
+        "order": [
+            [1, 'asc']
+        ]
     });
 
     var routeTable = $('#routeTable').DataTable({
@@ -37,30 +46,42 @@ $(document).ready(function () {
         "ajax": "routes.txt",
 
         "columns": [
-            { "data": "id" },
-            { "data": "fromRoute", 
-            render: function (row) {
+            {
+                "data": "id"
+            },
+            {
+                "data": "fromRoute",
+                render: function (row) {
                     return readSelectData(row);
                 }
             },
-            { "data": "toRoute" },
-            { "data": "price" },
             {
-                data: null,
+                "data": "toRoute",
+                render: function (row) {
+                    return readSelectData(row);
+                }
+            },
+            {
+                "data": "price"
+            },
+            {
+                "data": "price",
                 "autoWidth": true,
                 render: function (row) {
                     return `<ul class="m-0 p-0 d-flex justify-content-center">
-                           <li class=" list-group mr-2">
-                             <a  href="/Dashboard/Accommodation/Edit/${row.id}" class=' btn text-primary btn-sm'><i class='fa fa-edit'></i></a>
-                           </li>
-                           <li class="list-group">
-                              <a onclick="deleteItem()" class="btn text-danger btn-sm"><i class="fa fa-trash"></i></a>
-                           </li>
-                        </ul>`;
+                   <li class=" list-group mr-2">
+                     <a  href="/Dashboard/Accommodation/Edit/${row.id}" class=' btn text-primary btn-sm'><i class='fa fa-edit'></i></a>
+                   </li>
+                   <li class="list-group">
+                      <a onclick="deleteItem()" class="btn text-danger btn-sm"><i class="fa fa-trash"></i></a>
+                   </li>
+                </ul>`;
                 }
             }
         ],
-        "order": [[1, 'asc']]
+        "order": [
+            [1, 'asc']
+        ]
     });
 
     //#region row Details
@@ -119,7 +140,7 @@ $(document).ready(function () {
             });
         });
 
-        rideLoadData.on('draw',
+    rideLoadData.on('draw',
         function () {
             $.each(detailRows,
                 function (i, id) {
@@ -130,20 +151,20 @@ $(document).ready(function () {
 
 });
 
-function readSelectData(row){
-    let selectStart = "<select>"
+function readSelectData(row) {
+    let selectStart = "<select class='routeSelect'>"
     let selectEnd = "</select>";
     Array.prototype.forEach.call(row,
-        function (item){
+        function (item) {
             selectStart += `<option value="${item.id}">${item.name}</option>`;
-    });
-    selectStart+=selectEnd;
+        });
+    selectStart += selectEnd;
     return selectStart;
 }
 
 function format(row) {
     // variables
-    var card = 
+    var card =
         `<tr style="width: 100%">
             <td>Baku</td>
             <td>1</td>
