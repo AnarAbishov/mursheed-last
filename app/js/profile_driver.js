@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $('.select2MultipleDropDown').select2();
-    $('.select2DropDown').select2();
+    // $('.select2MultipleDropDown').select2();
+    // $('.select2DropDown').select2();
     // $('#driver-ride-table').DataTable();
     $("#driver-time-table").DataTable();
     // $("#driver-route-table").DataTable();
