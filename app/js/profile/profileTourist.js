@@ -28,28 +28,41 @@ $(document).ready(function () {
         "order": [[1, 'asc']]
     });
 
-    // var routeTable = $('#testDataLoad').DataTable({
-    //     "processing": true, // for show progress bar
-    //     "serverSide": true, // for process server side
-    //     "filter": true, // this is for disable filter (search box)
-    //     "orderMulti": false, // for disable multiple column at once
-    //     "ordering": false,
-    //     "ajax": "objects.txt",
+    var routeTable = $('#routeTable').DataTable({
+        "processing": true, // for show progress bar
+        "serverSide": true, // for process server side
+        "filter": true, // this is for disable filter (search box)
+        "orderMulti": false, // for disable multiple column at once
+        "ordering": false,
+        "ajax": "routes.txt",
 
-    //     "columns": [
-    //         { "data": "country" },
-    //         {
-    //             "className": 'details-control',
-    //             "orderable": false,
-    //             "data": null,
-    //             "defaultContent": ''
-    //         },
-    //         { "data": "fromDate" },
-    //         { "data": "toDate" },
-    //         { "data": "price" }
-    //     ],
-    //     "order": [[1, 'asc']]
-    // });
+        "columns": [
+            { "data": "id" },
+            { "data": "fromRoute", 
+            render: function (row) {
+                    return readSelectData(row);
+                }
+            },
+            { "data": "toRoute" },
+            { "data": "price" },
+            {
+                data: null,
+                "autoWidth": true,
+                render: function (row) {
+                    return `<ul class="m-0 p-0 d-flex justify-content-center">
+                           <li class=" list-group mr-2">
+                             <a  href="/Dashboard/Accommodation/Edit/${row.id}" class=' btn text-primary btn-sm'><i class='fa fa-edit'></i></a>
+                           </li>
+                           <li class="list-group">
+                              <a onclick="deleteItem()" class="btn text-danger btn-sm"><i class="fa fa-trash"></i></a>
+                           </li>
+                        </ul>`;
+                }
+            }
+        ],
+        "order": [[1, 'asc']]
+    });
+
     //#region row Details
     var detailRows = [];
 
@@ -116,6 +129,18 @@ $(document).ready(function () {
     //#endregion
 
 });
+
+function readSelectData(row){
+    let selectStart = "<select>"
+    let selectEnd = "</select>";
+    Array.prototype.forEach.call(row,
+        function (item){
+            selectStart += `<option value="${item.id}">${item.name}</option>`;
+    });
+    selectStart+=selectEnd;
+    return selectStart;
+}
+
 function format(row) {
     // variables
     var card = 

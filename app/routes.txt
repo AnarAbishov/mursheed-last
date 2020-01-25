@@ -1,0 +1,13 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "fromRoute": [
+                {"id":1, "name":"Baki"}, 
+                {"id":2, "name":"Turkuye"}
+            ],
+            "toRoute": "baki",
+            "price": "$230"
+        }
+    ]
+}
