@@ -68,7 +68,7 @@ $(document).ready(function () {
                 render: function (row) {
                     return `<ul class="m-0 p-0 d-flex justify-content-center">
                            <li class=" list-group mr-2">
-                             <a  href="/Dashboard/Accommodation/Edit/${row.id}"   class=' btn text-primary btn-sm'><i class='fa fa-edit'></i></a>
+                             <a href="/Dashboard/Accommodation/Edit/${row.id}" class="btn text-primary btn-sm'><i class='fa fa-edit'></i></a>
                            </li>
                            <li class="list-group">
                               <a onclick="deleteItem('${row.name}','${row.id}')" class="btn text-danger btn-sm"><i class="fa fa-trash"></i></a>

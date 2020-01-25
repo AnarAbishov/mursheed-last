@@ -117,7 +117,7 @@
                     <!--#region tab links-->
                     <div class="tab_headers">
                         <ul class="tabs">
-                            <li ><a href="#personal">Personal info</a></li>
+                            <li><a href="#personal">Personal info</a></li>
                             <li><a href="#car">Car</a></li>
                             <li class="active"><a href="#rides">Rides table</a></li>
                             <li><a href="#routes">Routes</a></li>
@@ -156,73 +156,73 @@
                     <!-- #endregion -->
 
                     <!--#region tab-container-->
-                    <div class="tab_container"> 
+                    <div class="tab_container">
                         <!--#region personal-info-->
                         <div id="personal" class="tab_content">
-                                <div class="details">
-                                    <form>
-                                        <div class="inputs">
-                                            <label for="name">First Name</label>
-                                            <input autocomplete="off" id="name" type="text" placeholder="Your First Name">
-                                            <!-- <span asp-validation-for="name" class="text-danger"></span> -->
+                            <div class="details">
+                                <form>
+                                    <div class="inputs">
+                                        <label for="name">First Name</label>
+                                        <input autocomplete="off" id="name" type="text" placeholder="Your First Name">
+                                        <!-- <span asp-validation-for="name" class="text-danger"></span> -->
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="last-name">Last Name</label>
+                                        <input autocomplete="off" id="last-name" type="text"
+                                            placeholder="Your Last Name">
+                                        <!-- <span asp-validation-for="name" class="text-danger"></span> -->
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="birthdate">Birthdate</label>
+                                        <input autocomplete="off" id="birthdate" type="date"
+                                            placeholder="Your Birthdate">
+                                        <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
+                                    </div>
+                                    <div class="form-group inputs driver-photo-container">
+                                        <label asp-for="Photo" class="col-form-label">Photo</label>
+                                        <div>
+                                            <input autocomplete="off" asp-for="Photo" class="form-control formField"
+                                                type="file" placeholder="@Html.DisplayNameFor(m => m.Photo)">
+                                            <span asp-validation-for="Photo" class="text-danger"></span>
                                         </div>
-                                        <div class="inputs">
-                                            <label for="last-name">Last Name</label>
-                                            <input autocomplete="off" id="last-name" type="text"
-                                                placeholder="Your Last Name">
-                                            <!-- <span asp-validation-for="name" class="text-danger"></span> -->
-                                        </div>
-                                        <div class="inputs">
-                                            <label for="birthdate">Birthdate</label>
-                                            <input autocomplete="off" id="birthdate" type="date"
-                                                placeholder="Your Birthdate">
-                                            <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
-                                        </div>
-                                        <div class="form-group inputs driver-photo-container">
-                                            <label asp-for="Photo" class="col-form-label">Photo</label>
-                                            <div>
-                                                <input autocomplete="off" asp-for="Photo" class="form-control formField"
-                                                    type="file" placeholder="@Html.DisplayNameFor(m => m.Photo)">
-                                                <span asp-validation-for="Photo" class="text-danger"></span>
-                                            </div>
-                                        </div>
-                                        <div class="inputs">
-                                            <label for="country">Country</label>
-                                            <select class="select2DropDown form-control" name="state" asp-for="CountryId"
-                                                asp-items="ViewBag.Countries">
-                                                <option>Azerbaijan</option>
-                                                <option>Turkey</option>
-                                                <option>Norway</option>
-                                            </select>
-                                            <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
-                                        </div>
-                                        <div class="form-group mb-0 inputs">
-                                            <label asp-for="LanguageIds">Language</label>
-                                            <select class="select2MultipleDropDown js-states form-control"
-                                                id="id_label_multiple" multiple="multiple">
-                                                <option value="">Azerbaijani</option>
-                                                <option value="">Russian</option>
-                                                <option value="">English</option>
-                                                <option value="">Deutsch</option>
-                                                <option value="">Spanish</option>
-                                                <option value="">French</option>
-                                                <option value="">Italian</option>
-                                                <option value="">Georgian</option>
-                                                <option value="">Iranian</option>
-                                                <option value="">Arabic</option>
-                                                <option value="">Armenian</option>
-                                            </select>
-                                            <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
-                                            <span asp-validation-for="LanguageIds" class="text-danger"></span>
-                                        </div>
-                                        <div class="save">
-                                            <button class="save-btn">Save changes</button>
-                                        </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="country">Country</label>
+                                        <select class="select2DropDown form-control" name="state" asp-for="CountryId"
+                                            asp-items="ViewBag.Countries">
+                                            <option>Azerbaijan</option>
+                                            <option>Turkey</option>
+                                            <option>Norway</option>
+                                        </select>
+                                        <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
+                                    </div>
+                                    <div class="form-group mb-0 inputs">
+                                        <label asp-for="LanguageIds">Language</label>
+                                        <select class="select2MultipleDropDown js-states form-control"
+                                            id="id_label_multiple" multiple="multiple">
+                                            <option value="">Azerbaijani</option>
+                                            <option value="">Russian</option>
+                                            <option value="">English</option>
+                                            <option value="">Deutsch</option>
+                                            <option value="">Spanish</option>
+                                            <option value="">French</option>
+                                            <option value="">Italian</option>
+                                            <option value="">Georgian</option>
+                                            <option value="">Iranian</option>
+                                            <option value="">Arabic</option>
+                                            <option value="">Armenian</option>
+                                        </select>
+                                        <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
+                                        <span asp-validation-for="LanguageIds" class="text-danger"></span>
+                                    </div>
+                                    <div class="save">
+                                        <button class="save-btn">Save changes</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <!--#endregion--> 
-                          
+                        <!--#endregion-->
+
                         <!--#region car-->
                         <div id="car" class="tab_content">
                             <div class="details">
@@ -252,8 +252,9 @@
                                     <div class="form-group inputs">
                                         <label asp-for="CarPhotos" class="col-form-label">Car Photos</label>
                                         <div>
-                                            <input disabled autocomplete="off" asp-for="CarPhotos" class="form-control formField"
-                                                type="file" multiple="multiple" id="add-photo" max="6">
+                                            <input disabled autocomplete="off" asp-for="CarPhotos"
+                                                class="form-control formField" type="file" multiple="multiple"
+                                                id="add-photo" max="6">
                                             <span asp-validation-for="CarPhotos" class="text-danger"></span>
                                         </div>
                                         <div class="car-img-container">
@@ -308,7 +309,7 @@
                             </div>
                         </div>
                         <!--#endregion-->
-    
+
                         <!--#region rides-->
                         <div id="rides" class="tab_content">
                             <div class="details">
@@ -346,60 +347,61 @@
                             </div>
                         </div>
                         <!--#endregion rides-->
-    
-                        <!--region routes-->
+
+                        <!--#region routes-->
                         <div id="routes" class="tab_content">
-                                <!-- <li class="icons">
+                            <!-- <li class="icons">
                                     <i class="fas fa-pencil-alt"></i>
                                     <i class="fas fa-trash-alt"></i>
                                 </li> -->
-                                <div class="details">
-                                    
-                                    <form action="" id="addRouteForm">
-                                        <p class="heading">Add new route</p>
-                                        <div class="new_route">
-                                            <div class="inputs"">
-                                                <label for="">From</label>
-                                                <div class=" custom-selectbox">
+                            <div class="details">
+                                <form action="" id="addRouteForm">
+                                    <p class="heading">Add new route</p>
+                                    <div class="new_route">
+                                        <div class="inputs"">
+                                            <label for="">From</label>
+                                            <div class="custom-selectbox">
                                                 <select class="route-from" name="routeFrom" required>
                                                     <option value="0">Select</option>
-                                                    <option value="Baku">Baku</option>
-                                                    <option value="Ganja">Ganja</option>
+                                                    <option value="1">Baku</option>
+                                                    <option value="2">Ganja</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="inputs">
-                                            <label for="">To</label>
-                                            <div class="custom-selectbox">
-                                                <select class="route-to" name="routeTo" required>
-                                                    <option value="0">All languages</option>
-                                                    <option value="Sumgait">Sumgait</option>
-                                                    <option value="Mingachevir">Mingachevir</option>
-                                                </select>
-                                                <span class="text-danger field-validation-valid" data-valmsg-for="routeTo" data-valmsg-replace="true"></span>
-                                            </div>
+                                        <label for="">To</label>
+                                        <div class="custom-selectbox">
+                                            <select class="route-to" name="routeTo" required>
+                                                <option value="0">All languages</option>
+                                                <option value="1">Sumgait</option>
+                                                <option value="2">Mingachevir</option>
+                                            </select>
+                                            <span class="text-danger field-validation-valid" data-valmsg-for="routeTo"
+                                                data-valmsg-replace="true"></span>
+                                        </div>
                                         </div>
                                         <div class="inputs"">
-                                                <label for="">Cost</label>
-                                                <input type=" number" class="route-price" autocomplete="off"
-                                            placeholder="100$" style="height: 36px;" name="routeCost" required min="1">
+                                                    <label for="">Cost</label>
+                                                    <input type=" number" class="route-price" autocomplete="off"
+                                        placeholder="100$" style="height: 36px;" name="routeCost" required min="1">
                                         </div>
                                         <div class="inputs">
-                                            <label for="">Add Route</label>
-                                            <div class="package-control-container">
-                                                <button type="button" onclick="addRoute()" class="add-route-btn"><i class="fas fa-plus"></i></button>
-                                            </div>
+                                        <label for="">Add Route</label>
+                                        <div class="package-control-container">
+                                            <button type="button" class="add-route-btn"><i
+                                                    class="fas fa-plus"></i></button>
                                         </div>
-                                </div>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                             <div class="details">
-                                <form>
-                                    <div class="inputs">
-                                        <label for="tourist_name">Routes</label>
-                                        <div class="journey">
-                                            <div class="details table-responsive">
-                                                <!-- <table id="routeTable" class="display">
+                            <form>
+                                <div class="inputs">
+                                    <label for="tourist_name">Routes</label>
+                                    <div class="journey">
+                                        <div class="details table-responsive">
+                                            <!-- <table id="routeTable" class="display">
                                                     <thead>
                                                         <tr>
                                                             <th>Start date</th>
@@ -423,7 +425,7 @@
                                                         </tr>
                                                     </tbody>
                                                 </table> -->
-                                                <table id="routeTable" class="table table-striped table-bordered  nowrap"
+                                            <table id="routeTable" class="table table-striped table-bordered  nowrap"
                                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>
                                                     <tr>
@@ -437,125 +439,125 @@
                                                 <tbody>
                                                 </tbody>
                                             </table>
-                                            </div>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
+                            </form>
                             </div>
                         </div>
-                        <!--#endregion-->
-    
-                        <!--#region account-->
-                        <div id="account" class="tab_content">
-                            <div class="details">
-                                <div class="form-group inputs">
-                                    <label asp-for="Email">Email</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="far fa-envelope"></i></span>
-                                        </div>
-                                        <input autocomplete="off" type="email" asp-for="Email"
-                                            class="form-control formField" placeholder="Your Email" autocomplete="off"
-                                            style="width: 80% !important;">
+                    <!--#endregion-->
+
+                    <!--#region account-->
+                    <div id="account" class="tab_content">
+                        <div class="details">
+                            <div class="form-group inputs">
+                                <label asp-for="Email">Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-envelope"></i></span>
                                     </div>
-                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                    <input autocomplete="off" type="email" asp-for="Email"
+                                        class="form-control formField" placeholder="Your Email" autocomplete="off"
+                                        style="width: 80% !important;">
                                 </div>
-                                <div class="form-group inputs">
-                                    <label asp-for="Phone">Phone</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                        </div>
-                                        <input autocomplete="off" type="text" asp-for="Phone" class="form-control formField"
-                                            placeholder="Your Phone" autocomplete="off" style="width: 80% !important;">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group inputs">
+                                <label asp-for="Phone">Phone</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
                                     </div>
-                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                    <input autocomplete="off" type="text" asp-for="Phone" class="form-control formField"
+                                        placeholder="Your Phone" autocomplete="off" style="width: 80% !important;">
                                 </div>
-                                <div class="form-group inputs">
-                                    <label asp-for="Username">Username</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="far fa-user"></i></span>
-                                        </div>
-                                        <input autocomplete="off" style="width: 80% !important;" type="text"
-                                            asp-for="Username" class="form-control formField" autocomplete="off"
-                                            placeholder="Your Username">
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group inputs">
+                                <label asp-for="Username">Username</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-user"></i></span>
                                     </div>
-                                    <span asp-validation-for="Username" class="text-danger"></span>
+                                    <input autocomplete="off" style="width: 80% !important;" type="text"
+                                        asp-for="Username" class="form-control formField" autocomplete="off"
+                                        placeholder="Your Username">
                                 </div>
-                                <div class="form-group inputs">
-                                    <label asp-for="Password">Password</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend"><span class="input-group-text"><i
-                                                    class="far fa-user"></i></span></div>
-                                        <input autocomplete="off" id="password_input" style="width: 80% !important;"
-                                            type="password" asp-for="Password" class="form-control formField"
-                                            placeholder="Your Password">
-                                        <button type="button" class="view"><img src="img/login/view-copy.svg"
-                                                alt=""></button>
-                                    </div>
-                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="form-group inputs">
+                                <label asp-for="Password">Password</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i
+                                                class="far fa-user"></i></span></div>
+                                    <input autocomplete="off" id="password_input" style="width: 80% !important;"
+                                        type="password" asp-for="Password" class="form-control formField"
+                                        placeholder="Your Password">
+                                    <button type="button" class="view"><img src="img/login/view-copy.svg"
+                                            alt=""></button>
                                 </div>
-                                <div class="form-group inputs">
-                                    <label asp-for="confirmPassword">Confirm Password</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="far fa-user"></i></span>
-                                        </div>
-                                        <input autocomplete="off" id="confrim_password_input" style="width: 80% !important;"
-                                            type="password" asp-for="confirmPassword" class="form-control formField"
-                                            placeholder="Confirm Your Password">
-                                        <button type="button" class="view_confrim"><img src="img/login/view-copy.svg"
-                                                alt=""></button>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group inputs">
+                                <label asp-for="confirmPassword">Confirm Password</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-user"></i></span>
                                     </div>
-                                    <span asp-validation-for="confirmPassword" class="text-danger"></span>
+                                    <input autocomplete="off" id="confrim_password_input" style="width: 80% !important;"
+                                        type="password" asp-for="confirmPassword" class="form-control formField"
+                                        placeholder="Confirm Your Password">
+                                    <button type="button" class="view_confrim"><img src="img/login/view-copy.svg"
+                                            alt=""></button>
+                                </div>
+                                <span asp-validation-for="confirmPassword" class="text-danger"></span>
+                            </div>
+                            <div class="save">
+                                <button class="save-btn">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--#endregion-->
+
+                    <!--#region avaible date-->
+                    <div id="available" class="tab_content">
+                        <div class="details">
+                            <form>
+                                <div class="inputs">
+                                    <label for="available">Available dates</label>
+                                    <div class="journey">
+                                        <div class="details table-responsive">
+                                            <table id="driver-time-table" class="display" style="border: none;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>From</th>
+                                                        <th>To</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input autocomplete="off" type="date" value="2020-01-01"
+                                                                style="background-color: transparent; padding-left: 0; border: none;">
+                                                        </td>
+                                                        <td><input autocomplete="off" type="date" value="2020-01-05"
+                                                                style="background-color: transparent; padding-left: 0; border: none;">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="save">
                                     <button class="save-btn">Save changes</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
-                        <!--#endregion-->
-    
-                        <!--#region avaible date-->
-                        <div id="available" class="tab_content">
-                            <div class="details">
-                                <form>
-                                    <div class="inputs">
-                                        <label for="available">Available dates</label>
-                                        <div class="journey">
-                                            <div class="details table-responsive">
-                                                <table id="driver-time-table" class="display" style="border: none;">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>From</th>
-                                                            <th>To</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><input autocomplete="off" type="date" value="2020-01-01"
-                                                                    style="background-color: transparent; padding-left: 0; border: none;">
-                                                            </td>
-                                                            <td><input autocomplete="off" type="date" value="2020-01-05"
-                                                                    style="background-color: transparent; padding-left: 0; border: none;">
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="save">
-                                        <button class="save-btn">Save changes</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!--#endregion-->
                     </div>
                     <!--#endregion-->
-                    
+                </div>
+                <!--#endregion-->
+
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -637,9 +639,11 @@
     <script src="js/navbar.js"></script>
     <script src="js/tabs.js"></script>
     <script src="js/sweetalert.min.js"></script>
+
     <!-- select2 -->
     <script src="js/select2.min.js"></script>
     <script src="js/driver/profile/select2.init.js"></script>
+
     <!-- dataTable -->
     <script src="plugin/datatable/datatables.min.js"></script>
     <script src="js/driver/profile/ride/datatable.init.js"></script>
@@ -647,8 +651,8 @@
 
     <!-- custom -->
     <script src="js/profile_driver.js"></script>
-    <script src="js/profile/profileTourist.js"></script>
     <script src="js/add-route.js"></script>
+    <script src="js/profile/profileTourist.js"></script>
     <script src="js/script.js"></script>
 </body>
 
