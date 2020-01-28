@@ -312,3 +312,13 @@ ul.dashed>li:before {
     width: 100% !important;
     padding: 8px !important;
 }
+
+
+
+.sub-menu {
+    transition: height .3s ease;
+    overflow: hidden;
+}
+.sub-menu:not(.d-block) {
+    display: none;
+}
