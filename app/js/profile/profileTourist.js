@@ -85,7 +85,7 @@ $('#routeTable tbody').on('click',
         } else {
             tr.addClass('shown');
             tr.addClass('details');
-            row.child(format(row.data())).show();
+            row.child(format2(row.data())).show();
 
             // Add to the 'open' array
             if (idx === -1) {
@@ -102,7 +102,7 @@ $('#btn-show-all-children').on('click',
             // If row has details collapsed
             if (!this.child.isShown()) {
                 // Open this row
-                this.child(format(this.data())).show();
+                this.child(format2(this.data())).show();
                 $(this.node()).addClass('shown');
             }
         });
@@ -132,37 +132,22 @@ routeTable.on('draw',
 });
 
 
-function format(row) {
+function format2(row) {
 
-    var card = `<div class="card">
-                 <div class="card-body">
-                    <h4 class="header-title text-center header-title p-2">Routes</h4>
-                     <div class="single-table">
-                         <div class="table-responsive">`,
+    var card = `<div>
+                    <h4 class="header-title text-center header-title p-2">Route Info</h4>`,
 
-        cardEnd = `</div>
-                        </div>
-                     </div>
-                 </div>`,
+        cardEnd = `</div>`,
         // route table
-        routeInfoTable = `<table class="table table-hover text-center">`,
-        routeInfoTableEnd = `</table>`;
+        routeInfoTable = `<textarea disabled class='routeInfoTextarea' rows='2' style="width: 100%; background-color: #F2F2F2;" >`,
+        routeInfoTableEnd = `</textarea>`;
 
 
     // region table
 
     // table first row
-    routeInfoTable += `<thead >
-                          <tr>
-                              <th scope="col">Info</th>
-                          </tr>
-                   </thead>`;
-                   routeInfoTable+=`<tbody>
-                    <tr>
-                        <th scope="row">${row.info}</th>
-                    </tr>
-                </tbody>`;
-                routeInfoTable += routeInfoTableEnd;
+    routeInfoTable+=`${row.info}`;
+    routeInfoTable += routeInfoTableEnd;
     //#endregion DocDirection and DocDirectionDetails
     card += routeInfoTable;
     card += cardEnd;
