@@ -151,7 +151,6 @@ function format2(row) {
     card += cardEnd;
     return card;
 }
-
 //#endregion
 function readSelectData(row) {
     let selectStart = "<select disabled style='color:black' class='select2DropDown formField routeSelect text-center'>"
