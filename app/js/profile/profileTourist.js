@@ -50,7 +50,13 @@ $(document).ready(function () {
         ],
         "order": [
             [1, 'asc']
-        ]
+        ],
+        language: {
+            paginate: {
+                next: `<i style="color: #007BFF;" class="fas fa-arrow-right"></i>`,
+                previous: `<i style="color: #007BFF;" class="fas fa-arrow-left"></i>`,
+            }
+        }
     });
 });
 
