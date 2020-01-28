@@ -50,5 +50,5 @@ function deleteItem(elem){
 }
 function saveItem(elem){
     $(elem).closest("tr").find(".routeSelect").prop("disabled", true).removeClass("enabled-select");
-    $(elem).closest("tr").find(".routePrice").prop("contenteditable", false);
+    $(elem).closest("tr").find(".routePrice").prop("contenteditable", false).css("outline", "none").css("color", "#000");;
 }

@@ -384,11 +384,18 @@
                                             <span asp-validation-for="RoutePrice" class="text-danger"></span>
                                         </div>
                                         <div class="inputs">
-                                        <label for="">Add Route</label>
-                                        <div class="package-control-container">
+                                        <label for="" class="text-center">Add Route</label>
+                                        <div class="package-control-container justify-content-center">
                                             <button type="button" class="add-route-btn"><i
                                                     class="fas fa-plus"></i></button>
                                         </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-route">
+                                        <div class="form-group inputs">
+                                            <label asp-for="RouteInfo" style="font-size: 14px;">Info</label>
+                                            <textarea required name="RouteInfo" cols="30" rows="2" style="resize: vertical;"></textarea>
+                                            <span asp-validation-for="RouteInfo" class="text-danger"></span>
                                         </div>
                                     </div>
                                 </form>
@@ -431,6 +438,7 @@
                                                         <th>from</th>
                                                         <th>to</th>
                                                         <th>price</th>
+                                                        <th>info</th>
                                                         <th>#</th>
                                                     </tr>
                                                 </thead>

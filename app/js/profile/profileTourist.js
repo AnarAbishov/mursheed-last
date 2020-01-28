@@ -30,6 +30,13 @@ $(document).ready(function () {
                 "data": "price", 
                 "class": "text-center pt-3 routePrice",
             },
+            // icon deyisecek todo
+            {
+                "data": null,
+                "className": 'details-control',
+                "orderable": false,
+                "defaultContent": ''
+            },
             {
                 "autoWidth": true,
                 render: function (row) {
@@ -58,8 +65,110 @@ $(document).ready(function () {
             }
         }
     });
+    //#region row Details
+var detailRows = [];
+
+$('#routeTable tbody').on('click',
+    'tr td.details-control',
+    function () {
+
+        var tr = $(this).closest('tr');
+        var row = routeTable.row(tr);
+        var idx = $.inArray(tr.attr('id'), detailRows);
+
+        if (row.child.isShown()) {
+            tr.removeClass('details');
+            row.child.hide();
+            tr.removeClass('shown');
+            // Remove from the 'open' array
+            detailRows.splice(idx, 1);
+        } else {
+            tr.addClass('shown');
+            tr.addClass('details');
+            row.child(format(row.data())).show();
+
+            // Add to the 'open' array
+            if (idx === -1) {
+                detailRows.push(tr.attr('id'));
+            }
+        }
+    });
+
+
+$('#btn-show-all-children').on('click',
+    function () {
+        // Enumerate all rows
+        routeTable.rows().every(function () {
+            // If row has details collapsed
+            if (!this.child.isShown()) {
+                // Open this row
+                this.child(format(this.data())).show();
+                $(this.node()).addClass('shown');
+            }
+        });
+    });
+
+$('#btn-hide-all-children').on('click',
+    function () {
+        // Enumerate all rows
+        routeTable.rows().every(function () {
+            // If row has details expanded
+            if (this.child.isShown()) {
+                // Collapse row details
+                this.child.hide();
+                $(this.node()).removeClass('shown');
+            }
+        });
+    });
+
+routeTable.on('draw',
+    function () {
+        $.each(detailRows,
+            function (i, id) {
+                $('#' + id + ' td.details-control').trigger('click');
+            });
+    });
+//#endregion
 });
 
+
+function format(row) {
+
+    var card = `<div class="card">
+                 <div class="card-body">
+                    <h4 class="header-title text-center header-title p-2">Routes</h4>
+                     <div class="single-table">
+                         <div class="table-responsive">`,
+
+        cardEnd = `</div>
+                        </div>
+                     </div>
+                 </div>`,
+        // route table
+        routeInfoTable = `<table class="table table-hover text-center">`,
+        routeInfoTableEnd = `</table>`;
+
+
+    // region table
+
+    // table first row
+    routeInfoTable += `<thead >
+                          <tr>
+                              <th scope="col">Info</th>
+                          </tr>
+                   </thead>`;
+                   routeInfoTable+=`<tbody>
+                    <tr>
+                        <th scope="row">${row.info}</th>
+                    </tr>
+                </tbody>`;
+                routeInfoTable += routeInfoTableEnd;
+    //#endregion DocDirection and DocDirectionDetails
+    card += routeInfoTable;
+    card += cardEnd;
+    return card;
+}
+//#endregion
 function readSelectData(row) {
     let selectStart = "<select disabled style='color:black' class='select2DropDown formField routeSelect text-center'>"
     let selectEnd = "</select>";
