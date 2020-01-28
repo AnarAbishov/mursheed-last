@@ -92,8 +92,7 @@ $('#routeTable tbody').on('click',
                 detailRows.push(tr.attr('id'));
             }
         }
-    });
-
+});
 
 $('#btn-show-all-children').on('click',
     function () {
@@ -106,7 +105,7 @@ $('#btn-show-all-children').on('click',
                 $(this.node()).addClass('shown');
             }
         });
-    });
+});
 
 $('#btn-hide-all-children').on('click',
     function () {
@@ -119,7 +118,7 @@ $('#btn-hide-all-children').on('click',
                 $(this.node()).removeClass('shown');
             }
         });
-    });
+});
 
 routeTable.on('draw',
     function () {
@@ -127,10 +126,9 @@ routeTable.on('draw',
             function (i, id) {
                 $('#' + id + ' td.details-control').trigger('click');
             });
-    });
+});
 //#endregion
 });
-
 
 function format2(row) {
 
@@ -153,6 +151,7 @@ function format2(row) {
     card += cardEnd;
     return card;
 }
+
 //#endregion
 function readSelectData(row) {
     let selectStart = "<select disabled style='color:black' class='select2DropDown formField routeSelect text-center'>"
