@@ -11,7 +11,8 @@ $(document).ready(function () {
 
         "columns": [
             {
-                "data": "id"
+                "data": "id",
+                "class": "text-center pt-3",
             },
             {
                 "data": "fromRoute",
@@ -26,22 +27,22 @@ $(document).ready(function () {
                 }
             },
             {
-                "data": "price"
+                "data": "price", 
+                "class": "text-center pt-3 routePrice",
             },
             {
-                "data": "price",
                 "autoWidth": true,
                 render: function (row) {
                     return `
                         <ul class="m-0 p-0 d-flex justify-content-center">
                             <li class=" list-group mr-2">
-                                <a class='edit-route-btn btn text-primary btn-sm'><i class='fa fa-edit'></i></a>
+                                <a onclick="editItem(this)" class='edit-route-btn btn text-primary btn-sm'><i class='fa fa-edit'></i></a>
                             </li>
                             <li class="list-group">
-                                <a onclick="deleteItem()" class="delete-rout-btn btn text-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                <a onclick="deleteItem(this)" class="delete-rout-btn btn text-danger btn-sm"><i class="fa fa-trash"></i></a>
                             </li>
                             <li class="list-group">
-                                <a class="save-route-btn btn text-success btn-sm"><i class="fas fa-check"></i></a>
+                                <a onclick="saveItem(this)" class="save-route-btn btn text-success btn-sm"><i class="fas fa-check"></i></a>
                             </li>
                         </ul>`;
                 }
@@ -54,7 +55,7 @@ $(document).ready(function () {
 });
 
 function readSelectData(row) {
-    let selectStart = "<select disabled style='color:black' class='routeSelect'>"
+    let selectStart = "<select disabled style='color:black' class='select2DropDown formField routeSelect text-center'>"
     let selectEnd = "</select>";
     Array.prototype.forEach.call(row,
         function (item) {

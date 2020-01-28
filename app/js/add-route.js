@@ -34,14 +34,21 @@ addRouteBtn.click(function(e){
     else {
         alert("poks");
     }
+    });
 });
 
 let editRouteBtn = $(".edit-route-btn");
 let deleteRouteBtn = $(".delete-route-btn");
 let saveRouteBtn = $(".save-route-btn");
 
-editRouteBtn.click(function(){
-    alert("hello!");
-});
-
-});
+function editItem(elem){
+    $(elem).closest("tr").find(".routeSelect").prop("disabled", false).addClass("enabled-select");
+    $(elem).closest("tr").find(".routePrice").prop("contenteditable", true).css("outline", "none").css("color", "#007BFF");
+}
+function deleteItem(elem){
+    $(elem).closest("tr").remove();
+}
+function saveItem(elem){
+    $(elem).closest("tr").find(".routeSelect").prop("disabled", true).removeClass("enabled-select");
+    $(elem).closest("tr").find(".routePrice").prop("contenteditable", false);
+}
